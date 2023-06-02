@@ -338,14 +338,14 @@ get_header();
 					</div>
 					<div class="ks-career-offer__options ks-decoration ks-decoration--center">
 						<?php
-							if( have_rows('career_offer_options') ):
-								while ( have_rows('career_offer_options') ) : the_row();
+							if( have_rows('career-offer_options') ):
+								while ( have_rows('career-offer_options') ) : the_row();
 									$icon = get_sub_field('career_offer_icon');
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
 									?>	
 										<div class="ks-option ">
-											<div class="w-[350px] p-[30px]">
+											<div class="w-[]">
 												<img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
 												<span class="ks-option__title ks-option__title--with-line"><?php echo $title; ?></span>
 											</div>

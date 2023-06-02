@@ -338,8 +338,8 @@ get_header();
 					</div>
 					<div class="ks-career-offer__options ks-decoration ks-decoration--center">
 						<?php
-							if( have_rows('career_offer_options') ):
-								while ( have_rows('career_offer_options') ) : the_row();
+							if( have_rows('career-offer_options') ):
+								while ( have_rows('career-offer_options') ) : the_row();
 									$icon = get_sub_field('career_offer_icon');
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
