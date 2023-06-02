@@ -338,14 +338,14 @@ get_header();
 					</div>
 					<div class="ks-career-offer__options flex justify-between gap-[20px]">
 						<?php
-							$career_offer_options2 = get_field('career_offer_button');
+							$career_offer_button2 = get_field('career_offer_button');
 
 							if( have_rows('career_offer_options') ):
 								while ( have_rows('career_offer_options') ) : the_row();
 									$icon = get_sub_field('career_offer_icon');
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
-									$career_offer_options = get_field('career_offer_button');
+									$career_offer_button = get_field('career_offer_button');
 									// if( $career_offer_button ): 
 										// $career_offer_button_url = $career_offer_button['url'];
 										// $career_offer_button_title = $career_offer_button['title'];
