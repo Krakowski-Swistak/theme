@@ -31,15 +31,16 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-		// module.exports = {
-		// 	corePlugins: {
-		// 		preflight: false,
-		// 	}
-		// }
+		module.exports = {
+			corePlugins: {
+				preflight: false,
+			}
+		}
       tailwind.config = {
 				corePlugins: {
           preflight: false,
         },
+      
       }
   </script>
 
