@@ -328,7 +328,7 @@ get_header();
 			</section>
 
 			<!-- test tomek -->
-			<section id="ks-career-offer" class="ks-background-shape ks-background-shape__square ks-career-offer ks-fade mb-[135px]">
+			<section id="ks-career-offer" class="ks-background-shape ks-background-shape__square ks-career-offer ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-career-offer__info">
 						<div class="ks-career-offer__content mb-[100px]">
