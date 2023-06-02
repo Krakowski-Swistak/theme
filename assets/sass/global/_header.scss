@@ -1,0 +1,165 @@
+.ks-header {
+    z-index: 99999;
+
+    .custom-logo {
+        height: 40px;
+        width: 110px;
+    }
+
+    &__fixed {
+            position: fixed!important;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: $color-gray-light-4;
+
+            .ks-header__bar {
+                padding: 10px 0;
+            }
+    }
+
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        padding: 29px 0 20px;
+        transition: padding .4s;
+
+        @include media-screen(tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .main-navigation {
+        overflow: hidden;
+        margin-top: -4px;
+
+        &.toggled {
+
+            .ks-menu-items-container {
+                transform: translateX(0);
+            }
+        }
+
+        .ks-menu-items-container {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            padding-left: 25px;
+            padding-top: 70px;
+            transform: translateX(-105%);
+            @include filter-shadow($drop-shadow-size-1, $color-shadow);
+            height: 100%;
+            transition-duration: .4s;
+            background-color: $color-gray-light-3;
+            z-index: 9999;
+    
+            @include media-screen(tablet) {
+                background-color: transparent;
+                position: relative;
+                width: auto;
+                padding-left: 0;
+                padding-top: 0;
+                transform: translateX(0);
+                filter: none;
+                height: auto;
+                align-items: flex-end;
+            }
+
+            @include media-screen(tablet-wide) {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .ks-contact-info {
+
+                @include media-screen(tablet) {
+                    margin-top: 10px;
+                }
+
+                @include media-screen(tablet-wide) {
+                    margin-top: 0;
+                }
+
+                button {
+                    display: block;
+                    margin-top: 20px;
+                    
+                    @include media-screen(tablet) {
+                        display: inline-block;
+                        margin-top: 0;
+                    }
+                }
+
+                &__social-media {
+                    margin-right: 10px;
+                    display: inline-block;
+    
+                    @include media-screen(desktop) {
+                        margin-right: 20px;
+                    }
+
+                    a {
+
+                        &:first-child {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .menu {
+            text-align: left;
+    
+            .menu-item {
+                margin-bottom: 20px;
+    
+                @include media-screen(tablet) {
+                    margin-bottom: 0;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+    
+                @include media-screen(desktop) {
+                    margin-right: 22px;
+                }
+    
+                a {
+                    display: inline-block;
+                    color: $color-black;
+                    font-size: $size-small-2;
+                    transition: color .1s ease-out;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        background: $color-primary;
+                        height: 2px;
+                        transition: width .5s ease-out;
+                        margin-top: 0px;
+                    }
+                }
+    
+                &.current-menu-item {
+    
+                    a {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

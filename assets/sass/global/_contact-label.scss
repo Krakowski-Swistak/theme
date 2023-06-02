@@ -1,0 +1,44 @@
+.ks-contact-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &::before {
+        margin-right: 0;
+        transform: scale(.6);
+
+        @include media-screen(tablet) {
+            margin-right: 25px;
+            transform: scale(1);
+        }
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: $weight-medium;
+        color: $color-dark;
+        transition: color .4s;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        @include media-screen(tablet) {
+            font-size: $size-big;
+        }
+    }
+
+    &--phone {
+        &::before {
+            content: url('../svg/phone-call.svg');
+            width: 50px;
+        }
+    }
+
+    &--email {
+        &::before {
+            content: url('../svg/email.svg');
+            width: 50px;
+        }
+    }
+}

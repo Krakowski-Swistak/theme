@@ -1,0 +1,70 @@
+.ks-strategy {
+    background: url('../images/bg-strategy.png') center center no-repeat;
+    background-size: cover;
+    padding: 60px 0 80px;
+
+    @include media-screen(desktop) {
+        padding: 56px 0 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include media-screen(tablet) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h2 {
+
+            @include media-screen(tablet) {
+                font-size: $size-large;
+                line-height: $line-height-big;
+                margin-bottom: 83px;
+            }
+        }
+
+        .ks-facility__title {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__column {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        &--content {
+            position: relative;
+
+            @include media-screen(tablet) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            @include media-screen(desktop) {
+                flex: 0 0 32.26%;
+                max-width: 32.26%;
+                margin-top: -35px;
+            }
+        }
+
+        &--image {
+            margin-top: 30px;
+
+            @include media-screen(tablet) {
+                flex: 0 0 50%;
+                max-width: 50%;
+                text-align: right;
+                margin-top: 0;
+            }
+
+            @include media-screen(desktop) {
+                flex: 0 0 67.74%;
+                max-width: 67.74%;
+                text-align: right;
+            }
+        }
+    }
+}

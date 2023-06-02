@@ -1,0 +1,56 @@
+.ks-util-color-primary {
+    color: $color-primary;
+}
+
+.ks-util-weight-500 {
+    font-weight: $weight-medium;
+}
+
+.ks-util-weight-300 {
+    font-weight: $weight-light;
+}
+
+.ks-sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.alternative-calendy {
+    display: none;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: $color-gray-4;
+
+    a {
+        font-size: 40px;
+        font-weight: 600;
+        color: $color-primary;
+        text-decoration: underline;
+    }
+}
+
+.no-js {
+
+    .ks-calendy {
+        border-bottom: 1px solid $color-shadow;
+    }
+
+    .calendly-inline-widget {
+        display: none;
+    }
+
+    .alternative-calendy {
+        display: block;
+    }
+
+    .loading-area {
+        display: none;
+    }
+}

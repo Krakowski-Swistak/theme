@@ -1,0 +1,16 @@
+.ks-container {
+    margin: auto;
+    width: 90%;
+
+    @include media-screen(tablet) {
+        width: 750px;
+    }
+
+    @include media-screen(tablet-wide) {
+        width: 970px;
+    }
+
+    @include media-screen(desktop) {
+        width: 1140px;
+    }
+}

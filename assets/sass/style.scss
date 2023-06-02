@@ -1,0 +1,45 @@
+@import './abstract/colors';
+@import './abstract/mixins';
+@import './abstract/variables';
+@import './global/reset';
+
+@import './sections/about';
+@import './sections/help';
+@import './sections/strategy';
+@import './sections/case-studies';
+@import './sections/clients';
+@import './sections/calendy';
+@import './sections/recommendations';
+@import './sections/content';
+
+
+@import './global/wpadminbar';
+@import './global/typography';
+@import './global/layout';
+@import './global/header';
+@import './global/menuToggler';
+@import './global/button';
+@import './global/loader';
+@import './global/hero';
+@import './global/image';
+@import './global/social-img';
+@import './global/background-shape';
+@import './global/facility';
+@import './global/input';
+@import './global/form';
+@import './global/acf-fields';
+@import './global/contact-label';
+@import './global/footer';
+@import './global/copyright';
+@import './global/swiper';
+@import './global/swiper-pagination';
+@import './global/recommendation';
+@import './global/overlay';
+@import './global/popup';
+@import './global/decoration';
+@import './global/utils';
+
+@import './pages/home';
+@import './pages/page';
+
+@import './animated/fade';

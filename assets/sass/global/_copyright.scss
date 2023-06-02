@@ -1,0 +1,43 @@
+.ks-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+
+    @include media-screen(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 40px;
+        padding: 0;
+    }
+
+    &__rights {
+        font-size: $size-small;
+        line-height: $line-height-normal - 1px;
+
+        @include media-screen(tablet, max) {
+            order: 1;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__social-media {
+
+        @include media-screen(tablet, max) {
+            order: 0;
+            margin-bottom: 10px;
+        }
+        
+        a {
+            display: inline-block;
+        }
+    }
+
+    &__author {
+
+        @include media-screen(tablet, max) {
+            order: 2;
+        }
+    }
+}

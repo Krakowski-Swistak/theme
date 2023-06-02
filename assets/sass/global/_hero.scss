@@ -1,0 +1,117 @@
+.ks-hero {
+    background-repeat: no-repeat;
+    background-position: 70% center;
+    background-size: cover;
+    height: 100vh;
+    background-blend-mode: screen;
+    background-color: $color-gray-light-5; 
+    min-height: 568px;
+
+    &:not(.loaded) {
+
+        .loading-area {
+            display: block;
+        }
+    }
+
+    .loading-area {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-gray-light-3;
+    }    
+
+    @include media-screen(phone-wide) {
+        min-height: 750px;
+    }
+
+    @include media-screen(tablet) {
+        background-blend-mode: normal;
+    }
+    
+    &__buttons {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    
+        @include media-screen(tablet) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        button {
+
+            &:not(:last-child) {
+                margin-bottom: 17px;
+    
+                @include media-screen(tablet) {
+                    margin-right: 37px;
+                    margin-bottom: 0;
+                }
+            }
+
+            a {
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+            margin-bottom: 50px;
+        
+            @include media-screen(phone-wide) {
+                font-size: $size-large;
+                line-height: $line-height-big;
+            }
+        
+            @include media-screen(tablet-wide) {
+                font-size: $size-large-3;
+                line-height: $line-height-large;
+                margin-bottom: 62px;
+            }
+        }
+
+        p {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+            font-weight: $weight-light;
+            margin-bottom: 30px;
+    
+            @include media-screen(tablet) {
+                padding-right: 150px;
+            }
+    
+            @include media-screen(tablet-wide) {
+                font-size: $size-large;
+                line-height: $line-height-big;
+                font-weight: $weight-light;
+                margin-bottom: 60px;
+                padding-right: 0;
+            }
+        }
+
+        a {
+            font-size: $size-small-2;
+            line-height: $line-height-large;
+            font-weight: $weight-regular;
+        }
+    }
+
+    &__content {
+        max-width: 320px;
+    
+        @include media-screen(tablet) {
+            max-width: 500px;
+        }
+    }
+}

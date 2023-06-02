@@ -1,0 +1,27 @@
+.ks-recommendation {
+    display: flex;
+    flex-direction: column;
+
+    @include media-screen(phone-wide) {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .ks-image {
+        
+        @include media-screen(phone-wide) {
+            flex: 0 0 130px;
+            min-width: 130px;
+        }
+    }
+
+    .ks-facility {
+        margin-bottom: 26px;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

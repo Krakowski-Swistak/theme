@@ -1,0 +1,100 @@
+.ks-about {
+    padding: 75px 0;
+
+    @include media-screen(desktop) {
+        padding: 185px 0 75px;
+    }
+
+    .ks-image {
+        margin-bottom: 60px;
+
+        @include media-screen(tablet) {
+            margin-bottom: 0;
+            margin-right: 40px;
+        }
+
+        @include media-screen(desktop) {
+            margin-bottom: 0;
+            margin-right: 80px;
+        }
+    }
+
+    h2 {
+        font-size: $size-big;
+        line-height: $line-height-normal;
+
+        @include media-screen(tablet) {
+            font-size: $size-large;
+            line-height: $line-height-big;
+            margin-bottom: 70px;
+        }
+
+        @include media-screen(desktop) {
+            margin-bottom: 97px;
+        }
+    }
+
+    .ks-facility {
+
+        img {
+            max-width: 67px;
+        }
+
+        &:first-child {
+
+            @include media-screen(desktop) {
+                margin-right: 20px;
+            }
+        }
+
+        &:nth-child(2) {
+
+            @include media-screen(desktop) {
+                margin-right: 13px;
+            }
+        }
+
+        &:nth-child(3) {
+
+            @include media-screen(desktop) {
+                margin-right: -63px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include media-screen(tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__facilities {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        flex-direction: column;
+        text-align: center;
+
+        @include media-screen(tablet) {
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+
+    &__text {
+
+        @include media-screen(desktop) {
+            margin-right: -35px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-top: -5px;
+    }
+}

@@ -1,0 +1,34 @@
+.ks-popup {
+    display: none;
+    
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        max-width: 100%;
+        width: 100%;
+
+        @include media-screen(tablet) {
+            width: auto;
+        }
+
+        iframe {
+
+            @include media-screen(tablet, max) {
+                width: 100%;
+            }
+        }
+    }
+
+    &.active {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+    }
+}

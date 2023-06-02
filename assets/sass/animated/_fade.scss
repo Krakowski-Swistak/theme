@@ -1,0 +1,15 @@
+.ks-fade {
+    overflow: hidden;
+}
+
+.ks-fadeInBottom.is-running {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .5s, transform .5s ease-out;
+    position: relative;
+
+    &--active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

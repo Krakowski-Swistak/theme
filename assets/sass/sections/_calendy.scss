@@ -1,0 +1,12 @@
+.ks-calendy {
+    padding: 30px 0 50px;
+
+    @include media-screen(tablet) {
+        padding: 50px 0 80px;
+    }
+
+    .calendly-inline-widget {
+        min-width: 320px;
+        height: 680px;
+    }
+}

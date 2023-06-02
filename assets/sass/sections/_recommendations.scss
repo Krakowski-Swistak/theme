@@ -1,0 +1,21 @@
+.ks-recommendations {
+    background: url('../images/bg-recommendations.png') center center no-repeat;
+    background-size: cover;
+    padding: 64px 0 135px;
+
+    &__swiper-container {
+        overflow: hidden;
+
+        .swiper-wrapper {
+            align-items: flex-end;
+            padding: 15px 0;
+        }
+    }
+
+    h2 {
+
+        @include media-screen(desktop) {
+            margin-bottom: 46px;
+        }
+    }
+}

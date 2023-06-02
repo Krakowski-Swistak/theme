@@ -1,0 +1,47 @@
+.ks-case-studies {
+    padding: 70px 0 100px;
+
+    @include media-screen(tablet) {
+        padding: 70px 0 120px;
+    }
+
+    @include media-screen(desktop) {
+        padding: 115px 0 140px;
+    }
+
+    &__slide {
+        padding: 20px 45px;
+        text-align: left;
+        width: 100%;
+        font-size: $size-normal;
+
+        @include media-screen(tablet) {
+            padding: 20px 50px;
+        }
+
+        @include media-screen(desktop) {
+            padding: 47px 80px;
+        }
+
+        .ks-facility {
+            margin-bottom: 20px!important;
+    
+            @include media-screen(tablet) {
+                margin-bottom: 37px!important;
+            }
+        }
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    h2 {
+
+        @include media-screen(desktop) {
+            margin-bottom: 90px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.ks-background-shape {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: none;
+        
+
+        @include media-screen(tablet) {
+            display: block;
+        }
+    }
+
+    &__square {
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 510px;
+            height: 425px;
+            background-color: $color-gray-light-2;
+        }
+    }
+}

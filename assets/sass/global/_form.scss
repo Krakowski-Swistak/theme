@@ -1,0 +1,38 @@
+.ks-form {
+    margin-top: 46px;
+
+    .acf-form-fields {
+        display: grid;
+        grid-template-areas: 
+            'name'
+            'email'
+            'message'
+            'rodo'
+        ;
+        
+        @include media-screen(tablet) {
+            grid-column-gap: 20px;
+            grid-template-areas: 
+               'name email'
+               'message message'
+               'rodo rodo'
+            ;
+        }
+
+        [data-name="input_name"] {
+            grid-area: name;
+        }
+
+        [data-name="input_email"] {
+            grid-area: email;
+        }
+
+        [data-name="input_message"] {
+            grid-area: message;
+        }
+
+        [data-name="input_rodo_checkbox"] {
+            grid-area: rodo;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.ks-facility {
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    
+        @include media-screen(tablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        max-width: 57px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        display: block;
+        font-size: $size-normal;
+        line-height: $line-height-normal;
+        font-weight: $weight-semi-bold;
+
+        @include media-screen(desktop) {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+        }
+
+        &--with-line {
+            padding-left: 30px;
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 11px;
+                width: 20px;
+                height: 3px;
+                background: $color-primary;
+            }
+        }
+
+        &--thin {
+            font-weight: $weight-light;
+        }
+
+        &--small {
+            font-size: $size-normal;
+        }
+    }
+
+    &--extended {
+
+        img {
+            margin-left: 35px;
+        }
+    }
+}

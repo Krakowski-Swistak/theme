@@ -1,0 +1,30 @@
+
+$breakpoints: (
+    'phone': 320px,
+    'phone-wide': 480px,
+    'phablet': 560px,
+    'tablet-small': 640px,
+    'tablet': 768px,
+    'tablet-wide': 1024px,
+    'desktop': 1248px,
+    'desktop-wide': 1440px
+);
+
+
+@mixin media-screen($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    } @else {
+        @error 'There is no breakpoint "#{$width}" in the breakpoints list.';
+    }
+}
+
+@mixin filter-shadow($size, $color) {
+    filter: drop-shadow($size $color);
+}

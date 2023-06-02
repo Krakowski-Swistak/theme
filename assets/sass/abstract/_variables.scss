@@ -1,0 +1,45 @@
+
+$base-spacing:                      20px;
+$base-border-radius:                5px;
+$base-easing-function:              cubic-bezier(0.0, 0.0, 0.2, 1);
+$base-box-shadow:                   20px 20px 50px 5px $color-gray-light-5;
+
+$drop-shadow-size-1: 0px 20px 25px;
+$drop-shadow-size-2: 0px 5px 7.5px;
+
+$img-border-radius: $base-border-radius * 2; 
+
+//
+// Font weights.
+//
+$weight-extra-light: 200;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-extra-bold: 800;
+
+//
+// Line height
+//
+
+$line-height-normal: 25px;
+$line-height-big: 35px;
+$line-height-large: 50px;
+
+//
+// Fonts sizes.
+//
+
+$size-small: 12px;
+$size-small-2: 15px;
+$size-normal: 16px;
+$size-big: 20px;
+$size-large: 30px;
+$size-large-2: 40px;
+$size-large-3: 50px;
+
+$base-font-family:                  'Poppins', Arial, sans-serif;
+$base-font-weight:                  $weight-regular;
+$base-font-size:                    $size-normal;
+$base-line-height:                  $line-height-normal;

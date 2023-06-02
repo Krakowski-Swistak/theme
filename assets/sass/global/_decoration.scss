@@ -1,0 +1,48 @@
+
+.ks-decoration {
+
+    &__line {
+        background: #00b3a7;
+        transform-origin: 50%;
+        display: inline-block;
+
+        &--small {
+            margin-right: -6px;
+            height: 4px;
+            width: 14px;
+        }
+
+        &--big {
+            margin-right: -9px;
+            height: 6px;
+            width: 21px;
+        }
+    }
+
+    &__wave {
+        position: absolute;
+
+        &--small {
+            bottom: -30px;
+        }
+
+        &--big {
+            bottom: -20px;
+        }
+    }
+
+    &--left {
+
+        .ks-decoration__wave--big {
+            left: 0;
+        }
+    }
+
+    &--center {
+
+        .ks-decoration__wave--big {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

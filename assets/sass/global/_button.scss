@@ -1,0 +1,148 @@
+.ks-button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    border-radius: $base-border-radius;
+    transition: background .3s;
+    position: relative;
+
+    &--primary {
+        background: $color-primary;
+        color: $color-white;
+        font-size: $size-small-2;
+        text-transform: uppercase;
+
+        a {
+            padding: 16px 26px;
+            display: block;
+            color: $color-white;
+        }
+
+        &:hover {
+            background: darken($color-primary, 10%);
+        }
+    }
+
+    &__video {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    
+        a {
+            display: flex;
+            align-items: center;
+
+            &::before {
+                margin-right: 10px;
+    
+                @include media-screen(tablet) {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        &--primary {
+            color: $color-dark;
+            
+            a {
+                color: $color-dark;
+    
+                &::before {
+                    content: url('../images/video-icon-green.png');
+                }
+            }
+        }
+
+        &--white {
+            color: $color-white;
+
+            a {
+                color: $color-white;
+    
+                &::before {
+                    content: url('../images/video-icon-white.png');
+                }
+            }
+        }
+    }
+
+    &--custom {
+        display: block;
+        font-size: $size-normal;
+        line-height: $line-height-normal;
+        font-weight: $weight-semi-bold;
+        border-radius: $base-border-radius;
+        padding: 18px 20px;
+        background: $color-gray-light-3;
+        transition: background .1s;
+        color: $color-dark;
+
+        a {
+            color: $color-dark;
+        }
+
+        width: 100%;
+        text-align: left;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        @include media-screen(desktop) {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+        }
+            
+        &::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 20px;
+            height: 3px;
+            background: $color-primary;
+        }
+
+        &::after {
+            content: url('../../assets/images/arrow-right-green.svg');
+            font-size: 30px;
+            fill: $color-primary;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            background: $color-primary;
+            color: $color-white;
+
+            a {
+                color: $color-white;
+            }
+
+            &::before{
+                background: $color-gray-light-4;
+            }
+            
+            &::after {
+                content: url('../../assets/images/arrow-right-white.svg');
+            }
+        }
+    }
+
+    &[disabled] {
+        background: $color-gray-3;
+    }
+
+    &--slide {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
