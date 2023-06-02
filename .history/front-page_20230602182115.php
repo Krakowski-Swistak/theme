@@ -336,7 +336,7 @@ get_header();
 							<?php echo the_field('career_offer_content'); ?>
 						</div>
 					</div>
-					<div class="ks-career-offer__options ks-decoration ks-decoration--center flex justify-between gap-[10px]">
+					<div class="ks-career-offer__options ks-decoration ks-decoration--center flex justify-between gap-[20px]">
 						<?php
 							if( have_rows('career_offer_options') ):
 								while ( have_rows('career_offer_options') ) : the_row();
@@ -346,7 +346,7 @@ get_header();
 									?>	
 										<div class="ks-option__wrapper w-[320px] bg-[#f3f3f3] p-[30px]">
 											<div class="flex justify-center items-center flex-col gap-[40px] text-center">
-												<div class="temp-icon w-[110px] h-[110px] rounded-full bg-[#00b3a7]">icon</div>
+												<div class="temp-icon w-[57px] h-[57px] rounded-full bg-[#00b3a7]">icon</div>
 												<!-- <img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="icon" /> -->
 												<p class="ks-option__title text-[20px] font-bold"><?php echo $title; ?></p>
 											</div>

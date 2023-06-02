@@ -336,7 +336,7 @@ get_header();
 							<?php echo the_field('career_offer_content'); ?>
 						</div>
 					</div>
-					<div class="ks-career-offer__options ks-decoration ks-decoration--center flex justify-between gap-[10px]">
+					<div class="ks-career-offer__options ks-decoration ks-decoration--center flex justify-between gap-[20px]">
 						<?php
 							if( have_rows('career_offer_options') ):
 								while ( have_rows('career_offer_options') ) : the_row();
