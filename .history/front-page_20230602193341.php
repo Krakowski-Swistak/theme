@@ -362,7 +362,7 @@ get_header();
 												<?php echo $description; ?>
 											</p>
 											<button class="ks-button ks-button--primary">
-												<!-- <a class="career-offer__button" href="<?php echo esc_url( $career_offer_button_url ); ?>" target="<?php echo esc_attr( $career_offer_button_target ); ?>"><?php echo esc_html( $career_offer_button_title ); ?> <?php $career_offer_button; ?></a> -->
+												<a class="career-offer__button" href="<?php echo esc_url( $career_offer_button_url ); ?>" target="<?php echo esc_attr( $career_offer_button_target ); ?>"><?php echo esc_html( $career_offer_button_title ); ?> <?php $career_offer_button; ?></a>
 												<?php echo $career_offer_button; ?>
 												<?php print_r($career_offer_button); ?>
 												<?php echo $career_offer_button2; ?>
