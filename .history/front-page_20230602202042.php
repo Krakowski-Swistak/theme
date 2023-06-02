@@ -347,7 +347,7 @@ get_header();
 									$description = get_sub_field('career_offer_description');
 									$button = get_sub_field('career_offer_button');
 									?>	
-										<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px] basis-full flex flex-col justify-center">
+										<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px] basis-full">
 											<div class="flex justify-center items-center flex-col gap-[40px] text-center">
 												<div class="temp-icon w-[110px] h-[110px] rounded-full bg-[#00b3a7]">icon</div>
 												<!-- <img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="icon" /> -->
@@ -358,7 +358,7 @@ get_header();
 													<?php echo $description; ?>
 												</p>
 											</div>
-											<button class="ks-button ks-button--primary w-fit mx-auto text-[20px]">
+											<button class="ks-button ks-button--primary text-[20px]">
 												 <a href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
 											</button>
 										</div>
