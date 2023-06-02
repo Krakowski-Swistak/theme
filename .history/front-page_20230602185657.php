@@ -343,11 +343,12 @@ get_header();
 									$icon = get_sub_field('career_offer_icon');
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
-									$career_offer_button = get_field('career_offer_buy_link');
-									if( $career_offer_button ): 
-										$career_offer_button_url = $career_offer_button['url'];
-										$career_offer_button_title = $career_offer_button['title'];
-										$career_offer_button_target = $career_offer_button['target'] ? $career_offer_button['target'] : '_self';
+
+									$hero_button_1 = get_field('hero_button_1');
+									if( $hero_button_1 ): 
+										$hero_button_1_url = $hero_button_1['url'];
+										$hero_button_1_title = $hero_button_1['title'];
+										$hero_button_1_target = $hero_button_1['target'] ? $hero_button_1['target'] : '_self';
 									endif;
 									?>	
 										<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px] h-[700px] basis-full overflow-y-scroll">
@@ -360,7 +361,7 @@ get_header();
 												<?php echo $description; ?>
 											</p>
 											<button class="ks-button ks-button--primary">
-												<a class="career-offer__button" href="<?php echo esc_url( $career_offer_button_url ); ?>" target="<?php echo esc_attr( $career_offer_button_target ); ?>"><?php echo esc_html( $career_offer_button_title ); ?></a>
+												<a class="career-offer__button" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 											</button>
 										</div>
 									<?php
