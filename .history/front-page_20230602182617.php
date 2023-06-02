@@ -344,7 +344,7 @@ get_header();
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
 									?>	
-										<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px] h-[700px] overflow-y-scroll">
+										<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px]">
 											<div class="flex justify-center items-center flex-col gap-[40px] text-center">
 												<div class="temp-icon w-[110px] h-[110px] rounded-full bg-[#00b3a7]">icon</div>
 												<!-- <img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="icon" /> -->
