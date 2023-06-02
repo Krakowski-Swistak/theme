@@ -1075,8 +1075,8 @@ a {
   text-decoration: none;
 }
 h1 {
-  font-size: 40px !important;
-  font-weight: 800 !important;
+  font-size: 40px;
+  font-weight: 800;
   line-height: 50px;
   position: relative;
   margin-bottom: 80px;
@@ -1096,7 +1096,7 @@ h2 {
 }
 @media only screen and (min-width: 1024px) {
   h2 {
-    font-size: 40px !important;
+    font-size: 40px;
     line-height: 50px;
   }
 }
