@@ -278,7 +278,7 @@ get_header();
 					<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
 					</div>
 					<button class="ks-button ks-button--primary">
-						<a class="scroll" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php echo 'Zobacz rekomendację Linked-in'; ?></a>
+						<a class="scroll" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 					</button>
 				</div>
 			</section>
