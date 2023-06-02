@@ -362,8 +362,7 @@ get_header();
 												<?php echo $description; ?>
 											</p>
 											<button class="ks-button ks-button--primary">
-												<a href="<?php echo $button; ?>"></a>
-												<a href="<?php print_r($button); ?>"></a>
+												<a href=""></a>
 											</button>
 										</div>
 									<?php

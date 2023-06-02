@@ -363,7 +363,6 @@ get_header();
 											</p>
 											<button class="ks-button ks-button--primary">
 												<a href="<?php echo $button; ?>"></a>
-												<a href="<?php print_r($button); ?>"></a>
 											</button>
 										</div>
 									<?php

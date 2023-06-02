@@ -338,14 +338,14 @@ get_header();
 					</div>
 					<div class="ks-career-offer__options flex justify-between gap-[20px]">
 						<?php
-							$options2 = get_field('career_offer_button');
+							$career_offer_options2 = get_field('career_offer_button');
 
 							if( have_rows('career_offer_options') ):
 								while ( have_rows('career_offer_options') ) : the_row();
 									$icon = get_sub_field('career_offer_icon');
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
-									$button = get_sub_field('career_offer_button');
+									$career_offer_button = get_sub_field('career_offer_button');
 									// if( $career_offer_button ): 
 										// $career_offer_button_url = $career_offer_button['url'];
 										// $career_offer_button_title = $career_offer_button['title'];
@@ -362,8 +362,11 @@ get_header();
 												<?php echo $description; ?>
 											</p>
 											<button class="ks-button ks-button--primary">
-												<a href="<?php echo $button; ?>"></a>
-												<a href="<?php print_r($button); ?>"></a>
+												<!-- <a class="career-offer__button" href="<?php echo esc_url( $career_offer_button_url ); ?>" target="<?php echo esc_attr( $career_offer_button_target ); ?>"><?php echo esc_html( $career_offer_button_title ); ?> <?php $career_offer_button; ?></a> -->
+												<?php echo $career_offer_options; ?>
+												<?php print_r($career_offer_options); ?>
+												<?php echo $career_offer_options2; ?>
+												<?php print_r($career_offer_options2); ?>
 											</button>
 										</div>
 									<?php
