@@ -32,10 +32,10 @@
 
   <script>
 		module.exports = {
-			corePlugins: {
-				preflight: false,
-			}
-		}
+  corePlugins: {
+    preflight: false,
+  }
+}
       tailwind.config = {
 				
       theme: {

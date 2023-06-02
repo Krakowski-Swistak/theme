@@ -30,14 +30,7 @@
 
 	<script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-		module.exports = {
-			corePlugins: {
-				preflight: false,
-			}
-		}
-      tailwind.config = {
-				
+	tailwind.config = {
       theme: {
         container: {
             screens: {
@@ -65,7 +58,6 @@
         },  
       }
       }
-  </script>
 
 	
 	<?php wp_head(); ?>

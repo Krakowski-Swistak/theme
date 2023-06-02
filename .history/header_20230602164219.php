@@ -31,13 +31,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-		module.exports = {
-			corePlugins: {
-				preflight: false,
-			}
-		}
       tailwind.config = {
-				
       theme: {
         container: {
             screens: {
