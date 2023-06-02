@@ -364,10 +364,7 @@ get_header();
 											<button class="ks-button ks-button--primary">
 												<a href="#"><?php echo $button[0]; ?></a>
 												<a href="#"><?php print_r($button[0]); ?></a>
-												<?php 
-													$options = the_field('career_offer_options'); 
-													echo $options[0];	
-												?>
+												<?php the_field('career_offer_options'); ?>
 											</button>
 										</div>
 									<?php
