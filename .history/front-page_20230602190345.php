@@ -343,7 +343,7 @@ get_header();
 									$icon = get_sub_field('career_offer_icon');
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
-									$career_offer_button = get_field('career_offer_button');
+									$career_offer_button = get_field('career_offer_buy_link');
 									if( $career_offer_button ): 
 										$career_offer_button_url = $career_offer_button['url'];
 										$career_offer_button_title = $career_offer_button['title'];
