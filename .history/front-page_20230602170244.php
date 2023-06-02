@@ -340,9 +340,9 @@ get_header();
 						<?php
 							if( have_rows('career-offer_options') ):
 								while ( have_rows('career-offer_options') ) : the_row();
-									$icon = get_sub_field('career_offer_icon');
-									$title = get_sub_field('career_offer_title');
-									$description = get_sub_field('career_offer_description');
+									$icon = get_sub_field('career-offer_option_icon');
+									$title = get_sub_field('career-offer_option_title');
+									$description = get_sub_field('career-offer_option_description');
 									?>	
 										<div class="ks-option ks-option--extended">
 											<div>

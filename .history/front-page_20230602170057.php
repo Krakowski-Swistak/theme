@@ -327,27 +327,27 @@ get_header();
 				</div>
 			</section>
 
-			<!-- test tomek -->
-			<section id="ks-career-offer" class="ks-background-shape ks-background-shape__square ks-career-offer ks-fade">
+						<!-- test tomek -->
+						<section id="ks-career-blog" class="ks-background-shape ks-background-shape__square ks-blog ks-fade">
 				<div class="ks-container ks-fadeInBottom">
-					<div class="ks-career-offer__info">
-						<div class="ks-career-offer__content">
+					<div class="ks-blog__info">
+						<div class="ks-blog__content">
 							<?php echo the_field('career_offer_heading'); ?>
-							<?php echo the_field('career_offer_content'); ?>
+							<?php echo the_field('blog_content'); ?>
 						</div>
 					</div>
-					<div class="ks-career-offer__options ks-decoration ks-decoration--center">
+					<div class="ks-blog__facilities ks-decoration ks-decoration--center">
 						<?php
-							if( have_rows('career-offer_options') ):
-								while ( have_rows('career-offer_options') ) : the_row();
-									$icon = get_sub_field('career_offer_icon');
-									$title = get_sub_field('career_offer_title');
-									$description = get_sub_field('career_offer_description');
+							if( have_rows('blog_facilities') ):
+								while ( have_rows('blog_facilities') ) : the_row();
+									$icon = get_sub_field('blog_facility_icon');
+									$title = get_sub_field('blog_facility_title');
+									$description = get_sub_field('blog_facility_description');
 									?>	
-										<div class="ks-option ks-option--extended">
+										<div class="ks-facility ks-facility--extended">
 											<div>
 												<img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
-												<span class="ks-option__title ks-option__title--with-line"><?php echo $title; ?></span>
+												<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
 											</div>
 											<?php echo $description; ?>
 										</div>

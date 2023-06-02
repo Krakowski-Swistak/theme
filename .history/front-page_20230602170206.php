@@ -336,18 +336,18 @@ get_header();
 							<?php echo the_field('career_offer_content'); ?>
 						</div>
 					</div>
-					<div class="ks-career-offer__options ks-decoration ks-decoration--center">
+					<div class="ks-career-offer__facilities ks-decoration ks-decoration--center">
 						<?php
-							if( have_rows('career-offer_options') ):
-								while ( have_rows('career-offer_options') ) : the_row();
-									$icon = get_sub_field('career_offer_icon');
-									$title = get_sub_field('career_offer_title');
-									$description = get_sub_field('career_offer_description');
+							if( have_rows('career-offer_facilities') ):
+								while ( have_rows('career-offer_facilities') ) : the_row();
+									$icon = get_sub_field('career-offer_facility_icon');
+									$title = get_sub_field('career-offer_facility_title');
+									$description = get_sub_field('career-offer_facility_description');
 									?>	
-										<div class="ks-option ks-option--extended">
+										<div class="ks-facility ks-facility--extended">
 											<div>
 												<img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
-												<span class="ks-option__title ks-option__title--with-line"><?php echo $title; ?></span>
+												<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
 											</div>
 											<?php echo $description; ?>
 										</div>

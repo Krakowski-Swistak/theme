@@ -327,38 +327,7 @@ get_header();
 				</div>
 			</section>
 
-			<!-- test tomek -->
-			<section id="ks-career-offer" class="ks-background-shape ks-background-shape__square ks-career-offer ks-fade">
-				<div class="ks-container ks-fadeInBottom">
-					<div class="ks-career-offer__info">
-						<div class="ks-career-offer__content">
-							<?php echo the_field('career_offer_heading'); ?>
-							<?php echo the_field('career_offer_content'); ?>
-						</div>
-					</div>
-					<div class="ks-career-offer__options ks-decoration ks-decoration--center">
-						<?php
-							if( have_rows('career-offer_options') ):
-								while ( have_rows('career-offer_options') ) : the_row();
-									$icon = get_sub_field('career_offer_icon');
-									$title = get_sub_field('career_offer_title');
-									$description = get_sub_field('career_offer_description');
-									?>	
-										<div class="ks-option ks-option--extended">
-											<div>
-												<img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
-												<span class="ks-option__title ks-option__title--with-line"><?php echo $title; ?></span>
-											</div>
-											<?php echo $description; ?>
-										</div>
-									<?php
-								endwhile;
-							else :
-							endif;
-						?>
-					</div>
-				</div>
-			</section>
+			
 
 			<section id="ks-content" class="ks-content ks-fade">
 				<div class="ks-container ks-fadeInBottom">
