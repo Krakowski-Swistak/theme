@@ -348,7 +348,7 @@ get_header();
 											<div class="p-[30px]">
 												<div class="temp-icon w-[57px] rounded-full bg-[#00b3a7]">icon</div>
 												<!-- <img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="icon" /> -->
-												<p class="ks-option__title text-[20px] font-bold"><?php echo $title; ?></p>
+												<span class="ks-option__title text-[20px] font-bold"><?php echo $title; ?></span>
 											</div>
 											<?php echo $description; ?>
 										</div>

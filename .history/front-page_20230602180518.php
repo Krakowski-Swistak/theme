@@ -344,11 +344,11 @@ get_header();
 									$title = get_sub_field('career_offer_title');
 									$description = get_sub_field('career_offer_description');
 									?>	
-										<div class="ks-option__wrapper w-[320px] bg-[#f3f3f3]">
+										<div class="ks-option w-[320px] bg-[#f3f3f3]">
 											<div class="p-[30px]">
-												<div class="temp-icon w-[57px] rounded-full bg-[#00b3a7]">icon</div>
+												<div class="temp-icon rounded-full bg-[]">icon</div>
 												<!-- <img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="icon" /> -->
-												<p class="ks-option__title text-[20px] font-bold"><?php echo $title; ?></p>
+												<span class="ks-option__title ks-option__title--with-line"><?php echo $title; ?></span>
 											</div>
 											<?php echo $description; ?>
 										</div>
