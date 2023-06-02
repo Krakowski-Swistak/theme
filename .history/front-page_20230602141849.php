@@ -6,7 +6,9 @@
  */
 
 get_header();
+
 ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<section class="ks-hero">
@@ -18,6 +20,7 @@ get_header();
 							<p><?php echo the_field('hero_description'); ?></p>
 							<div class="ks-hero__buttons">
 								<?php
+								
 									$hero_button_1 = get_field('hero_button_1');
 									if( $hero_button_1 ): 
 										$hero_button_1_url = $hero_button_1['url'];
@@ -31,7 +34,9 @@ get_header();
 										$hero_button_2_title = $hero_button_2['title'];
 										$hero_button_2_target = $hero_button_2['target'] ? $hero_button_2['target'] : '_self';
 									endif;
+
 								?>
+
 								<button class="ks-button ks-button--primary">
 									<a class="scroll" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 								</button>
@@ -227,11 +232,8 @@ get_header();
 			</section>
 
 			<section id="ks-recommendations" class="ks-recommendations ks-fade">
-				<div class="ks-container ks-fadeInBottom relative flex flex-col justify-center ">
+				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('recommendations_heading'); ?>
-					<button class="ks-button w-fit font-semibold desktop:absolute desktop:top-[10px] desktop:right-0">
-						<a class="text-[14px] text-[#00b3a7] hover:text-[#008077] flex items-center gap-[6px] transition-text ease-out duration-200" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?> <span class="text-[20px]">	&rarr;</span></a>
-					</button>
 					<div class="ks-swiper">
 						<div class="swiper-container ks-recommendations__swiper-container" data-slider-recommendation >
 							<ul class="swiper-wrapper">
@@ -273,10 +275,10 @@ get_header();
 								?>
 							</ul>
 						</div>
-						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
+					<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
 					</div>
 					<button class="ks-button ks-button--primary">
-						<a class="scroll" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php echo 'Zobacz rekomendację Linked-in'; ?></a>
+						<a class="scroll" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 					</button>
 				</div>
 			</section>
@@ -291,8 +293,7 @@ get_header();
 						$clients_chunks = array_chunk($clients_brands, $board_size, true);
 						foreach ($clients_chunks as $key => $chunk) {
 							?>
-							<!-- hidden clients logo board -->
-							<div class="hidden ks-clients__board">
+							<div class="ks-clients__board">
 										<?php
 											foreach ($chunk as $key => $brand) {
 												?>
@@ -308,31 +309,12 @@ get_header();
 														</div>
 													</div>
 												<?php
-											};
+											}
 										?>
 								</div>
 							<?php
-						};
+						}
 					?>
-					<div class="ks-swiper">
-						<div class="swiper-container ks-clients__swiper-container" data-slider-clients >
-							<ul class="swiper-wrapper">
-								<?php
-									$clients_brands = get_field('clients_brands');
-								?>	
-								<?php
-									foreach ($clients_brands as $key => $client_img){
-								?>
-									<li class="swiper-slide max-w-[285px] self-center">	
-										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-h-[150px] object-contain">
-									</li>
-								<?php
-									};
-								?>
-							</ul>
-						</div>
-						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
-					</div>
 				</div>
 			</section>
 
@@ -345,99 +327,7 @@ get_header();
 				</div>
 			</section>
 
-			<!-- hidden -->
-			<section id="ks-career-offer" class="hidden ks-career-offer ks-fade mb-[135px]">
-				<div class="ks-container ks-fadeInBottom">
-					<div class="ks-career-offer__info">
-						<div class="ks-career-offer__content mb-[100px]">
-							<?php echo the_field('career_offer_heading'); ?>
-							<?php echo the_field('career_offer_content'); ?>
-						</div>
-					</div>
-					<div class="wrapper pb-[10px] desktop:overflow-x-auto overflow-x-scroll">
-						<div class="ks-career-offer__options flex justify-between gap-[20px]">
-							<?php
-								$options2 = get_field('career_offer_button');
-
-								if( have_rows('career_offer_options') ):
-									while ( have_rows('career_offer_options') ) : the_row();
-										$icon = get_sub_field('career_offer_icon');
-										$title = get_sub_field('career_offer_title');
-										$description = get_sub_field('career_offer_description');
-										$button = get_sub_field('career_offer_button');
-										?>	
-											<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px] drop-shadow-lg basis-full flex flex-col justify-center">
-												<div class="flex justify-center items-center flex-col gap-[40px] text-center">
-													<div class="temp-icon w-[110px] h-[110px] rounded-full bg-[#00b3a7]">icon</div>
-													<!-- <img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="icon" /> -->
-													<p class="ks-option__title text-[21px] font-bold"><?php echo $title; ?></p>
-												</div>
-												<div class="ks-option__description-wrapper h-[290px] mb-[50px] overflow-y-scroll">
-													<p class="ks-option__description">
-														<?php echo $description; ?>
-													</p>
-												</div>
-												<button class="ks-button ks-button--primary w-fit mx-auto text-[20px]">
-													<a href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
-												</button>
-											</div>
-										<?php
-									endwhile;
-								else :
-								endif;
-							?>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px] bg-[#f6f6f6]">
-				<div class="relative ks-container ks-fadeInBottom">
-					<h2>Blog</h2>
-					<p class="mb-[40px] text-[20px]"><?php the_field('blog_subtitle'); ?></p>
-					<button class="ks-button absolute desktop:top-[100px] top-[15px] right-0">
-						<a href="https://swistak.webo.design/blog/" class="text-[14px] text-[#00b3a7] hover:text-[#008077] flex items-center gap-[6px] font-semibold transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px] mb-[2px]">&rarr;</span></a>
-					</button>
-					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] desktop:flex-nowrap flex-wrap">
-						<?php 
-							$homepagePost = new WP_Query(array(
-								'posts_per_page' => 3
-							));
-							while ($homepagePost -> have_posts()){
-								$homepagePost -> the_post(); 
-								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
-						?>
-							<div class="post-wrapper relative mb-[30px] desktop:w-1/3 w-fit">
-								<a href="<?php the_permalink(); ?>" class="text-black  hover:text-[#00b3a7] transition ease-out duration-200">
-								<?php
-									if($postImageUrl){
-									?>
-									<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden">
-										<img src="<?php echo $postImageUrl[0]; ?>" alt="post-image" class="object-cover h-[100%] scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
-									</div>
-								<?php
-									}else{
-										?>
-										<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden">
-											<img src="<?php echo get_template_directory_uri() . '/assets/images/logo-swistak.png' ?>" alt="post-image-default" class="object-contain scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
-										</div>
-										<?php
-									};
-								?>
-									<?php the_title('<h3 class="desktop:text-[24px] text-[22px] font-semibold mb-0 desktop:leading-[30px] leading-[26px]">', '</h3>'); ?></php>
-								</a>
-								<p class="mb-[10px] text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
-								<p class="text-[#252525] mb-[45px]"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
-								<a href="<?php the_permalink(); ?>" class="flex items-center gap-[6px] absolute bottom-0 left-0 text-[14px] text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px] mb-[2px]">&rarr;</span></a>
-							</div>
-						<?php };
-							wp_reset_postdata(); 
-						?>
-					</div>
-				</div>
-			</section>
-
-			<section id="ks-content" class="ks-content ks-fade hidden">
+			<section id="ks-content" class="ks-content ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('materials_heading'); ?>
 					<?php echo the_field('materials_description'); ?>
