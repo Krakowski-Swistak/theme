@@ -1096,7 +1096,7 @@ h2 {
 }
 @media only screen and (min-width: 1024px) {
   h2 {
-    font-size: 40px;
+    font-size: 40px !important;
     line-height: 50px;
   }
 }
