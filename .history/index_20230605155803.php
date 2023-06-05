@@ -4,8 +4,8 @@ index.php
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background'); ?>')] bg-no-repeat bg-right h-[250px] mb-[40px] text-center flex justify-center items-center">
-				<?php the_field('blog_page_title_text'); ?>
+			<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background'); ?>')] h-[250px] mb-[40px] text-center flex justify-center items-center">
+				<?php echo the_field('blog_page_title_text'); ?>
 			</div>
 			<div class="ks-container">
 				<div class="posts-wrapper mb-[30px]">
