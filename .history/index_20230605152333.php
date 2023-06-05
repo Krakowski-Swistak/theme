@@ -12,7 +12,7 @@ index.php
 				<a href="https://swistak.webo.design/"><- Powrót do Strony Głównej</a>
 			</button>
 
-				<div class="posts-wrapper mb-[30px] relative">
+				<div class="posts-wrapper mb-[30px]">
 					<?php
 						while ( have_posts() ) :
 							the_post();
