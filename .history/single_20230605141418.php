@@ -13,7 +13,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main ks-container">
-		<button class="ks-button ks-button--primary mb-[50px]">
+		<button class="ks-button ks-button--primary mb-[]">
 			<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
 		</button>
 
@@ -36,9 +36,6 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<button class="ks-button ks-button--primary my-[50px]">
-			<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
-		</button>
 <?php
 get_sidebar();
 get_footer();

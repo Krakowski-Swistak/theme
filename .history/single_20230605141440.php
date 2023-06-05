@@ -36,9 +36,6 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<button class="ks-button ks-button--primary my-[50px]">
-			<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
-		</button>
 <?php
 get_sidebar();
 get_footer();
