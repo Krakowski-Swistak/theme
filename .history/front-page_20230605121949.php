@@ -374,7 +374,7 @@ get_header();
 
 			<section id="ks-blog" class="ks-blogr ks-fade mb-[135px] mb-[135px]">
 				<div class="ks-container ks-fadeInBottom">
-					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
+					<h2><a href="" class="ks-util-color-primary">Blog</a></h2>
 					<div class="blog-wrapper mb-[60px] flex justify-between">
 						<?php 
 							$homepagePost = new WP_Query(array(
