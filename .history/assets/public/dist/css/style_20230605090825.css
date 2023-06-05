@@ -1271,7 +1271,7 @@ h2 {
   .ks-menu-items-container
   .ks-contact-info__social-media
   a:first-child
-  a:nth-child(2) {
+  a:nth(2)-child {
   margin-right: 5px;
 }
 .ks-header .main-navigation .menu {
