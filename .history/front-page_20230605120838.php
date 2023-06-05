@@ -386,11 +386,10 @@ get_header();
 							
 							the_title();
 							the_excerpt();
-					?>
-						<div class="test"><span>test</span></div>
-
-					<?php };
-						wp_reset_postdata(); 
+						 ?>
+						<?php };
+          		wp_reset_postdata(); 
+        		?>
 					?>
 				</div>
 			</section>
