@@ -278,7 +278,6 @@ get_header();
 						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
 					</div>
 					<button class="ks-button ks-button--primary w-fit self-end mt-[70px]">
-						<a class="" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?></a>
 					</button>
 				</div>
 			</section>
