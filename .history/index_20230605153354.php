@@ -23,7 +23,7 @@ index.php
 									<a href="<?php the_permalink(); ?> " class="text-black"><?php the_title(); ?></a>
 								</h2>
 								<p><?php the_excerpt(); ?></p>
-								<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
+								<button class="ks-button ks-button--primary absolute bottom-0 right-[40px]">
 									<a href="<?php the_permalink(); ?>">więcej >></a>
 								</button>
 							</div>

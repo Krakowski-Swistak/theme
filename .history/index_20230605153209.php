@@ -7,7 +7,7 @@ index.php
 			<div class="title-bg bg-[#f6f6f6] h-[250px] mb-[40px] text-center flex justify-center items-center">
 				<h2 class="[&>div]:left-[50%] [&>div]:translate-x-[-50%] mb-0">Witaj na moim <br/><span class="ks-util-color-primary">Blogu</span></h2>
 			</div>
-			<div class="ks-container">
+			<div class="ks-container relative">
 				<button class="ks-button ks-button--primary mb-[50px]">
 					<a href="https://swistak.webo.design/"><- Powrót do Strony Głównej</a>
 				</button>
@@ -23,8 +23,8 @@ index.php
 									<a href="<?php the_permalink(); ?> " class="text-black"><?php the_title(); ?></a>
 								</h2>
 								<p><?php the_excerpt(); ?></p>
-								<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
-									<a href="<?php the_permalink(); ?>">więcej >></a>
+								<button class="ks-button ks-button--primary absolute bottom-0 right-[40px]">
+									<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
 								</button>
 							</div>
 						<?php	
