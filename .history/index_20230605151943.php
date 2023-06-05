@@ -5,7 +5,7 @@ index.php
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="title-bg bg-[#f6f6f6] h-[200px] mb-[40px] text-center flex justify-center items-center">
-				<h2 class="[&>div]:left-[50%] [&>div]:translate-y-[-50%] mb-0">Witaj na moim <br/><span class="ks-util-color-primary">Blogu</span></h2>
+				<h2 class="[&>div]:left-[50%] [&>div]:translate-y-[-50%]">Witaj na moim <br/><span class="ks-util-color-primary">Blogu</span></h2>
 			</div>
 			<div class="ks-container">
 			<button class="ks-button ks-button--primary mb-[50px]">
