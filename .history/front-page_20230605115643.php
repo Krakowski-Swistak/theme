@@ -376,10 +376,7 @@ get_header();
 				<div class="ks-container ks-fadeInBottom">
 					<h2><span class="ks-util-color-primary">Blog</span></h2>
 					<?php 
-						while (have_posts()) : the_post();
-							the_title();
-							the_excerpt();
-						endwhile;
+						if (have_posts)
 					?>
 				</div>
 			</section>
