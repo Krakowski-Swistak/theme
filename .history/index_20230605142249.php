@@ -26,7 +26,7 @@ get_header();
 
 					the_posts_navigation();
 				else :
-					the_excerpt();
+					the_content();
 				endif;
 				?>
 			</div>
