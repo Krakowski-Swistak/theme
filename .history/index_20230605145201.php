@@ -9,7 +9,7 @@ index.php
 				<a href="https://swistak.webo.design/"><- Powrót do Strony Głównej</a>
 			</button>
 
-				<div class="post-wrapper mb-[30px]">
+				<div class="post-wrapper">
 					<?php
 						while ( have_posts() ) :
 							the_post();
