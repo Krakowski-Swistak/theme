@@ -59,7 +59,7 @@ endif;
 		<div class="ks-container">
 			<div class="site-info ks-copyright">
 				<div class="ks-copyright__rights">
-					<span>&copy; <?php the_date('Y'); ?> All Rights Reserved</span>
+					<span>&copy; 2020 All Rights Reserved</span>
 				</div>
 				<div class="ks-copyright__social-media">
 				<?php
@@ -68,7 +68,7 @@ endif;
 							$image = get_sub_field('social_image');
 							$link = get_sub_field('social_url');
 							?>	
-							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="last-of-type:ml-[7px]">
+							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
 								<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
 							</a>
 							<?php
