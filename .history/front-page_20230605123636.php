@@ -372,7 +372,7 @@ get_header();
 				</div>
 			</section>
 
-			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px]">
+			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] mb-[135px]">
 				<div class="ks-container ks-fadeInBottom">
 					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
 					<div class="blog-wrapper mb-[60px] flex justify-between">
