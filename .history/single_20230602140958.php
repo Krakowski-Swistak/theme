@@ -1,4 +1,3 @@
-single.php
 <?php
 /**
  * The template for displaying all single posts
@@ -13,9 +12,6 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		<button class="ks-button ks-button--primary">
-			<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
-		</button>
 
 		<?php
 		while ( have_posts() ) :
