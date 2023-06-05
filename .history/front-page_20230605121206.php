@@ -375,27 +375,25 @@ get_header();
 			<section id="ks-blog" class="ks-blogr ks-fade mb-[135px] mb-[135px]">
 				<div class="ks-container ks-fadeInBottom">
 					<h2><span class="ks-util-color-primary">Blog</span></h2>
-					<div class="blog-wrapper mb-[60px]">
-						<?php 
-							$homepagePost = new WP_Query(array(
-								'posts_per_page' => 2
-							));
+					<?php 
+						$homepagePost = new WP_Query(array(
+							'posts_per_page' => 2
+						));
 
-							// blog posts
-							while ($homepagePost -> have_posts()){
-								$homepagePost -> the_post(); 
-						?>
-							<div class="post-wrapper mb-[30px]">
-								<h2><?php the_title(); ?></php></h2>	
-								<p><?php the_excerpt(); ?></p>
-								<button>
-									<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
-								</button>
-							</div>
-						<?php };
-							wp_reset_postdata(); 
-						?>
-					</div>
+						// blog posts
+						while ($homepagePost -> have_posts()){
+							$homepagePost -> the_post(); 
+							
+							the_title();
+							the_excerpt();
+					?>
+						<button>
+              <a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
+						</button>
+
+					<?php };
+						wp_reset_postdata(); 
+					?>
 				</div>
 			</section>
 

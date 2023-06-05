@@ -384,14 +384,16 @@ get_header();
 							// blog posts
 							while ($homepagePost -> have_posts()){
 								$homepagePost -> the_post(); 
-						?>
-							<div class="post-wrapper mb-[30px]">
-								<h2><?php the_title(); ?></php></h2>	
-								<p><?php the_excerpt(); ?></p>
-								<button>
-									<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
-								</button>
-							</div>
+						?>	
+							<h2><?php the_title(); ?></php></h2>	
+							<p><?php the_excerpt(); ?></p>
+								
+								
+						
+							<button>
+								<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
+							</button>
+
 						<?php };
 							wp_reset_postdata(); 
 						?>

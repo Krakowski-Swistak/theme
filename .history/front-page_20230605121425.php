@@ -385,7 +385,7 @@ get_header();
 							while ($homepagePost -> have_posts()){
 								$homepagePost -> the_post(); 
 						?>
-							<div class="post-wrapper mb-[30px]">
+							<div class="post-wrapper">
 								<h2><?php the_title(); ?></php></h2>	
 								<p><?php the_excerpt(); ?></p>
 								<button>
