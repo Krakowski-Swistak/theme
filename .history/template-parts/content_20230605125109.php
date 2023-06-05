@@ -49,4 +49,3 @@ content.php
 		<?php swistak_theme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
-</div>
