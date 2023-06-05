@@ -14,9 +14,7 @@ get_header();
 	
 	<div id="primary" class="content-area ks-container">
 		<main id="main" class="site-main">
-		<button class="ks-button ks-button--primary">
-			<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
-		</button>
+
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">

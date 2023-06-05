@@ -1,4 +1,3 @@
-content.php
 <?php
 /**
  * Template part for displaying posts
@@ -9,8 +8,11 @@ content.php
  */
 
 ?>
-
-<div class="ks-container">
+content.php
+	<div class="ks-container">
+		<button class="ks-button ks-button--primary">
+			<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
+		</button>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php

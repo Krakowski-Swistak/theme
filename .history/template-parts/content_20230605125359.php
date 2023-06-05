@@ -1,4 +1,3 @@
-content.php
 <?php
 /**
  * Template part for displaying posts
@@ -9,7 +8,7 @@ content.php
  */
 
 ?>
-
+content.php
 <div class="ks-container">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
