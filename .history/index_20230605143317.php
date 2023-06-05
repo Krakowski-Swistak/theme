@@ -1,6 +1,8 @@
 index.php
-<?php 
-	get_header(); 
+<?php
+
+get_header();
+
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -25,8 +27,10 @@ index.php
 						<p> <?php the_excerpt(); ?> </p>
 					<?php	
 					endwhile;
+
 					the_posts_navigation();
 				else :
+					
 				endif;
 				?>
 			</div>

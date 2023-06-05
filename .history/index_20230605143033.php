@@ -1,6 +1,8 @@
 index.php
-<?php 
-	get_header(); 
+<?php
+
+get_header();
+
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -20,13 +22,12 @@ index.php
 					while ( have_posts() ) :
 						the_post();
 						// get_template_part( 'template-parts/content', get_post_type() );
-						?>
-						<h2><?php the_title(); ?></h2>
-						<p> <?php the_excerpt(); ?> </p>
-					<?php	
+						the_excerpt();
 					endwhile;
+
 					the_posts_navigation();
 				else :
+					
 				endif;
 				?>
 			</div>
