@@ -24,8 +24,8 @@ index.php
 						<h2><?php the_title(); ?></h2>
 						<p> <?php the_excerpt(); ?> </p>
 						<button class="ks-button ks-button--primary">
-							<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
-						</button>
+					<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
+				</button>
 					<?php	
 					endwhile;
 					the_posts_navigation();
