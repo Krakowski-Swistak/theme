@@ -375,7 +375,7 @@ get_header();
 			<section id="ks-blog" class="ks-blogr ks-fade mb-[135px] mb-[135px]">
 				<div class="ks-container ks-fadeInBottom">
 					<h2><span class="ks-util-color-primary">Blog</span></h2>
-					<div class="blog-wrapper mb-[60px] flex justify-between">
+					<div class="blog-wrapper mb-[60px]">
 						<?php 
 							$homepagePost = new WP_Query(array(
 								'posts_per_page' => 2
