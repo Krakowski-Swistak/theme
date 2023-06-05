@@ -9,8 +9,8 @@
 
 get_header();
 ?>
-	archive.php
-	<div id="primary" class="content-area ks-container">
+
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
