@@ -5,7 +5,7 @@ index.php
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="ks-container">
-				<div class="title-bg bg-[#f6f6f6] h-[200px] text-center">
+				<div class="title-bg bg-[#f6f6f6] h-[200px]">
 					<h2>Witaj na moim <br/><span class="ks-util-color-primary">Blogu</span></h2>
 				</div>
 			<button class="ks-button ks-button--primary mb-[50px]">
