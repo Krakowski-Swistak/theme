@@ -1184,7 +1184,7 @@ h2 {
   .main-navigation
   .ks-menu-items-container
   .ks-contact-info__social-media
-  a {
+  a:first-child {
   margin-right: 5px;
 }
 .ks-header .main-navigation .menu {
