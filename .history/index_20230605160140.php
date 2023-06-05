@@ -6,7 +6,6 @@ index.php
 		<main id="main" class="site-main">
 			<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background'); ?>')] bg-no-repeat bg-right h-[250px] mb-[40px] text-center flex justify-center items-center">
 				<?php the_field('blog_page_title_text'); ?>
-				<?php the_field('blog_page_subtitle'); ?>
 				<?php echo 'test'; ?>
 			</div>
 			<div class="ks-container">
