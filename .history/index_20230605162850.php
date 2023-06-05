@@ -7,7 +7,7 @@ index.php
 			<div class="ks-container">
 			<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background',443); ?>')] bg-no-repeat bg-fill bg-[right_-5px] h-[300px] mb-[40px]">
 				<?php the_field('blog_page_title_text', 443); ?>
-				<p class="text-[22px] w-[420px] leading-[35px]">
+				<p class="text-[22px] w-[450px] leading-[35px]">
 					<?php echo get_field('blog_page_subtitle', 443); ?>
 				</p>
 			</div>
