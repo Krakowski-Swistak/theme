@@ -37,7 +37,7 @@
         },
 				theme: {
 					screens: {
-						'desktop': '1024px',
+						'desktop': '1280px',
 					},
 				}
       }
