@@ -4,7 +4,7 @@ index.php
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background',443); ?>')] bg-no-repeat bg-cover bg-right h-[300px] mb-[40px] text-center flex justify-center items-center">
+			<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background',443); ?>')] bg-no-repeat bg-cover bg-right h-[250px] mb-[40px] text-center flex justify-center items-center">
 				<?php the_field('blog_page_title_text', 443); ?>
 				<?php echo get_field('blog_page_subtitle', 443); ?>
 			</div>
