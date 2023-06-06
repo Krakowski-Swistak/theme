@@ -241,5 +241,6 @@ function custom_menu_item_links($items, $args) {
 		};
 	};
 	return $items;
-};
+}
+
 add_filter('wp_nav_menu_objects', 'custom_menu_item_links', 10, 2);
