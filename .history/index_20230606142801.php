@@ -49,8 +49,9 @@ index.php
 											$categories = get_the_category();
 											foreach ($categories as $category) {
 											?>
-											<li class="inline mr-[5px]"><?php echo $category->name; ?></li>
-										<?php }; ?>
+											<li><?php echo $category->name; ?></li>
+											}
+										?>
 									</ul>
 									<p class="mb-[45px]"><?php echo get_the_excerpt(); ?></p>
 									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">

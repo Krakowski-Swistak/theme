@@ -43,15 +43,14 @@ index.php
 										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo the_title(); ?></a>
 									</h3>
 									<p class="text-[14px] text-neutral-500 mb-[0px]">Auto: <?php the_author(); ?></p>
-									<span class="text-[14px] text-neutral-500">Kategoria: </span>
-									<ul class="text-[14px] text-neutral-500 mb-[20px]">
-										<?php 
-											$categories = get_the_category();
-											foreach ($categories as $category) {
-											?>
-											<li class="inline mr-[5px]"><?php echo $category->name; ?></li>
-										<?php }; ?>
-									</ul>
+									<span class="text-[14px] text-neutral-500 mb-[20px]">Kategoria: </span>
+									<?php 
+										$categories = get_the_category();
+										foreach ($categories as $category) {
+
+											echo $category->name;
+										}
+									?>
 									<p class="mb-[45px]"><?php echo get_the_excerpt(); ?></p>
 									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
 										<a href="<?php the_permalink(); ?>">więcej >></a>
