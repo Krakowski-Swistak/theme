@@ -394,7 +394,7 @@ get_header();
 								<?php the_title('<h3 class="text-[22px] font-semibold">', '</h3>'); ?></php>
 								<!-- <h3 class="text-[22px] font-semibold"><?php the_title(); ?></php></h2>	 -->
 								<!-- <p class="text-[#252525]"><?php echo the_excerpt(); ?></p> -->
-								<?php echo get_the_excerpt('<p class="text-[#252525]">', '</p>'); ?>
+								<?php echo get_excerpt('<p class="text-[#252525]">', '</p>'); ?>
 								<button class="ks-button ks-button--primary">
 									<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
 								</button>
