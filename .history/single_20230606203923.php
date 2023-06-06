@@ -78,7 +78,7 @@ get_header();
 								$categorySearch = $category->term_id;
 							};
 							$args = array(
-								'category__in' => array(unset($categorySearch[0])),
+								'category__in' => array(unset($categorySearch)),
 								'posts_per_page' => -1
 							);
 							$query = new WP_Query($args);
