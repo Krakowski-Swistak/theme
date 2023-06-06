@@ -34,7 +34,7 @@ index.php
 									</div>
 								</div>
 								<div class="post-text-wrapper basis-2/3 pt-[30px]">
-									<h3 class="text-[35px] font-semibold">
+									<h3 class="text-[]">
 										<a href="<?php the_permalink(); ?> " class="text-black"><?php the_title(); ?></a>
 									</h3>
 									<p><?php the_excerpt(); ?></p>
