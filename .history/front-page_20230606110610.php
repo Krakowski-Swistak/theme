@@ -384,7 +384,7 @@ get_header();
 							// blog posts
 							while ($homepagePost -> have_posts()){
 								$homepagePost -> the_post(); 
-								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
+								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'portrait');
 						?>
 							<div class="post-wrapper mb-[30px]">
 								<div class="post-img w-[100%] h-[395px]">

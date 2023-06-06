@@ -46,7 +46,7 @@ if ( ! function_exists( 'swistak_theme_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'post', 500, 395, true );
+		add_image_size( 'post', 380, 400, true );
 		add_image_size( 'portrait', 325, 488, true );
 		add_image_size( 'help1', 260, 356, true );
 		add_image_size( 'help2', 260, 316, true );
