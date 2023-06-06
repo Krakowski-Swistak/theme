@@ -48,15 +48,15 @@ index.php
 										// print_r(get_categories());
 										$cat = get_categories();
 										echo $cat['name'];
-										echo '-----';
+										echo '-----'
 										
-										// $categories = get_categories( array(
-										// 	'orderby' => 'name',
-										// ) );
-										// foreach($categories as $category)
-										// {
-										// 	echo $category['name'];
-										// };      
+										$categories = get_categories( array(
+											'orderby' => 'name',
+										) );
+										foreach($categories as $category)
+										{
+											echo $category['name'];
+										};      
 										
 									?>
 									<p class="mb-[45px]"><?php echo get_the_excerpt(); ?></p>

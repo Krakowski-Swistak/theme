@@ -50,13 +50,13 @@ index.php
 										echo $cat['name'];
 										echo '-----';
 										
-										// $categories = get_categories( array(
-										// 	'orderby' => 'name',
-										// ) );
-										// foreach($categories as $category)
-										// {
-										// 	echo $category['name'];
-										// };      
+										$categories = get_categories( array(
+											'orderby' => 'name',
+										) );
+										foreach($categories as $category)
+										{
+											echo $category['name'];
+										};      
 										
 									?>
 									<p class="mb-[45px]"><?php echo get_the_excerpt(); ?></p>
