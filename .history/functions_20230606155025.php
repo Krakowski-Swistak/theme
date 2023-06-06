@@ -235,14 +235,7 @@ function custom_menu_item_links($items, $args) {
 							$item->url = '#ks-blog';
 					};
 			};
-	}else{
-		foreach ($items as $item) {
-			// Modify the menu item based on your condition
-			if ($item->title == 'Blog') {
-					$item->url = 'https://swistak.webo.design/blog/';
-			};
 	};
-	}
 
 	return $items;
 }

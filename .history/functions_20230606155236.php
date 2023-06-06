@@ -239,7 +239,7 @@ function custom_menu_item_links($items, $args) {
 		foreach ($items as $item) {
 			// Modify the menu item based on your condition
 			if ($item->title == 'Blog') {
-					$item->url = 'https://swistak.webo.design/blog/';
+					$item->url = '#test';
 			};
 	};
 	}
