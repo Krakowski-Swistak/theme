@@ -47,7 +47,7 @@ index.php
 									<?php 
 										$categories = get_categories();
 										foreach ($categories as $category) {
-											echo $category['name'];
+											echo $category->['name'];
 										}
 										echo '-----';
 										// test
