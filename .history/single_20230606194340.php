@@ -32,7 +32,6 @@ get_header();
 
 					$categoriesNames = get_the_category();
 					foreach ($categoriesNames as $category){
-						echo $category->name;
 						echo $category->term_id;
 					};
 
