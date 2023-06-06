@@ -1,7 +1,7 @@
 index.php
 <?php 
 	// get_header(); 
-	wp_head();
+	wp_head()''
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
