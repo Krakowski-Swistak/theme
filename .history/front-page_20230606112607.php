@@ -387,9 +387,8 @@ get_header();
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper mb-[30px]">
-								<div class="post-img w-[100%] h-[395px] overflow-hidden
-									bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat
-								">
+								<div class="post-img w-[100%] h-[395px] overflow-hidden">
+									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 								</div>
 								<h3 class="text-[22px] font-semibold"><?php the_title(); ?></php></h2>	
 								<p><?php the_excerpt(); ?></p>
