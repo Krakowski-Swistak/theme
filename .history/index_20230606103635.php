@@ -27,7 +27,8 @@ index.php
 									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 								</div>
 								<div class="post-date mx-auto pt-[30px] text-center leading-[60px]">
-									<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="52" class="inline">
+									<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar.png" alt="calendar-icon" width="52" class="inline">
+									
 									<div class="date-text-wrapper inline">
 										<p class="day mb-0 text-[40px] text-[#00b3a7] font-semibold"><?php the_time('d'); ?></p>  
 										<p class="month text-[20px] text-[#00b3a7] font-light leading-[16px]"><?php the_time('M'); ?></p>
