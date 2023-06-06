@@ -43,7 +43,7 @@ index.php
 										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo the_title(); ?></a>
 									</h3>
 									<p class="text-[14px] text-neutral-500 mb-[10px]">Auto: <?php the_author(); ?></p>
-									<p class="text-[14px] text-neutral-500 mb-[20px]">Kategoria: <?php the_category(); ?></p>
+									<p class="text-[14px] text-neutral-500 mb-[20px]">Kategoria: <?php the_author(); ?></p>
 									<p class="mb-[45px]"><?php echo get_the_excerpt(); ?></p>
 									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
 										<a href="<?php the_permalink(); ?>">więcej >></a>
