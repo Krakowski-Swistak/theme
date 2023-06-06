@@ -384,12 +384,11 @@ get_header();
 							// blog posts
 							while ($homepagePost -> have_posts()){
 								$homepagePost -> the_post(); 
-								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id());
+								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 						?>
 							<div class="post-wrapper mb-[30px]">
 								<div class="post-img w-[100%] h-[395px]">
 									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
-									<img src="<?php echo $postImageUrl; ?>" alt="post-img" class="object-cover">
 								</div>
 								<h3 class="text-[22px] font-semibold"><?php the_title(); ?></php></h2>	
 								<p><?php the_excerpt(); ?></p>
