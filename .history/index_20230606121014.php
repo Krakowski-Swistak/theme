@@ -20,7 +20,7 @@ index.php
 							$counter++;
 							$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 					?>
-							<div class="relativev post-wrapper mb-[30px] h-[350px] flex gap-[30px] justify-between overflow-hidden rounded-tl-[60px] rounded-br-[60px]
+							<div class="relativev post-wrapper mb-[30px] h-[300px] flex gap-[30px] justify-between overflow-hidden rounded-tl-[60px] rounded-br-[60px]
 							<?php if (($counter % 2)) echo 'bg-[#f6f6f6]'; else echo 'bg-white'; ?> 
 							">
 								<div class="post-img basis-1/3">

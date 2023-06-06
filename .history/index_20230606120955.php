@@ -20,7 +20,7 @@ index.php
 							$counter++;
 							$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 					?>
-							<div class="relativev post-wrapper mb-[30px] h-[350px] flex gap-[30px] justify-between overflow-hidden rounded-tl-[60px] rounded-br-[60px]
+							<div class="relativev post-wrapper mb-[30px] h-[300px] flex gap-[30px] justify-between overflow-hidden rounded-tl-[60px] rounded-br-[60px]
 							<?php if (($counter % 2)) echo 'bg-[#f6f6f6]'; else echo 'bg-white'; ?> 
 							">
 								<div class="post-img basis-1/3">
@@ -37,7 +37,7 @@ index.php
 									<h3 class="text-[35px] font-semibold mb-[10px]">
 										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo the_title(); ?></a>
 									</h3>
-									<p class="text-[14px] text-neutral-500 mb-[20px]">Auto: <?php the_author(); ?></p>
+									<p class="text-[14px] text-neutral-500">the author<?php the_author(); ?></p>
 									<p class="w-[90%] get_the_excerpt"><?php echo get_the_excerpt(); ?></p>
 									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
 										<a href="<?php the_permalink(); ?>">więcej >></a>
