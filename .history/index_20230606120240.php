@@ -35,9 +35,9 @@ index.php
 								</div>
 								<div class="post-text-wrapper basis-2/3 pt-[50px]">
 									<h3 class="text-[35px] font-semibold">
-										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo get_the_title(); ?></a>
+										<a href="<?php the_permalink(); ?> " class="text-black"><?php the_title(); ?></a>
 									</h3>
-									<p class="text-[14px] text-neutral-400"><?php the_author(); ?></p>
+									<p></p>
 									<p><?php the_excerpt(); ?></p>
 									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
 										<a href="<?php the_permalink(); ?>">więcej >></a>
