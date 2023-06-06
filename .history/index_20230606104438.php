@@ -30,7 +30,7 @@ index.php
 									<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="52" class="inline">
 									<div class="date-text-wrapper">
 										<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
-										<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
+										<p class="month text-[20px] font-light leading-[16px]"><?php the_time('M'); ?></p>
 									</div>
 								</div>
 								<div class="post-text-wrapper basis-2/3 pt-[50px]">
