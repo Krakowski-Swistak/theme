@@ -228,11 +228,11 @@ add_filter( 'tiny_mce_before_init', 'allow_nbsp_in_tinymce' );
 // tk test
 function custom_menu_item_links($items, $args) {
 	// Define your condition to modify the menu items
-	if (is_page('443')) {
+	if (is_user_logged_in()) {
 			foreach ($items as $item) {
 					// Modify the menu item based on your condition
-					if ($item->title == 'Blogt') {
-							$item->url = 'https://swistak.webo.design/blog/';
+					if ($item->title == 'My Account') {
+							$item->url = 'https://example.com/my-account/';
 					}
 			}
 	}
