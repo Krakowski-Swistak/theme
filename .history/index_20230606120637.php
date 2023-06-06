@@ -35,10 +35,10 @@ index.php
 								</div>
 								<div class="post-text-wrapper basis-2/3 pt-[50px]">
 									<h3 class="text-[35px] font-semibold">
-										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo the_title(); ?></a>
+										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo get_the_title(); ?></a>
 									</h3>
 									<p class="text-[14px] text-neutral-500">the author<?php the_author(); ?></p>
-									<p class="w-[80%] get_the_excerpt"><?php echo get_the_excerpt(); ?></p>
+									<p><?php the_excerpt(); ?></p>
 									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
 										<a href="<?php the_permalink(); ?>">więcej >></a>
 									</button>
