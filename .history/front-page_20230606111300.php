@@ -388,7 +388,7 @@ get_header();
 						?>
 							<div class="post-wrapper mb-[30px]">
 								<div class="post-img w-[100%] h-[395px]">
-									<img src="<?php $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
+									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 								</div>
 								<h3 class="text-[22px] font-semibold"><?php the_title(); ?></php></h2>	
 								<p><?php the_excerpt(); ?></p>
