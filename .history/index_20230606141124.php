@@ -45,7 +45,7 @@ index.php
 									<p class="text-[14px] text-neutral-500 mb-[10px]">Auto: <?php the_author(); ?></p>
 									<span class="text-[14px] text-neutral-500 mb-[20px]">Kategoria: </span>
 									<?php 
-										$categories = get_categories();
+										// print_r(get_categories());
 										foreach ($categories as $category) {
 											echo $category->name;
 										}
