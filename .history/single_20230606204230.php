@@ -83,22 +83,15 @@ get_header();
 							);
 							$query = new WP_Query($args);
 							
-							$counter = 0;
 							if ($query->have_posts()) {
 								while ($query->have_posts()) {
-									if($counter > 0){
-
-									
 									$query->the_post();
 									?>
 									<li class="w-[300px]">
 										<p><?php the_title(); ?></p>
 										<p><?php the_excerpt(); ?></p>
 									</li>
-									<?php
-										$counter++;
-									};
-								};
+								<?php };
 							} else {
 								echo 'No posts found.';
 							};

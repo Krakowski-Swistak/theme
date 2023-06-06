@@ -95,9 +95,8 @@ get_header();
 										<p><?php the_title(); ?></p>
 										<p><?php the_excerpt(); ?></p>
 									</li>
-									<?php
-										$counter++;
-									};
+									$counter++;
+									<?php };
 								};
 							} else {
 								echo 'No posts found.';

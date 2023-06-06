@@ -96,7 +96,7 @@ get_header();
 										<p><?php the_excerpt(); ?></p>
 									</li>
 									<?php
-										$counter++;
+									$counter++;
 									};
 								};
 							} else {
