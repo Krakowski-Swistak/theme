@@ -27,10 +27,10 @@ index.php
 									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 								</div>
 								<div class="post-date mx-auto text-center leading-[60px]">
-									<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar.png" alt="calendar-icon" width="52" class="inline">
-									<div class="date-text-wrapper inline">
-										<p class="day text-[40px] font-semibold"><?php the_time('d'); ?></p>  
-										<p class="month text-[20px] font-light leading-[16px]"><?php the_time('M'); ?></p>
+									<img src="<?php echo get_theme_file_uri('/assets/img/icon-calendar.png'); ?>" alt="calendar-icon" width="52" class="desktop:inline hidden">
+									<div class="date-text-wrapper desktop:inline hidden">
+										<p class="day text-darkblue text-[40px] font-semibold"><?php the_time('d'); ?></p>  
+										<p class="month text-[20px] text-[#666C89] font-light leading-[16px]"><?php the_time('M'); ?></p>
 									</div>
 								</div>
 								<div class="post-text-wrapper basis-2/3 pt-[30px]">
