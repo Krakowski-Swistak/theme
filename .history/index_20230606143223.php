@@ -44,7 +44,7 @@ index.php
 									</h3>
 									<p class="text-[14px] text-neutral-500 mb-[0px]">Auto: <?php the_author(); ?></p>
 									<span class="text-[14px] text-neutral-500">Kategoria: </span>
-									<ul class="inline text-[14px] text-neutral-500 mb-[20px]">
+									<ul class="text-[14px] text-neutral-500 mb-[20px]">
 										<?php 
 											$categories = get_the_category();
 											foreach ($categories as $category) {
