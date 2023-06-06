@@ -67,12 +67,12 @@ get_header();
 					<hr>
 					<p>Powiązane posty z kategorii:
 						<?php 
-							$categoriesArray = get_the_categories();
-							foreach($categoriesArray as $category) echo $cat->name;
+							$categoriesNames = get_the_categories();
+							foreach($categoriesNames as $category) echo $cat->name;
 						?>
 					</p>
 						<?php
-							foreach($categoriesArray as $category){
+							foreach($categoriesNames as $category){
 								$categorySearch = $category->term_id;
 							};
 							$args = array(
