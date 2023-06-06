@@ -52,7 +52,7 @@ index.php
 												$category_link = get_category_link($category->term_id);
 												?>
 												<li class="inline">
-													<a href="<?php echo esc_url($category_link); ?>" class="text-white bg-[#00b3a7] p-[4px_8px] rounded-full"><?php echo $category->name; ?></a>
+													<a href="<?php echo esc_url($category_link); ?>" class="text-white bg-[#00b3a7] p-[5px_10px] rounded-full"><?php echo $category->name; ?></a>
 												</li>
 											<?php }; ?>
 										</ul>
