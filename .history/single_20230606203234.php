@@ -71,7 +71,6 @@ get_header();
 							foreach($categoriesArray as $category) echo $category->name;
 						?>
 					</p>
-					<ul class="flex gap-[30px] flex-wrap">
 						<?php
 							foreach($categoriesArray as $category){
 								$categorySearch = $category->term_id;
@@ -86,17 +85,14 @@ get_header();
 								while ($query->have_posts()) {
 									$query->the_post();
 									?>
-									<li class="w-[300px]">
-										<p><?php the_title(); ?></p>
-										<p><?php the_excerpt(); ?></p>
-									</li>
+									<p><?php the_title(); ?></p>
+									<p><?php the_excerpt(); ?></p>
 								<?php };
 							} else {
 								echo 'No posts found.';
 							};
 							wp_reset_postdata();
 						?>
-					</ul>
 				</div>
 			</div>
 		</main>
