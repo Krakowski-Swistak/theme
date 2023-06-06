@@ -50,9 +50,6 @@ index.php
 											echo $category->'name';
 										}
 										echo '-----';
-										foreach ($categories as $category) {
-											echo $category->name;
-										}
 										// test
 										// $categories = get_categories( array(
 										// 	'orderby' => 'name',
