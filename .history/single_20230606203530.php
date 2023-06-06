@@ -86,8 +86,7 @@ get_header();
 							if ($query->have_posts()) {
 								while ($query->have_posts()) {
 									$query->the_post();
-									if($categorySearch[0])
-									continue;
+									if()
 									?>
 									<li class="w-[300px]">
 										<p><?php the_title(); ?></p>
