@@ -392,7 +392,7 @@ get_header();
 								">
 								</div>
 								<?php the_title('<h3 class="text-[22px] font-semibold mb-[10px]">', '</h3>'); ?></php>
-								<p class="text-[14px] text-neutral-400"><?php the_time('d M Y') ?></p>
+								<p class=""></p>
 								<p class="text-[#252525]"><?php echo get_the_excerpt(); ?></p>
 								<button class="ks-button ks-button--primary">
 									<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
