@@ -35,7 +35,7 @@ get_header();
 
 					echo 'cat: '
 					print_r(get_the_category());
-					print_r(get_categories());
+					print_r(the_category());
 
 				?>
 				<h1><?php the_title(); ?></h1>

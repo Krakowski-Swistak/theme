@@ -34,8 +34,8 @@ get_header();
 					the_ID();
 
 					echo 'cat: '
-					print_r(get_the_category());
-					print_r(get_categories());
+					print_r(get_the_category();
+					print_r(get_the_category();
 
 				?>
 				<h1><?php the_title(); ?></h1>

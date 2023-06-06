@@ -30,13 +30,7 @@ get_header();
 				while ( have_posts() ) :
 					the_post();
 
-					echo 'id: '
-					the_ID();
-
-					echo 'cat: '
-					print_r(get_the_category());
-					print_r(get_categories());
-
+					// get_template_part( 'template-parts/content', get_post_type() );
 				?>
 				<h1><?php the_title(); ?></h1>
 					
@@ -74,7 +68,7 @@ get_header();
 				<div class="related-posts-wrapper">
 					<p>Powiązane posty</p>
 					<hr>
-
+					
 				</div>
 			</div>
 		</main>
