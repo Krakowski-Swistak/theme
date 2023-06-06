@@ -335,7 +335,7 @@ get_header();
 							<?php echo the_field('career_offer_content'); ?>
 						</div>
 					</div>
-					<div class="wrapper pb-[10px] desktop:overflow-x-auto overflow-x-scroll">
+					<div class="wrapper desktop:overflow-x-auto overflow-x-scroll">
 						<div class="ks-career-offer__options flex justify-between gap-[20px]">
 							<?php
 								$options2 = get_field('career_offer_button');
