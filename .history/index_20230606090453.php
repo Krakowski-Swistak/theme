@@ -20,8 +20,7 @@ index.php
 					?>
 							<div class="relativev post-wrapper mb-[30px] h-[300px] flex gap-[30px] justify-between">
 								<div class="post-img basis-1/3">
-								<?php the_post_thumbnail(); ?>
-									<img src="<?php wp_get_attachment_image_src(get_post_thumbnail_id()); ?>" alt="post-img" class="object-cover">
+									<img src="<?php the_post_thumbnail(); ?>" alt="post-img" class="object-cover">
 								</div>
 								<div class="post-text-wrapper basis-2/3">
 									<h2>
