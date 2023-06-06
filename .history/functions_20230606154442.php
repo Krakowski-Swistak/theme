@@ -233,9 +233,9 @@ function custom_menu_item_links($items, $args) {
 					// Modify the menu item based on your condition
 					if ($item->title == 'Blog') {
 							$item->url = 'https://swistak.webo.design/blog/';
-					};
-			};
-	};
+					}
+			}
+	}
 
 	return $items;
 }
