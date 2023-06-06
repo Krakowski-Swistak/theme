@@ -106,7 +106,7 @@ get_header();
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
-											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
+											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
 												<span class="text-[14px] text-neutral-500"> Kategoria: </span>
 												<ul class="inline text-[14px] text-neutral-500">
