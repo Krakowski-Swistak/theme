@@ -40,8 +40,8 @@ get_header();
 				</article>
 				<?php
 					the_post_navigation($args = array(
-						'prev_text' => 'Poprzedni wpis',
-						'class' => 'prev-post-nav'
+						'prev_text' = 'Poprzedni wpis',
+						'class' = 'prev-post-nav'
 					));
 
 					// If comments are open or we have at least one comment, load up the comment template.
