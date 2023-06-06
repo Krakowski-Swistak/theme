@@ -29,8 +29,8 @@ index.php
 								<div class="post-date mx-auto pt-[30px] text-center leading-[60px]">
 									<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="52" class="inline">
 									<div class="date-text-wrapper inline">
-										<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
-										<p class="month text-[20px] font-light leading-[16px]"><?php the_time('M'); ?></p>
+										<p class="day mb-0 text-[40px] text-[#00b3a7] font-semibold"><?php the_time('d'); ?></p>  
+										<p class="month text-[20px] text-[#00b3a7] font-light leading-[16px]"><?php the_time('M'); ?></p>
 									</div>
 								</div>
 								<div class="post-text-wrapper basis-2/3 pt-[50px]">
