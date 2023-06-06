@@ -16,11 +16,11 @@ index.php
 					<?php
 						while ( have_posts() ) :
 							the_post();
-							$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
+							
 					?>
 							<div class="relativev post-wrapper mb-[30px] h-[300px] flex gap-[30px] justify-between">
 								<div class="post-img basis-1/3">
-									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
+									<img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id()[0],'portrait'); ?>" alt="post-img" class="object-cover">
 								</div>
 								<div class="post-text-wrapper basis-2/3">
 									<h2>
