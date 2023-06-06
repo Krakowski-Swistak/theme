@@ -386,8 +386,8 @@ get_header();
 								$homepagePost -> the_post(); 
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 						?>
-							<div class="post-wrapper mb-[30px] flex justify-center items-center">
-								<div class="post-img h-[395px]">
+							<div class="post-wrapper mb-[30px]">
+								<div class="post-img h-[]">
 									<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 								</div>
 								<h3 class="text-[22px] font-semibold"><?php the_title(); ?></php></h2>	
