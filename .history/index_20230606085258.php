@@ -18,19 +18,17 @@ index.php
 							the_post();
 							// get_template_part( 'template-parts/content', get_post_type() );
 					?>
-							<div class="post-wrapper mb-[30px] relative flex gap-[30px] justify-between">
+							<div class="post-wrapper mb-[30px] relative">
 								<div class="post-img w-[300px]">
 									<img src="<?php the_post_thumbnail(); ?>" alt="post-img">
 								</div>
-								<div class="post-text-wrapper">
-									<h2>
-										<a href="<?php the_permalink(); ?> " class="text-black"><?php the_title(); ?></a>
-									</h2>
-									<p><?php the_excerpt(); ?></p>
-									<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
-										<a href="<?php the_permalink(); ?>">więcej >></a>
-									</button>
-								</div>
+								<h2>
+									<a href="<?php the_permalink(); ?> " class="text-black"><?php the_title(); ?></a>
+								</h2>
+								<p><?php the_excerpt(); ?></p>
+								<button class="ks-button ks-button--primary absolute bottom-0 left-[70%]">
+									<a href="<?php the_permalink(); ?>">więcej >></a>
+								</button>
 							</div>
 						<?php	
 						endwhile;
