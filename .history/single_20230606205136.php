@@ -86,7 +86,7 @@ get_header();
 							$counter = 0;
 							if ($query->have_posts()) {
 								while ($query->have_posts()) {
-									if($counter > 1){
+									if($counter > 0){
 										$query->the_post();
 										$counter++;
 										?>
