@@ -65,28 +65,12 @@ get_header();
 
 				<div class="related-posts-wrapper">
 					<hr>
-					<!-- <p>Powiązane posty z kategorii:
+					<p>Powiązane posty z kategorii:
 						<?php 
 							$categoriesArray = get_the_category();
-							foreach($categoriesArray as $category) echo $category->name;
+							foreach($categoriesArray as $category) echo $category->name . ', ';
 						?>
-					</p> -->
-
-					<div class="category-list mb-[15px] inline-block">
-						<span class="text-[14px] text-neutral-500"> Powiązane posty z kategorii: </span>
-						<ul class="inline text-[14px] text-neutral-500">
-							<?php 
-								$categories = get_the_category();
-								foreach ($categories as $category) {
-								$category_link = get_category_link($category->term_id);
-								?>
-								<li class="inline">
-									<a href="<?php echo esc_url($category_link); ?>" class="text-white bg-[#00b3a7] p-[4px_8px] rounded-full"><?php echo $category->name; ?></a>
-								</li>
-							<?php }; ?>
-						</ul>
-					</div>
-
+					</p>
 					<ul class="flex gap-[30px] flex-wrap">
 						<?php
 							foreach($categoriesArray as $category){
@@ -96,8 +80,9 @@ get_header();
 								'category__in' => array($categorySearch),
 								'posts_per_page' => -1
 							);
-
 							$query = new WP_Query($args);
+							
+							
 							if ($query->have_posts()) {
 								$counter2 = 0;
 								while ($query->have_posts()) {
