@@ -42,9 +42,9 @@ index.php
 									<h3 class="text-[35px] font-semibold mb-[10px]">
 										<a href="<?php the_permalink(); ?> " class="text-black"><?php echo the_title(); ?></a>
 									</h3>
-									<p class="text-[14px] text-neutral-500 mb-[0px] inline">Autor: <?php the_author(); ?>,</p>
-									<div class="category-list mb-[15px] inline-block">
-										<span class="text-[14px] text-neutral-500"> Kategoria: </span>
+									<p class="text-[14px] text-neutral-500 mb-[0px]">Auto: <?php the_author(); ?></p>
+									<div class="category-list mb-[15px]">
+										<span class="text-[14px] text-neutral-500">Kategoria: </span>
 										<ul class="inline text-[14px] text-neutral-500">
 											<?php 
 												$categories = get_the_category();
