@@ -29,6 +29,14 @@ get_header();
 				<?php
 				while ( have_posts() ) :
 					the_post();
+
+					$categoriesNames = get_the_category();
+					foreach ($categoriesNames as $category){
+						echo $category->name;
+						echo $category->term_id;
+						
+					};
+
 				?>
 				<h1><?php the_title(); ?></h1>
 					
@@ -64,34 +72,13 @@ get_header();
 				</button>
 
 				<div class="related-posts-wrapper">
-					<hr>
 					<p>Powiązane posty z kategorii:
-						<?php foreach($categoriesNames as $category) echo $cat->name . ', '; ?>
+						<?php foreach($categoriesNames as $cat) echo $cat->name . ', '; ?>
 					</p>
-						<?php
-							$categorySearch = 
-							foreach($categoriesNames as $category){
-								$categorySearch = $category->term_id
-								$args = array(
-									'category__in' => array($categorySearch),
-									'posts_per_page' => -1
-								);
-							};
-							$query = new WP_Query($args);
-							
-							if ($query->have_posts()) {
-								while ($query->have_posts()) {
-									$query->the_post();
-									?>
-									<p><?php the_title(); ?></p>
-									<p><?php the_excerpt(); ?></p>
-								
-								<?php };
-							} else {
-								echo 'No posts found.';
-							};
-							wp_reset_postdata();
-						?>
+					<hr>
+					<?php
+
+					?>
 				</div>
 			</div>
 		</main>

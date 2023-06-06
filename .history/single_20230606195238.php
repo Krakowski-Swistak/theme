@@ -72,26 +72,12 @@ get_header();
 							$categorySearch = 
 							foreach($categoriesNames as $category){
 								$categorySearch = $category->term_id
-								$args = array(
-									'category__in' => array($categorySearch),
-									'posts_per_page' => -1
-								);
-							};
-							$query = new WP_Query($args);
-							
-							if ($query->have_posts()) {
-								while ($query->have_posts()) {
-									$query->the_post();
-									?>
-									<p><?php the_title(); ?></p>
-									<p><?php the_excerpt(); ?></p>
-								
-								<?php };
-							} else {
-								echo 'No posts found.';
-							};
-							wp_reset_postdata();
+										
+						}
 						?>
+					<?php
+
+					?>
 				</div>
 			</div>
 		</main>

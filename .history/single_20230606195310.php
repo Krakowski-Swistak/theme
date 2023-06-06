@@ -73,25 +73,34 @@ get_header();
 							foreach($categoriesNames as $category){
 								$categorySearch = $category->term_id
 								$args = array(
-									'category__in' => array($categorySearch),
-									'posts_per_page' => -1
-								);
-							};
-							$query = new WP_Query($args);
-							
-							if ($query->have_posts()) {
-								while ($query->have_posts()) {
-									$query->the_post();
-									?>
-									<p><?php the_title(); ?></p>
-									<p><?php the_excerpt(); ?></p>
-								
-								<?php };
-							} else {
-								echo 'No posts found.';
-							};
-							wp_reset_postdata();
+									'category__in' => array($category_id),
+									'posts_per_page' => -1 // Retrieve all posts in the category
+									);
+									$query = new WP_Query($args);
+									
+									// Check if there are posts in the category
+									if ($query->have_posts()) {
+											while ($query->have_posts()) {
+													$query->the_post();
+													?>
+													<!-- Display the post content -->
+													<h2><?php the_title(); ?></h2>
+													<div><?php the_content(); ?></div>
+													<?php
+											}
+									} else {
+											// No posts found in the category
+											echo 'No posts found.';
+									}
+									
+									// Restore original post data
+									wp_reset_postdata();
+									?>		
+						}
 						?>
+					<?php
+
+					?>
 				</div>
 			</div>
 		</main>
