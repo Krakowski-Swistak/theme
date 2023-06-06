@@ -34,7 +34,6 @@ get_header();
 					foreach ($categoriesNames as $category){
 						echo $category->name;
 						echo $category->term_id;
-						
 					};
 
 				?>
@@ -72,12 +71,10 @@ get_header();
 				</button>
 
 				<div class="related-posts-wrapper">
-					<p>Powiązane posty z kategorii:
-						<?php echo foreach($categoriesNames as $cat){echo $cat->name;} ?>
-					</p>
+					<p>Powiązane posty</p>
 					<hr>
 					<?php
-
+						
 					?>
 				</div>
 			</div>

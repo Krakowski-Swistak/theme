@@ -73,7 +73,7 @@ get_header();
 
 				<div class="related-posts-wrapper">
 					<p>Powiązane posty z kategorii:
-						<?php echo foreach($categoriesNames as $cat){echo $cat->name;} ?>
+						<?php echo foreach($categoriesNames as $cat){echo $cat->name;}
 					</p>
 					<hr>
 					<?php
