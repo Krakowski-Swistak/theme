@@ -387,12 +387,12 @@ get_header();
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper mb-[30px]">
-								<div class="post-img w-[100%] h-[395px] mb-[35px] overflow-hidden drop-shadow-lg
+								<div class="post-img w-[100%] h-[395px] mb-[40px] overflow-hidden
 									bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat
 								">
 								</div>
 								<?php the_title('<h3 class="text-[22px] font-semibold mb-[10px]">', '</h3>'); ?></php>
-								<p class="text-[#252525]"><?php echo get_the_excerpt(); ?></p>
+								<p class="text-[#252525] get_the"><?php echo get_the_excerpt(); ?></p>
 								<button class="ks-button ks-button--primary">
 									<a href="<?php the_permalink(); ?>">Czytaj więcej >></a>
 								</button>
