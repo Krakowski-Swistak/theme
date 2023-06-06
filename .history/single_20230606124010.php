@@ -41,7 +41,6 @@ get_header();
 				<?php
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis'
-						'next_text' => 'Następny wpis'
 					));
 
 					// If comments are open or we have at least one comment, load up the comment template.
