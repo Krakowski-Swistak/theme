@@ -30,10 +30,17 @@ get_header();
 				while ( have_posts() ) :
 					the_post();
 
+					echo 'id: ';
+					the_ID();
+
+					echo 'cat: ';
+					print_r(get_the_category());
+					print_r(get_categories());
+
 					$categoriesNames = get_the_category();
 					foreach ($categoriesNames as $category){
-						echo $category->name;
-					};
+						
+					}
 
 				?>
 				<h1><?php the_title(); ?></h1>
