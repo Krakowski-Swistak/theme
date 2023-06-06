@@ -91,8 +91,8 @@ get_header();
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
-											<p class="mb-0"><?php the_title(); ?></p>
-											<div class="category-list mb-[5px] inline-block">
+											<p><?php the_title(); ?></p>
+											<div class="category-list mb-[15px] inline-block">
 												<span class="text-[14px] text-neutral-500"> Kategoria: </span>
 												<ul class="inline text-[14px] text-neutral-500">
 													<?php 
@@ -101,7 +101,7 @@ get_header();
 														$category_link = get_category_link($category->term_id);
 														?>
 														<li class="inline">
-															<a href="<?php echo esc_url($category_link); ?>"><?php echo $category->name; ?></a>
+															<a href="<?php echo esc_url($category_link); ?>" class="text-white bg-[#00b3a7] p-[4px_8px] rounded-full"><?php echo $category->name; ?></a>
 														</li>
 													<?php }; ?>
 												</ul>

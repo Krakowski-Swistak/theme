@@ -91,7 +91,7 @@ get_header();
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
-											<p class="mb-0"><?php the_title(); ?></p>
+											<p><?php the_title(); ?></p>
 											<div class="category-list mb-[5px] inline-block">
 												<span class="text-[14px] text-neutral-500"> Kategoria: </span>
 												<ul class="inline text-[14px] text-neutral-500">
