@@ -40,7 +40,7 @@ get_header();
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
 						'next_text' => 'Następny wpis',
-						'class' => 'ks-button'
+						'class' => 'ks-button ', 'ks-button--primary', 'w-fit',
 						'class' => 'ks-button--primary',
 						'class' => 'w-fit'
 					));
@@ -50,6 +50,20 @@ get_header();
 					endif;
 				endwhile;
 				?>
+
+				<div class="page-nav flex gap-[30px]">
+					<?php
+						wp_link_pages(
+							array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'swistak-theme' ),
+								'after'  => '</div>',
+							)
+						);
+					?>
+					<button class="ks-button ks-button--primary mt-[20px] mb-[50px]">
+						<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
+					</button>
+				</div>
 
 				<div class="Share-wrapper flex items-center gap-[40px]">
 					<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
@@ -78,20 +92,6 @@ get_header();
 							</li>
 						<?php }; ?>
 					</ul>
-				</div>
-
-				<div class="page-nav flex gap-[30px]">
-					<?php
-						wp_link_pages(
-							array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'swistak-theme' ),
-								'after'  => '</div>',
-							)
-						);
-					?>
-					<button class="ks-button ks-button--primary mt-[20px] mb-[50px]">
-						<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
-					</button>
 				</div>
 
 				<div class="related-posts-wrapper">

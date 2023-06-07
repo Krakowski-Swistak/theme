@@ -40,7 +40,7 @@ get_header();
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
 						'next_text' => 'Następny wpis',
-						'class' => 'ks-button'
+						'class' => 'ks-button ', 'ks-button--primary', 'w-fit',
 						'class' => 'ks-button--primary',
 						'class' => 'w-fit'
 					));
