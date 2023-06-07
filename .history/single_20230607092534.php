@@ -71,26 +71,19 @@ get_header();
 						$socialMedia = array(
 								'facebook' => array(
 										'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode($url),
-										'icon' => '<img width="23" height="23" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/facebook-square-1.svg" alt="fb-icon">'
+										'icon' => 'Facebook'
 								),
 								'linkedin' => array(
 										'url' => 'https://www.linkedin.com/shareArticle?url=' . urlencode($url) . '&title=' . urlencode($title),
-										'icon' => '<img width="23" height="23" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
+										'icon' => 'LinkedIn'
 								),
-						); 
+						);
+						echo '<div class="share links">';
+						foreach ($socialMedia as $platform => $data) {
+								echo '<a href="' . $data['url'] . '" target="_blank">' . $data['icon'] . '</a>';
+						}
+						echo '</div>';
 					?>
-
-					<ul class="share-links">
-						<?php
-							foreach ($socialMedia as $platform => $data) {
-						?>
-							<li>
-								<a href="' . $data['url'] . '" target="_blank">
-									<?php echo $data['icon']; ?>
-								</a>
-							</li>
-						<?php }; ?>
-					</ul>
 				</div>
 
 				<div class="related-posts-wrapper">

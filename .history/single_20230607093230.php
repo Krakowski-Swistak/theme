@@ -77,20 +77,19 @@ get_header();
 										'url' => 'https://www.linkedin.com/shareArticle?url=' . urlencode($url) . '&title=' . urlencode($title),
 										'icon' => '<img width="23" height="23" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
 								),
-						); 
-					?>
+						); ?>
 
-					<ul class="share-links">
-						<?php
-							foreach ($socialMedia as $platform => $data) {
-						?>
-							<li>
-								<a href="' . $data['url'] . '" target="_blank">
-									<?php echo $data['icon']; ?>
-								</a>
-							</li>
-						<?php }; ?>
-					</ul>
+						<ul class="share-links">
+							<?php
+								foreach ($socialMedia as $platform => $data) {
+							?>
+								<li>
+									<a href="' . $data['url'] . '" target="_blank">
+										<?php echo $data['icon']; ?>
+									</a>'
+								</li>
+						</ul>';
+					?>
 				</div>
 
 				<div class="related-posts-wrapper">
