@@ -1394,7 +1394,7 @@ h2 {
   color: #fff;
   font-size: 15px;
   text-transform: uppercase;
-  padding: 16px 26px !important;
+  padding: 16px 26px;
 }
 .ks-button--primary a {
   padding: 16px 26px;
