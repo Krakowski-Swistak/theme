@@ -2468,5 +2468,5 @@ img {
 /* ------------------------------------------------------------------------------ */
 .nav-previous .prev,
 .nav-next .next {
-  padding: 16px 26px;
+  padding: 16px 26px !important;
 }
