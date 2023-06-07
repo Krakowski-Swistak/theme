@@ -11,7 +11,7 @@ index.php
 					<?php echo get_field('blog_page_subtitle', 443); ?>
 				</p>
 			</div>
-<!-- test -->
+<!-- TEST -->
 				<div class="posts-wrapper mb-[30px]">
 					<?php
 						$counter = 0;
