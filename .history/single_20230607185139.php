@@ -24,27 +24,26 @@ get_header();
 					<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
 				</button>
 
-				<?php
-					while ( have_posts() ) :
-						the_post(); ?>
-
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php
+						while ( have_posts() ) :
+							the_post();
+					?>
 							<h1><?php the_title(); ?></h1>
 								
 							<div class="post-wrapper">
 								<?php the_content(); ?>
 							</div>
-						</article>
-
+				</article>
 						<?php
-							the_post_navigation($args = array(
-								'prev_text' => 'Poprzedni wpis',
-								'next_text' => 'Następny wpis',
-							));
+						the_post_navigation($args = array(
+							'prev_text' => 'Poprzedni wpis',
+							'next_text' => 'Następny wpis',
+						));
 
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
 					endwhile;
 				?>
 				

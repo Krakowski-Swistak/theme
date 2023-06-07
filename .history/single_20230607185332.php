@@ -37,14 +37,14 @@ get_header();
 						</article>
 
 						<?php
-							the_post_navigation($args = array(
-								'prev_text' => 'Poprzedni wpis',
-								'next_text' => 'Następny wpis',
-							));
+						the_post_navigation($args = array(
+							'prev_text' => 'Poprzedni wpis',
+							'next_text' => 'Następny wpis',
+						));
 
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
 					endwhile;
 				?>
 				

@@ -27,7 +27,6 @@ get_header();
 				<?php
 					while ( have_posts() ) :
 						the_post(); ?>
-
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1><?php the_title(); ?></h1>
 								
@@ -35,17 +34,16 @@ get_header();
 								<?php the_content(); ?>
 							</div>
 						</article>
+					<?php
+					the_post_navigation($args = array(
+						'prev_text' => 'Poprzedni wpis',
+						'next_text' => 'Następny wpis',
+					));
 
-						<?php
-							the_post_navigation($args = array(
-								'prev_text' => 'Poprzedni wpis',
-								'next_text' => 'Następny wpis',
-							));
-
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-					endwhile;
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+				endwhile;
 				?>
 				
 
