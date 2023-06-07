@@ -40,7 +40,7 @@ get_header();
 							the_post_navigation($args = array(
 								'prev_text' => 'Poprzedni wpis',
 								'next_text' => 'Następny wpis',
-								'class' => 'test'
+								'class'
 							));
 
 							if ( comments_open() || get_comments_number() ) :
