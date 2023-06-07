@@ -27,48 +27,31 @@ get_header();
 				
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php
-					while ( have_posts() ) :
-						the_post();
-					?>
-						<h1><?php the_title(); ?></h1>
-							
-						<div class="post-wrapper">
-							<?php the_content(); ?>
-						</div>
-						</article>
-					<!-- <?php
-						previous_post_link();
-						next_post_link();
-						?> -->
-						<hr>
-						<?php
-						the_post_navigation($args = array(
-							'prev_text' => 'Poprzedni wpis',
-							'next_text' => 'Następny wpis',
-						));
-
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-					endwhile;
+				while ( have_posts() ) :
+					the_post();
 				?>
-
-
-
-				<button class="ks-button ks-button--primary mt-[20px] mb-[50px]">
-						<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
-					</button>
-
-				<div class="page-nav flex gap-[30px]">
-					<?php
-						wp_link_pages(
-							array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'swistak-theme' ),
-								'after'  => '</div>',
-							)
-						);
-					?>
+				<h1><?php the_title(); ?></h1>
+					
+				<div class="post-wrapper">
+					<?php the_content(); ?>
 				</div>
+				</article>
+				<!-- <?php
+					previous_post_link();
+					next_post_link();
+					?> -->
+					<hr>
+					<?php
+					the_post_navigation($args = array(
+						'prev_text' => 'Poprzedni wpis',
+						'next_text' => 'Następny wpis',
+					));
+
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+				endwhile;
+				?>
 
 				<div class="Share-wrapper flex items-center gap-[40px]">
 					<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
@@ -97,6 +80,20 @@ get_header();
 							</li>
 						<?php }; ?>
 					</ul>
+				</div>
+
+				<div class="page-nav flex gap-[30px]">
+					<?php
+						wp_link_pages(
+							array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'swistak-theme' ),
+								'after'  => '</div>',
+							)
+						);
+					?>
+					<button class="ks-button ks-button--primary mt-[20px] mb-[50px]">
+						<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
+					</button>
 				</div>
 
 				<div class="related-posts-wrapper">

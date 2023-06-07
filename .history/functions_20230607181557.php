@@ -260,13 +260,13 @@ add_filter('wp_nav_menu_objects', 'custom_menu_item_links', 10, 2);
 // }
 
 function posts_link_next_class($format){
-	$format = str_replace('href=', 'class="next ks-button ks-button--primary" href=', $format);
+	$format = str_replace('href=', 'class="text-[20px]" href=', $format);
 	return $format;
 }
 add_filter('next_post_link', 'posts_link_next_class');
 
 function posts_link_prev_class($format) {
-	$format = str_replace('href=', 'class="prev ks-button ks-button--primary" href=', $format);
+	$format = str_replace('href=', 'class="prev clean-gray" href=', $format);
 	return $format;
 }
 add_filter('previous_post_link', 'posts_link_prev_class');
