@@ -84,7 +84,7 @@ get_header();
 						<?php
 							foreach ($socialMedia as $platform => $data) {
 						?>
-							<li class="scale-[2]">
+							<li>
 								<a href="<?php echo $data['url']; ?>" target="_blank">
 									<?php echo $data['icon']; ?>
 								</a>
