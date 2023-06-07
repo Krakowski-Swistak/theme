@@ -245,7 +245,7 @@ function custom_menu_item_links($items, $args) {
 add_filter('wp_nav_menu_objects', 'custom_menu_item_links', 10, 2);
 
 function add_custom_classes_to_post_navigation($attr) {
-	$attr['class'] .= ' ks-button ks-button--primary w-fit';
+	$attr['class'] .= 'ks-button ks-button--primary w-fit';
 	return $attr;
 }
 add_filter('next_posts_link_attributes', 'add_custom_classes_to_post_navigation');
