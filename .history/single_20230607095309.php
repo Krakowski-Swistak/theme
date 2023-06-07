@@ -39,10 +39,9 @@ get_header();
 				<?php
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
-						'next_text' => 'Następny wpis',
-						'class' => 'test'
+						'next_text' => 'Następny wpis'
 					));
-
+					
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif;
@@ -58,7 +57,7 @@ get_header();
 					);
 				?>
 				<div class="Share-wrapper flex items-center gap-[40px]">
-					<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
+					<p class="mb-0 font-medium text-[22px]">Udostępnij:  </p>
 					<?php
 						$url = get_permalink();
 						$title = get_the_title();
@@ -85,7 +84,7 @@ get_header();
 						<?php }; ?>
 					</ul>
 				</div>
-				<button class="ks-button ks-button--primary mt-[20px] mb-[50px]">
+				<button class="ks-button ks-button--primary my-[50px]">
 					<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
 				</button>
 

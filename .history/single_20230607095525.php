@@ -39,7 +39,7 @@ get_header();
 				<?php
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
-						'next_text' => 'Następny wpis',
+						'next_text' => 'Następny wpis'
 						'class' => 'test'
 					));
 

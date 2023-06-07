@@ -39,8 +39,7 @@ get_header();
 				<?php
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
-						'next_text' => 'Następny wpis',
-						'class' => 'test'
+						'next_text' => 'Następny wpis'
 					));
 
 					if ( comments_open() || get_comments_number() ) :
@@ -58,7 +57,7 @@ get_header();
 					);
 				?>
 				<div class="Share-wrapper flex items-center gap-[40px]">
-					<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
+					<p class="mb-0 font-medium text-[22px]">Udostępnij:  </p>
 					<?php
 						$url = get_permalink();
 						$title = get_the_title();
