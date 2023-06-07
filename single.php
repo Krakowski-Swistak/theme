@@ -38,8 +38,7 @@ get_header();
 						<?php
 							the_post_navigation($args = array(
 								'prev_text' => 'Poprzedni wpis',
-								'next_text' => 'Następny wpis',
-								'class' => '[&>div>div>a]:p-[16px_26px]'
+								'next_text' => 'Następny wpis'
 							));
 
 							if ( comments_open() || get_comments_number() ) :
