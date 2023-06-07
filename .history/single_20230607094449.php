@@ -58,22 +58,28 @@ get_header();
 						)
 					);
 				?>
-				<div class="Share-wrapper flex gap-[40px] mb-[30px]">
-					<p class="mb-0 uppercase font-medium text-[22px]">Udostępnij:  </p>
+
+				<button class="ks-button ks-button--primary my-[50px]">
+					<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
+				</button>
+
+				<div class="Share-wrapper">
+					<p class="mb-0 inline">Udostępnij -> </p>
 					<?php
 						$url = get_permalink();
 						$title = get_the_title();
 						$socialMedia = array(
 							'facebook' => array(
 								'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode($url),
-								'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/facebook-square-1.svg" alt="fb-icon">'
+								'icon' => '<img width="23" height="23" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/facebook-square-1.svg" alt="fb-icon">'
 							),
 							'linkedin' => array(
 								'url' => 'https://www.linkedin.com/shareArticle?url=' . urlencode($url) . '&title=' . urlencode($title),
-								'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
+								'icon' => '<img width="23" height="23" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
 							),
 						); 
 					?>
+
 					<ul class="share-links flex gap-[10px]">
 						<?php
 							foreach ($socialMedia as $platform => $data) {
@@ -86,9 +92,6 @@ get_header();
 						<?php }; ?>
 					</ul>
 				</div>
-				<button class="ks-button ks-button--primary my-[50px]">
-					<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
-				</button>
 
 				<div class="related-posts-wrapper">
 					<hr>
