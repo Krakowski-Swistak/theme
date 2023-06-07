@@ -38,7 +38,6 @@ get_header();
 				</article>
 				<?php
 				previous_post_link();
-				next_post_link();
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
 						'next_text' => 'Następny wpis',
