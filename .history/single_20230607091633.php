@@ -78,7 +78,7 @@ get_header();
 										'icon' => 'LinkedIn'
 								),
 						);
-						echo '<div class="share links">';
+						echo '<div class="social-sharing-buttons">';
 						foreach ($socialMedia as $platform => $data) {
 								echo '<a href="' . $data['url'] . '" target="_blank">' . $data['icon'] . '</a>';
 						}

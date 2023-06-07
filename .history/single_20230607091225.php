@@ -65,25 +65,6 @@ get_header();
 
 				<div class="Share-wrapper">
 					<p>Udostępnij: </p>
-					<?php
-						$url = get_permalink();
-						$title = get_the_title();
-						$socialMedia = array(
-								'facebook' => array(
-										'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode($url),
-										'icon' => 'Facebook'
-								),
-								'linkedin' => array(
-										'url' => 'https://www.linkedin.com/shareArticle?url=' . urlencode($url) . '&title=' . urlencode($title),
-										'icon' => 'LinkedIn'
-								),
-						);
-						echo '<div class="share links">';
-						foreach ($socialMedia as $platform => $data) {
-								echo '<a href="' . $data['url'] . '" target="_blank">' . $data['icon'] . '</a>';
-						}
-						echo '</div>';
-					?>
 				</div>
 
 				<div class="related-posts-wrapper">
