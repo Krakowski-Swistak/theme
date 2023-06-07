@@ -2466,7 +2466,6 @@ img {
 
 /* tk tests */
 /* ------------------------------------------------------------------------------ */
-.nav-previous .prev,
-.nav-previous .next {
+.nav-previous.prev .nav-previous.next {
   padding: 16px 26px !important;
 }
