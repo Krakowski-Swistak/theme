@@ -40,7 +40,7 @@ get_header();
 					the_post_navigation($args = array(
 						'prev_text' => 'Poprzedni wpis',
 						'next_text' => 'Następny wpis',
-						'class' => 'ks-button ', 'ks-button--primary', 'w-fit'
+						'class' => 'ks-button ks-button--primary w-fit'
 					));
 
 					if ( comments_open() || get_comments_number() ) :
@@ -49,7 +49,7 @@ get_header();
 				endwhile;
 				?>
 
-				<div class="Share-wrapper flex items-center gap-[40px]">
+<div class="Share-wrapper flex items-center gap-[40px]">
 					<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
 					<?php
 						$url = get_permalink();
