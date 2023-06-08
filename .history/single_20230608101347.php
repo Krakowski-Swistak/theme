@@ -30,8 +30,8 @@ get_header();
 						the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<h1 class="mb-[50px]"><?php the_title(); ?></h1>
-							<div class="category-list mb-[35px] inline-block">
+							<h1><?php the_title(); ?></h1>
+							<div class="category-list mb-[15px] inline-block">
 								<ul class="inline text-[14px] text-neutral-500">
 									<?php 
 										$categoriesArray = get_the_category();
