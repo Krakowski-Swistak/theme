@@ -137,9 +137,8 @@ get_header();
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
-											<div class="related-post-img w-[150px] h-[150px] overflow-hidden">
+											<div class="related-post-img w-[150px] h-[150px]">
 												<img src="<?php echo $postImageUrl ?>" alt="post-img" class="object-cover">
-												<?php get_the_post_thumbnail(); ?>
 											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
