@@ -36,8 +36,8 @@ get_header();
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1 class="mb-[50px]"><?php the_title(); ?></h1>
 							<div class="post-author-wrapper flex gap-[20px]">
-								<!-- <div class="bg-[url('<?php echo $AvatarUrl; ?>')] bg-center bg-no-repeat bg-cover"></div> -->
-								<?php echo $Avatar; ?>
+								<div class="bg-[url('<?php echo $AvatarUrl; ?>')] bg-center bg-no-repeat bg-cover"></div>
+								<?php echo $AvatarUrl; ?>
 								<span class="mb-[30px]"><?php the_author(); ?></span>
 							</div>
 							<div class="category-list mb-[35px] inline-block">
