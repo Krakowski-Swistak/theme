@@ -91,15 +91,6 @@
           clickable: !0,
         },
         breakpoints: { 1024: { slidesPerView: 2 } },
-      }),
-      new Swiper("swiper-blog", {
-        slidesPerView: 1,
-        spaceBetween: 95,
-        pagination: {
-          el: ".ks-recommendations__swiper-pagination",
-          clickable: !0,
-        },
-        breakpoints: { 1024: { slidesPerView: 2 } },
       });
   },
 });
