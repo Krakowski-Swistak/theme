@@ -56,25 +56,33 @@ get_header();
 									<?php the_content(); ?>
 
 									<div class="swiper-blog max-h-[400px] max-w-[800px] overflow-hidden">
-										<ul class="swiper-wrapper">
-											<?php 				
-												if( have_rows('blog_post_gallery') ):
-												while ( have_rows('blog_post_gallery') ) : the_row();
-													$ImgUrl = get_sub_field('case_study_title');
-													?>	
-														<li class="swiper-slide">
-															<?php the_sub_field('gallery_image'); ?>
-														</li>
-													<?php
-												endwhile;
-												else :
-												endif; 
-											?>
+										<div class="swiper-wrapper">
+										<?php 				
+											if( have_rows('blog_post_gallery') ):
+											while ( have_rows('blog_post_gallery') ) : the_row();
+												$ImgUrl = get_sub_field('case_study_title');
+												$description = get_sub_field('case_study_description');
+												?>	
+													<li class="swiper-slide" data-case-slide>
+														<div class="ks-case-studies__slide">
+															<div class="ks-facility">
+																<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
+																<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
+															</div>
+															<div class="ks-case-studies__content-wrapper">
+																<div class="ks-case-studies__content" data-case-studies-content><?php echo $description; ?></div>
+															</div>
+														</div>
+													</li>
+												<?php
+											endwhile;
+											else :
+											endif; ?>
 
 											<!-- <div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 1</div>
 											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 2</div>
 											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 3</div> -->
-										</ul>
+										</div>
 										<div class="swiper-pagination"></div>
 
 										<div class="swiper-button-prev"></div>

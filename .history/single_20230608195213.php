@@ -63,7 +63,15 @@ get_header();
 													$ImgUrl = get_sub_field('case_study_title');
 													?>	
 														<li class="swiper-slide">
-															<?php the_sub_field('gallery_image'); ?>
+															<div class="ks-case-studies__slide">
+																<div class="ks-facility">
+																	<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
+																	<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
+																</div>
+																<div class="ks-case-studies__content-wrapper">
+																	<div class="ks-case-studies__content" data-case-studies-content><?php echo $description; ?></div>
+																</div>
+															</div>
 														</li>
 													<?php
 												endwhile;

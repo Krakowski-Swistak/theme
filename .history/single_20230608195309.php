@@ -63,7 +63,7 @@ get_header();
 													$ImgUrl = get_sub_field('case_study_title');
 													?>	
 														<li class="swiper-slide">
-															<?php the_sub_field('gallery_image'); ?>
+															<?php the_sub_field('')
 														</li>
 													<?php
 												endwhile;
