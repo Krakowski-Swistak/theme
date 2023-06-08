@@ -48,7 +48,7 @@ get_header();
 									<?php }; ?>
 								</ul>
 							</div>
-							<div class="post-author-wrapper rounded-full flex gap-[20px] items-center">
+							<div class="post-author-wrapper flex gap-[20px]">
 								<!-- <div class="bg-[url('<?php echo $AvatarUrl; ?>')] bg-center bg-no-repeat bg-cover"></div> -->
 								<?php echo $Avatar; ?>
 								<span class="mb-[30px]"><?php the_author(); ?></span>
