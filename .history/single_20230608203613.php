@@ -55,7 +55,7 @@ get_header();
 
 									<?php the_content(); ?>
 
-									<div class="swiper swiper-container">
+									<div class="swiper swiper-container swiper-blog max-h-[400px] max-w-[800px] overflow-hidden">
 										<ul class="swiper-wrapper">
 											<?php 				
 												if( have_rows('blog_post_gallery') ):
