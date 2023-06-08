@@ -60,7 +60,7 @@ get_header();
 											<?php 				
 												if( have_rows('blog_post_gallery') ):
 												while ( have_rows('blog_post_gallery') ) : the_row();
-													$ImgUrl = get_sub_field('gallery_image');
+													$ImgUrl = get_sub_field('case_study_title');
 													?>	
 														<li class="swiper-slide">
 															<?php echo $ImgUrl; ?>
