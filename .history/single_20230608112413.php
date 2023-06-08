@@ -115,7 +115,7 @@ get_header();
 				</div>
 
 				<div class="related-posts-wrapper">
-					<hr class="mb-[20px]">
+					<hr class="mb-[10px]">
 					<div class="category-list mb-[15px] inline-block">
 						<span class="text-[14px] text-neutral-500"> Powiązane posty z kategorii: </span>
 						<ul class="inline text-[14px] text-neutral-500">
@@ -152,8 +152,8 @@ get_header();
 										if($counter2 >= 0){
 										?>
 										<li class="w-[300px]">
-											<a href="<?php the_permalink(); ?>" class="related-post-img w-full h-[200px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-no-repeat bg-cover">
-											</a>
+											<div class="related-post-img w-full h-[200px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-no-repeat bg-cover">
+											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
 												<span class="text-[14px] text-neutral-500"> Kategoria: </span>
