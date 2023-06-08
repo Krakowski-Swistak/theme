@@ -92,7 +92,7 @@
         },
         breakpoints: { 1024: { slidesPerView: 2 } },
       }),
-      new Swiper(".swiper-blog", {
+      new Swiper("swiper-blog", {
         slidesPerView: 1,
         spaceBetween: 95,
         pagination: {
