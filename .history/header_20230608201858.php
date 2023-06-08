@@ -41,6 +41,7 @@
       }
   </script>
 
+	
 	<?php wp_head(); ?>
 	<script>
 		var acf = {};
