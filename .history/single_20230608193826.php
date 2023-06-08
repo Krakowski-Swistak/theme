@@ -55,7 +55,7 @@ get_header();
 
 									<?php the_content(); ?>
 
-									<div class="swiper-blog max-h-[400px] max-w-[100%]">
+									<div class="swiper-blog max-h-[400px] max-w-screen">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 1</div>
 											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 2</div>
