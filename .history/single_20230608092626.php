@@ -127,12 +127,12 @@ get_header();
 										$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'help1');
 										$thumbnail = get_the_post_thumbnail();
 										$thumbnailUrl2 = get_the_post_thumbnail_url();
-										// echo 'get:';
-										// echo $thumbnail;
-										// echo 'old:';
-										// echo $postImageUrl;
-										// echo 'get t url::';
-										// echo $postImageUrl2;
+										echo 'get:';
+										echo $thumbnail;
+										echo 'old:';
+										echo $postImageUrl;
+										echo 'get t url::';
+										echo $postImageUrl2;
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
