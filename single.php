@@ -206,8 +206,6 @@ get_header();
 		<!-- #main -->
 	</div><!-- #primary -->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
 <?php
 	get_sidebar();
 
