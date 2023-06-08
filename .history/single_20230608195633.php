@@ -64,6 +64,7 @@ get_header();
 													?>	
 														<li class="swiper-slide">
 															<img src="<?php echo $ImgUrl; ?>" alt="image">
+															
 														</li>
 													<?php
 												endwhile;
