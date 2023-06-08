@@ -30,7 +30,7 @@ get_header();
 						the_post(); 
 
 						$authorID = get_the_author_id(); 
-						$avatarImg = get_avatar($authorID);
+						$avatar = get_avatar($authorID);
 						$avatarUrl = get_avatar_url($authorID);
 					?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -51,7 +51,7 @@ get_header();
 							<div class="post-author-wrapper flex gap-[15px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
 								<img src="<?php echo $avatarUrl; ?>" alt="avatar-image">
 								<!-- <?php echo $avatarUrl; ?>
-								<?php echo $avatarImg; ?> -->
+								<?php echo $avatar; ?> -->
 								<span class="mb-0"><?php the_author(); ?></span>
 							</div>
 							<?php the_content(); ?>
