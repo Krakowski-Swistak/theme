@@ -25,27 +25,14 @@ get_header();
 				</button>
 
 				<?php
-					// post content
 					while ( have_posts() ) :
 						the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1><?php the_title(); ?></h1>
-							<div class="category-list mb-[15px] inline-block">
-								<span class="text-[14px] text-neutral-500"> Powiązane posty z kategorii: </span>
-								<ul class="inline text-[14px] text-neutral-500">
-									<?php 
-										$categoriesArray = get_the_category();
-										foreach ($categoriesArray as $category) {
-										$category_link = get_category_link($category->term_id);
-										?>
-										<li class="inline">
-											<a href="<?php echo esc_url($category_link); ?>" class="text-white bg-[#00b3a7] p-[4px_8px] rounded-full"><?php echo $category->name; ?></a>
-										</li>
-									<?php }; ?>
-								</ul>
+							<div class="post-wrapper">
+								<?php the_content(); ?>
 							</div>
-							<?php the_content(); ?>
 						</article>
 
 						<?php
