@@ -30,8 +30,8 @@ get_header();
 						the_post(); 
 
 						$authorID = get_the_author_meta('ID'); 
-						$avatar = get_avatar($author_id);
-						$avatarUrl = get_avatar_url($author_id);
+						$Avatar = get_avatar($author_id);
+						$AvatarUrl = get_avatar_url($author_id);
 					?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1 class="mb-[50px]"><?php the_title(); ?></h1>
@@ -49,11 +49,8 @@ get_header();
 								</ul>
 							</div>
 							<div class="post-author-wrapper flex gap-[15px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
-								<!-- <div class="bg-[url('<?php echo $avatarUrl; ?>')] bg-center bg-no-repeat bg-cover"></div> -->
-								
-								<?php echo 'author id: '; ?>
-								<?php echo $authorID; ?>
-								<?php echo $avatar; ?>
+								<!-- <div class="bg-[url('<?php echo $AvatarUrl; ?>')] bg-center bg-no-repeat bg-cover"></div> -->
+								<?php echo $Avatar; ?>
 								<span class="mb-0"><?php the_author(); ?></span>
 							</div>
 							<?php the_content(); ?>

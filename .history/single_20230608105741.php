@@ -51,7 +51,6 @@ get_header();
 							<div class="post-author-wrapper flex gap-[15px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
 								<!-- <div class="bg-[url('<?php echo $avatarUrl; ?>')] bg-center bg-no-repeat bg-cover"></div> -->
 								
-								<?php echo 'author id: '; ?>
 								<?php echo $authorID; ?>
 								<?php echo $avatar; ?>
 								<span class="mb-0"><?php the_author(); ?></span>
