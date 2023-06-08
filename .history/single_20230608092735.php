@@ -137,7 +137,7 @@ get_header();
 										?>
 										<li class="w-[300px]">
 											<div class="related-post-img w-full h-[150px] bg-center bg-no-repeat bg-cover bg-[url(')]">
-												<?php echo $thumbnail ?>'
+											<?php echo $thumbnail ?>'
 											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
