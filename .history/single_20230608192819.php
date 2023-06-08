@@ -57,9 +57,9 @@ get_header();
 
 									<div class="swiper-blog">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 1</div>
-											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 2</div>
-											<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 3</div>
+											<div class="swiper-slide bg-slate-200 max-w-[450px] max-h-[250px]">Slide 1</div>
+											<div class="swiper-slide bg-slate-200 max-w-[450px] max-h-[250px]">Slide 2</div>
+											<div class="swiper-slide bg-slate-200 max-w-[450px] max-h-[250px]">Slide 3</div>
 										</div>
 										<div class="swiper-pagination"></div>
 
