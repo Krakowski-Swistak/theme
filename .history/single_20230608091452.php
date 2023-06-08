@@ -124,7 +124,7 @@ get_header();
 								while ($query->have_posts()) {
 										$query->the_post();
 										$counter2++;
-										$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
+										$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id()
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
