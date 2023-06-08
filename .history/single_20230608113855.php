@@ -170,7 +170,7 @@ get_header();
 													<?php }; ?>
 												</ul>
 											</div>
-											<p class="mb-0"><?php the_excerpt(); ?></p>
+											<p><?php the_excerpt(); ?></p>
 										</li>
 									<?php
 									};
