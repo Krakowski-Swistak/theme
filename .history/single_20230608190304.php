@@ -57,9 +57,9 @@ get_header();
 
 									<div class="swiper">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide bg-slate-200 w-[450px] h-[250px]">Slide 1</div>
-											<div class="swiper-slide bg-slate-200 w-[450px] h-[250px]">Slide 2</div>
-											<div class="swiper-slide bg-slate-200 w-[450px] h-[250px]">Slide 3</div>
+											<div class="swiper-slide bg-slate-200 w-[450-px] h-[250px]">Slide 1</div>
+											<div class="swiper-slide bg-slate-200 w-[450-px] h-[250px]">Slide 2</div>
+											<div class="swiper-slide bg-slate-200 w-[450-px] h-[250px]">Slide 3</div>
 										</div>
 										<div class="swiper-pagination"></div>
 
