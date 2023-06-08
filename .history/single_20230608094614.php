@@ -138,6 +138,7 @@ get_header();
 										?>
 										<li class="w-[300px]">
 											<div class="related-post-img w-[150px] h-[150px]">
+												<?php  echo $postImageUrl['data']; ?>
 												<img src="<?php echo $postImageUrl['url']; ?>" alt="post-img" class="object-cover">
 											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
