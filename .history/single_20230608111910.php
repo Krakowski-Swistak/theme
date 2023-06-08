@@ -58,7 +58,7 @@ get_header();
 							<?php the_content(); ?>
 						</article>
 
-						<div class="share-wrapper mb-[40px] flex items-center gap-[40px]">
+						<div class="share-wrapper flex items-center gap-[40px]">
 							<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
 							<?php
 								$url = get_permalink();

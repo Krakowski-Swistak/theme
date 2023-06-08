@@ -48,17 +48,17 @@ get_header();
 									<?php }; ?>
 								</ul>
 							</div>
-							<div class="post-author-wrapper mb-[20px] flex gap-[10px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
+							<div class="post-author-wrapper flex gap-[10px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
 								<img src="<?php echo $avatarUrl; ?>" alt="avatar-image">
 								<!-- <?php echo $avatarUrl; ?>
 								<?php echo $avatarImg; ?> -->
 								<span class="mb-0">Autor: <?php the_author(); ?></span>
 							</div>
-
+							
 							<?php the_content(); ?>
 						</article>
 
-						<div class="share-wrapper mb-[40px] flex items-center gap-[40px]">
+						<div class="share-wrapper flex items-center gap-[40px]">
 							<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
 							<?php
 								$url = get_permalink();
