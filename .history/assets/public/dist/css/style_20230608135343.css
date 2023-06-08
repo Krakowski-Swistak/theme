@@ -2485,12 +2485,5 @@ img {
 }
 .sidebar-wrapper .widget-title {
   font-weight: 500;
-  font-size: 24px;
-}
-.sidebar-wrapper .widget-title {
-  font-weight: 500;
-  font-size: 24px;
-}
-.sidebar-wrapper .widget-title .ks-decoration__wave {
-  display: none;
+  font-size: ;
 }
