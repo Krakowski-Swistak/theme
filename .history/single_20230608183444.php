@@ -31,7 +31,10 @@ get_header();
 							// post content
 							while ( have_posts() ) :
 								the_post(); 
-								$avatarUrl = get_avatar_url(get_the_author_id(););
+
+								$authorID = get_the_author_id(); 
+								$avatarImg = get_avatar($authorID);
+								$avatarUrl = get_avatar_url($authorID);
 							?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 									<h1 class="mb-[50px]"><?php the_title(); ?></h1>
