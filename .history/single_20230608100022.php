@@ -124,8 +124,16 @@ get_header();
 								while ($query->have_posts()) {
 										$query->the_post();
 										$counter2++;
+										// $postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'help1');
+										// $thumbnail = get_the_post_thumbnail();
+										// $thumbnailUrl2 = get_the_post_thumbnail_url();
+										// echo 'get:';
+										// echo $thumbnail;
 										$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'post');
-										
+										// echo 'old:';
+										// echo $postImageUrl;
+										// echo 'get t url::';
+										// echo $postImageUrl2;
 										if($counter2 >= 0){
 										?>
 										<li class="w-[300px]">
