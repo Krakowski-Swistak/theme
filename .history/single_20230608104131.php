@@ -30,7 +30,7 @@ get_header();
 						the_post(); 
 
 						$authorID = get_the_author_meta('ID'); 
-						$AvatarUrl = get_avatar_url($author_id);
+						$AvatarUrl = get_avatar($author_id);
 					?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1 class="mb-[50px]"><?php the_title(); ?></h1>
