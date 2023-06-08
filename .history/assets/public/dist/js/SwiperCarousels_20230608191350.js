@@ -93,7 +93,7 @@
         breakpoints: { 1024: { slidesPerView: 2 } },
       }),
       new Swiper("[data-slider-blog-post-gallery]", {
-        direction: "horizontal",
+        direction: "vertical",
         loop: true,
         pagination: {
           el: ".swiper-pagination",

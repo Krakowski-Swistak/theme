@@ -65,7 +65,7 @@ get_header();
 															?>	
 																<li class="swiper-slide">
 																	<div class="ks-blog-post__slide">
-																		<?php the_sub_field('post_image'); ?>
+																		<?php the_sub_field()
 																	</div>
 																</li>
 															<?php

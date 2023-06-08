@@ -59,13 +59,20 @@ get_header();
 										<div class="swiper-container ks-swiper__blog-post-gallery" data-slider-blog-post-gallery>
 											<ul class="swiper-wrapper">
 												<?php
-													if( have_rows('blog_post_gallery') ):
-														while ( have_rows('blog_post_gallery') ) : the_row();
-															$blogPostImg = get_sub_field('blog_post_gallery');
+													if( have_rows('case_studies_cases') ):
+														while ( have_rows('case_studies_cases') ) : the_row();
+															$title = get_sub_field('case_study_title');
+															$description = get_sub_field('case_study_description');
 															?>	
-																<li class="swiper-slide">
-																	<div class="ks-blog-post__slide">
-																		<?php the_sub_field('post_image'); ?>
+																<li class="swiper-slide" data-case-slide>
+																	<div class="ks-case-studies__slide">
+																		<div class="ks-facility">
+																			<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
+																			<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
+																		</div>
+																		<div class="ks-case-studies__content-wrapper">
+																			<div class="ks-case-studies__content" data-case-studies-content><?php echo $description; ?></div>
+																		</div>
 																	</div>
 																</li>
 															<?php
