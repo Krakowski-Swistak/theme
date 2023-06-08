@@ -29,13 +29,15 @@ get_header();
 					while ( have_posts() ) :
 						the_post(); 
 
-						$authorID = get_the_author_meta('ID'); 
-						$AvatarUrl = get_avatar($author_id);
+						$author_id = get_the_author_meta('ID'); // Get the author's ID
+						$author_avatar = get_avatar($author_id); // Get the avatar HTML
 					?>
+
+						echo $author_avatar; // Display the avatar
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1 class="mb-[50px]"><?php the_title(); ?></h1>
 							<div class="post-author-wrapper flex gap-[20px]">
-								<img src="<?php echo $AvatarUrl; ?>" alt="">
+								<img src="<?php  ?>" alt="">
 								<span class="mb-[30px]"><?php the_author(); ?></span>
 							</div>
 							<div class="category-list mb-[35px] inline-block">

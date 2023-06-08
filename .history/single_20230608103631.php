@@ -32,6 +32,8 @@ get_header();
 						$authorID = get_the_author_meta('ID'); 
 						$AvatarUrl = get_avatar($author_id);
 					?>
+
+						echo $author_avatar; // Display the avatar
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1 class="mb-[50px]"><?php the_title(); ?></h1>
 							<div class="post-author-wrapper flex gap-[20px]">
