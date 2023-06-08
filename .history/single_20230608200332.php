@@ -63,7 +63,7 @@ get_header();
 													$ImgUrl = get_sub_field('gallery_image');
 													?>	
 														<li class="swiper-slide">
-															<img src="<?php echo $ImgUrl; ?>" alt="image" class="object-contain ">
+															<img src="<?php echo $ImgUrl; ?>" alt="image" class="object-contain h-fit object-center">
 														</li>
 													<?php
 												endwhile;
