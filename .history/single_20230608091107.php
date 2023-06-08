@@ -127,7 +127,7 @@ get_header();
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
-											<div class="related-post-img w-full h-[150px] bg-center bg-no-repeat bg-cover bg-[url('<?php wp_get_attachment_image_src(get_post_thumbnail_id())[0] ?>')]">
+											<div class="related-post-img bg-[url('<?php  ?>')]">
 											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
