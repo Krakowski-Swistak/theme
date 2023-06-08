@@ -91,20 +91,6 @@
           clickable: !0,
         },
         breakpoints: { 1024: { slidesPerView: 2 } },
-      }),
-      new Swiper(".swiper", {
-        direction: "vertical",
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
       });
   },
 });
