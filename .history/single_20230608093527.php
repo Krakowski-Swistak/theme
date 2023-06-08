@@ -138,7 +138,7 @@ get_header();
 										?>
 										<li class="w-[300px]">
 											<div class="related-post-img w-[150px] h-[150px]">
-												<img src="<?php echo $postImageUrl[1]; ?>" alt="post-img" class="object-cover">
+												<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
