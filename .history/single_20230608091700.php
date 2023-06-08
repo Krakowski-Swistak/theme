@@ -125,13 +125,11 @@ get_header();
 										$query->the_post();
 										$counter2++;
 										$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
-										$thumbnail = get_the_post_thumbnail();
-										echo $thumbnail;
-										echo $postImageUrl;
+										$thumbnail = get_
 										if($counter2 > 1){
 										?>
 										<li class="w-[300px]">
-											<div class="related-post-img w-full h-[150px] bg-center bg-no-repeat bg-cover bg-[url('<?php $postImageUrl[0]; ?>')]">
+											<div class="related-post-img w-full h-[150px] bg-center bg-no-repeat bg-cover bg-[url('<?php $postImageUrl[0] ?>')]">
 											</div>
 											<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
 											<div class="category-list mb-[5px] inline-block">
