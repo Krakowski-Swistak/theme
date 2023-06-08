@@ -130,7 +130,7 @@ get_header();
 										echo 'get:'
 										echo $thumbnail;
 										echo 'old:'
-										echo $postImageUrl;
+										echo $postImageUrl[0];
 										echo 'get t url::'
 										echo $postImageUrl2;
 										if($counter2 > 1){
