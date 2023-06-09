@@ -133,7 +133,7 @@ get_header();
 							<ul class="related-post-wrapper flex gap-[30px] flex-wrap">
 								<?php
 									foreach($categoriesArray as $category){
-										$categorySearch = $category->term_id;
+										$categorySearch = array($category->term_id);
 										print_r($categorySearch);
 									};
 									$args = array(
