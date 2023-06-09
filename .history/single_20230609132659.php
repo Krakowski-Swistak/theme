@@ -112,17 +112,8 @@ get_header();
 								);
 							?>
 						</div>
-						
-						<!-- related posts -->
 
-					</div>
-
-					<div class="sidebar-wrapper basis-[30%]">
-							<?php get_sidebar(); ?>
-					</div>
-				</div>
-
-				<div class="related-posts-container">
+						<div class="related-posts-container">
 							<hr class="mb-[20px]">
 							<div class="category-list mb-[15px] inline-block">
 								<span class="text-[14px] text-neutral-500"> Powiązane posty z kategorii: </span>
@@ -190,8 +181,12 @@ get_header();
 								?>
 							</ul>
 						</div>
+					</div>
 
-
+					<div class="sidebar-wrapper basis-[30%]">
+							<?php get_sidebar(); ?>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- #main -->
