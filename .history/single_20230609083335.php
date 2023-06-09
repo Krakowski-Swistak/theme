@@ -54,6 +54,34 @@ get_header();
 									</div>
 
 									<?php the_content(); ?>
+									
+									<div class="ks-swiper mb-[20px]">
+										<div class="swiper swiper-container swiper-blog max-h-[400px] max-w-[800px] overflow-hidden">
+											<ul class="swiper-wrapper">
+												<?php 				
+													if( have_rows('blog_post_gallery') ): 
+													while ( have_rows('blog_post_gallery') ) : the_row();
+														$ImgUrl = get_sub_field('gallery_image');
+														?>	
+															<li class="swiper-slide">
+																<img src="<?php echo $ImgUrl; ?>" alt="image" class="object-cover ">
+															</li>
+														<?php
+													endwhile;
+													else :
+													endif; 
+												?>
+
+												<!-- <div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 1</div>
+												<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 2</div>
+												<div class="swiper-slide bg-slate-200 max-h-[250px]">Slide 3</div> -->
+											</ul>
+											<div class="swiper-pagination"></div>
+
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+										</div>
+									</div>
 								</article>
 
 								<div class="share-wrapper mb-[40px] flex items-center gap-[20px]">
