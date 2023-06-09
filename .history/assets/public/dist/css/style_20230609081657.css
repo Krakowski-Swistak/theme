@@ -2495,8 +2495,13 @@ img {
 .sidebar-wrapper .widget-title .ks-decoration__wave {
   display: none;
 }
-#recent-posts-2 > ul > li {
+.sidebar-wrapper .widget .widget_recent_entries ul li {
   margin-bottom: 8px;
+}
+#recent-posts-2 > ul > li {
+  display: block;
+  color: black;
+  font-size: 14px;
 }
 #recent-posts-2 > ul > li > a {
   display: block;
