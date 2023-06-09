@@ -148,8 +148,6 @@ get_header();
 
 										while ($query->have_posts()) {
 											$query->the_post();
-											print_r($categorySearch);
-
 											$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'help1');
 
 											if(true){
