@@ -2526,7 +2526,7 @@ img {
 .widget_text strong {
   font-weight: 500;
 }
-.contact-wrapper .ks-contact-label--phone::before {
+.ks-contact-label--phone::before {
   content: url(images/fd33cc6a868cca0474fa0a5c0c340849.svg);
   width: 34px;
 }
