@@ -120,7 +120,7 @@ get_header();
 								<ul class="inline text-[14px] text-neutral-500">
 									<?php 
 										$categoriesArray = get_the_category();
-										echo 'get the cat';
+										echo 'get the cat'
 										print_r($categoriesArray);
 										foreach ($categoriesArray as $category) {
 										$category_link = get_category_link($category->term_id);
