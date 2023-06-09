@@ -28,7 +28,7 @@ endif;
 <aside id="secondary" class="widget-area">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	<div class="contact-wrapper">
-		<p class="text-[24px] font-medium mb-[5px]">Skontaktuj się!</p>
+		<p>Skontaktuj się!</p>
 		<div class="ks-contact-label ks-contact-label--phone">
 			<a href="<?php echo esc_url( $footer_phone_url ); ?>" target="<?php echo esc_attr( $footer_phone_target ); ?>"><?php echo esc_html( $footer_phone_title ); ?></a>
 		</div>
