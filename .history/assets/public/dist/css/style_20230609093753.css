@@ -2507,7 +2507,7 @@ img {
   color: #00b3a7;
   transition: color 0.2s ease-out;
 }
-.sidebar-wrapper > .widget > ul > li > span {
+.sidebar-wrapper > ul > li > span {
   display: block;
   color: #a3a3a3;
   font-size: 14px;
