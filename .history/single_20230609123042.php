@@ -137,7 +137,7 @@ get_header();
 										print_r($categorySearch);
 									};
 									$args = array(
-										'category__in' => array($categorySearch),
+										'category__in' => $categorySearch,
 										'posts_per_page' => -1
 									);
 
