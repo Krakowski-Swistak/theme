@@ -142,8 +142,10 @@ get_header();
 
 									$query = new WP_Query($args);
 									if ($query->have_posts()) {
+										$counter2 = 0;
 										while ($query->have_posts()) {
 												$query->the_post();
+												$counter2++;
 												$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'help1');
 
 												if(true){
