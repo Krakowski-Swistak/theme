@@ -137,7 +137,7 @@ get_header();
 										$categorySearch[] = $category->term_id;
 									};
 									$args = array(
-										'category__in' => array(6),
+										'category__in' => array(6, 7),
 										'posts_per_page' => -1
 									);
 
