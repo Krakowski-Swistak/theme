@@ -59,7 +59,7 @@ get_header();
 										<div class="swiper swiper-container swiper-blog max-h-[400px] max-w-[800px] overflow-hidden">
 											<ul class="swiper-wrapper">
 												<?php 				
-													if( have_rows('gallery_image') ):
+													if( have_rows('gallery_image) ):
 													while ( have_rows('blog_post_gallery') ) : the_row();
 														$ImgUrl = get_sub_field('gallery_image');
 														?>	
