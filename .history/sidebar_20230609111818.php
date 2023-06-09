@@ -30,10 +30,10 @@ endif;
 	<div class="contact-wrapper">
 		<p class="text-[24px] font-medium mb-[20px]">Skontaktuj się!</p>
 		<div class="ks-contact-label ks-contact-label--phone before:w-[34px]">
-			<a href="<?php echo esc_url( $footer_phone_url ); ?>" target="<?php echo esc_attr( $footer_phone_target ); ?>" class="text-[16px] font-normal"><?php echo esc_html( $footer_phone_title ); ?></a>
+			<a href="<?php echo esc_url( $footer_phone_url ); ?>" target="<?php echo esc_attr( $footer_phone_target ); ?>"><?php echo esc_html( $footer_phone_title ); ?></a>
 		</div>
 		<div class="ks-contact-label ks-contact-label--email before:w-[34px]">
-			<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?> class="text-[16px] font-normal""><?php echo esc_html( $footer_email_title ); ?></a>
+			<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
 		</div>
 	</div>
 </aside><!-- #secondary -->
