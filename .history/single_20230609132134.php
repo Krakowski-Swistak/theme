@@ -144,7 +144,7 @@ get_header();
 									echo 'after id loop: ';
 									print_r($categorySearch);
 									echo '---';
-									print_r($args);
+									print_r($$args);
 
 
 									$query = new WP_Query($args);
