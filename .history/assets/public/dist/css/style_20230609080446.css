@@ -2496,12 +2496,5 @@ img {
   display: none;
 }
 .sidebar-wrapper .widget .widget_recent_entries ul li {
-  margin-bottom: 8px;
-}
-.sidebar-wrapper .widget .widget_recent_entries ul li a {
   display: block;
-  color: black;
-}
-.sidebar-wrapper .widget .widget_recent_entries ul li span {
-  color: #ccc;
 }
