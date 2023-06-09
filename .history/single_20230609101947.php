@@ -152,7 +152,7 @@ get_header();
 												if($counter2 >= 0){
 												?>
 												<li class="w-[300px]">
-													<a href="<?php the_permalink(); ?>" class="related-post-img block w-full h-[200px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-no-repeat bg-cover">
+													<a href="<?php the_permalink(); ?>" class="related-post-img  block w-full h-[200px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-no-repeat bg-cover">
 														<img src="<?php echo $postImageUrl[0]; ?>" alt="post-image" class="object-cover h-[200px] mb-[6px]">
 													</a>
 													<a href="<?php the_permalink(); ?>" class="block mb-0 text-black font-medium"><?php the_title(); ?></a>
