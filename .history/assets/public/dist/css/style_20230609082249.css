@@ -2504,8 +2504,9 @@ img {
   line-height: 20px;
 }
 #recent-posts-2 > ul > li > a:hover {
-  color: #00b3a7;
-  transition: color 0.3s ease-out;
+  display: block;
+  color: black;
+  line-height: 20px;
 }
 #recent-posts-2 > ul > li > span {
   display: block;
