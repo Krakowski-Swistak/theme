@@ -2534,8 +2534,11 @@ img {
   content: url(images/265ed38ab8541a42cbf0a5cc601c6ffc.svg);
   width: 34px;
 }
-.contact-wrapper .ks-contact-label--phone a,
-.contact-wrapper .ks-contact-label--email a {
+.contact-wrapper .ks-contact-label--phone::before {
   font-size: 16px;
   font-weight: 400;
+}
+.contact-wrapper .ks-contact-label--email::before {
+  content: url(images/265ed38ab8541a42cbf0a5cc601c6ffc.svg);
+  width: 34px;
 }
