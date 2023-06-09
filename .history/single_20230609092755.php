@@ -52,7 +52,7 @@ get_header();
 									<div class="post-author-wrapper mb-[20px] flex gap-[10px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
 										<img src="<?php echo $avatarUrl; ?>" alt="avatar-image">
 										<span class="mb-0">Autor: <?php the_author(); ?></span>
-										<span class="mb-0">, <?php the_time('j D Y'); ?></span>
+										<span class="mb-0">, <?php the_time(''); ?></span>
 									</div>
 
 									<?php the_content(); ?>

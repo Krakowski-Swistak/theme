@@ -35,7 +35,7 @@ get_header();
 							?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 									<h1 class="mb-[50px]"><?php the_title(); ?></h1>
-
+									
 									<div class="category-list mb-[35px] inline-block">
 										<ul class="inline text-[14px] text-neutral-500">
 											<?php 
@@ -52,7 +52,6 @@ get_header();
 									<div class="post-author-wrapper mb-[20px] flex gap-[10px] items-center [&>img]:rounded-full [&>img]:w-[55px] [&>img]:h-[55px]">
 										<img src="<?php echo $avatarUrl; ?>" alt="avatar-image">
 										<span class="mb-0">Autor: <?php the_author(); ?></span>
-										<span class="mb-0">, <?php the_time('j D Y'); ?></span>
 									</div>
 
 									<?php the_content(); ?>
