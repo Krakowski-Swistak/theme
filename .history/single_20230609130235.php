@@ -142,7 +142,7 @@ get_header();
 										'posts_per_page' => -1
 									);
 
-									echo 'after id loop: ';
+									echo 'after id loop: '
 									print_r($categorySearch);
 
 
