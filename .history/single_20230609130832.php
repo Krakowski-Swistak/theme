@@ -134,7 +134,7 @@ get_header();
 								<?php
 									$categorySearch = array();
 									foreach($categoriesArray as $category){
-										array_push($categorySearch, $category->term_id);
+										array_push($categorySearch, $category->term_id)
 										// $categorySearch[] = $category->term_id;
 										// print($categorySearch);
 									};
