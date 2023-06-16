@@ -232,9 +232,9 @@ get_header();
 			</section>
 
 			<section id="ks-recommendations" class="ks-recommendations ks-fade">
-				<div class="ks-container ks-fadeInBottom relative flex flex-col justify-center ">
+				<div class="ks-container ks-fadeInBottom flex flex-col justify-center ">
 					<?php echo the_field('recommendations_heading'); ?>
-					<button class="ks-button ks-button--primary inverted w-fit absolute top-0 right-0">
+					<button class="ks-button ks-button--primary inverted w-fit desktop:self-end self-center">
 						<a class="" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?></a>
 					</button>
 					<div class="ks-swiper">
