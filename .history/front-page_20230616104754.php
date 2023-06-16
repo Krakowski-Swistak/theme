@@ -235,7 +235,7 @@ get_header();
 				<div class="ks-container ks-fadeInBottom relative flex flex-col justify-center ">
 					<?php echo the_field('recommendations_heading'); ?>
 					<button class="ks-button ks-button--primary inverted w-fit absolute desktop:top-[10px] bottom-[-130px] desktop:bottom-auto desktop:right-0">
-						<a class="" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?> <span>	&rarr;</span></a>
+						<a class="" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?> 	&rarr;</a>
 					</button>
 					<div class="ks-swiper">
 						<div class="swiper-container ks-recommendations__swiper-container" data-slider-recommendation >
