@@ -234,6 +234,9 @@ get_header();
 			<section id="ks-recommendations" class="ks-recommendations ks-fade">
 				<div class="ks-container ks-fadeInBottom flex flex-col justify-center ">
 					<?php echo the_field('recommendations_heading'); ?>
+					<button class="ks-button ks-button--primary inverted w-fit desktop:self-end self-center mt-[70px]">
+						<a class="" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?></a>
+					</button>
 					<div class="ks-swiper">
 						<div class="swiper-container ks-recommendations__swiper-container" data-slider-recommendation >
 							<ul class="swiper-wrapper">
@@ -277,9 +280,6 @@ get_header();
 						</div>
 						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
 					</div>
-					<button class="ks-button ks-button--primary w-fit desktop:self-end self-center mt-[70px]">
-						<a class="" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?></a>
-					</button>
 				</div>
 			</section>
 
