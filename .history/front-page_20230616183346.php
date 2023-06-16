@@ -230,7 +230,7 @@ get_header();
 					</div>
 				</div>
 			</section>
-<!-- test -->
+
 			<section id="ks-recommendations" class="ks-recommendations ks-fade">
 				<div class="ks-container ks-fadeInBottom relative flex flex-col justify-center ">
 					<?php echo the_field('recommendations_heading'); ?>
