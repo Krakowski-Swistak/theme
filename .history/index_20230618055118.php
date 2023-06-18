@@ -12,7 +12,7 @@
 				</div> -->
 
 				<div class="page-content-container flex justify-between gap-[80px]">
-					<div class="posts-wrapper mb-[30px] [&>div]:basis-[70%]">
+					<div class="posts-wrapper mb-[30px] basis-[70%]">
 							<?php
 								$counter = 0;
 								while ( have_posts() ) :
