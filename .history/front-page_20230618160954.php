@@ -395,7 +395,9 @@ get_header();
 								</a>
 								<p class="text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
 								<p class="text-[#252525] mb-[70px]"><?php echo get_the_excerpt(); ?></p>
-								<a href="<?php the_permalink(); ?>" class="absolute bottom-0 left-0 text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
+								<button class="absolute bottom-0 left-0">
+									<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej >></a>
+								</button>
 							</div>
 						<?php };
 							wp_reset_postdata(); 
