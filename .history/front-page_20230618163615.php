@@ -378,7 +378,7 @@ get_header();
 					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
 					<p class="mb-[40px] text-[20px] font-semibold "><?php the_field('blog_subtitle'); ?></p>
 					<button class="ks-button ks-button--primary inverted mt-[20px] mb-[50px] absolute top-[65px] right-0">
-							<a href="https://swistak.webo.design/blog/">Wszystkie posty <span class="text-[20px]"> &rarr;</span></a>
+							<a href="https://swistak.webo.design/blog/"><span class="text-[20px]"> &rarr;</span> Wszystkie posty</a>
 						</button>
 					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px]">
 						<?php 
