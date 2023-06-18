@@ -25,9 +25,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					<div class="recent-post-img max-w-[60px] max-h-[60px] overflow-hidden">	
 						<?php echo get_the_post_thumbnail($post_item['ID'], 'full'); ?>
 					</div>
-					<div class="recent-post-info leading-[20px]">
-						<p class="slider-caption-class mb-0"><?php echo $post_item['post_title'] ?></p>
-						<p class="post-date text-[#A3A3A3] text-[14px]"><?php echo get_the_date(); ?></p>
+					<div class="recent-post-info">
+						<p class="slider-caption-class mb-[]"><?php echo $post_item['post_title'] ?></p>
+						<p class="post-date"><?php echo get_the_date(); ?></p>
 					</div>
 				</a>
 			</li>

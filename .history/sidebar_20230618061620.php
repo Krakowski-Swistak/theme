@@ -27,7 +27,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					</div>
 					<div class="recent-post-info leading-[20px]">
 						<p class="slider-caption-class mb-0"><?php echo $post_item['post_title'] ?></p>
-						<p class="post-date text-[#A3A3A3] text-[14px]"><?php echo get_the_date(); ?></p>
+						<p class="post-date"><?php echo get_the_date(); ?></p>
 					</div>
 				</a>
 			</li>
