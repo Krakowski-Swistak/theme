@@ -22,7 +22,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		foreach( $recent_posts as $post_item ) : ?>
 			<li>
 				<a href="<?php echo get_permalink($post_item['ID']) ?>" class="flex gap-[15px]">
-					<p class="font-medium text-[24px] mb-[5px]">Ostatnie wpisy</p>
+					<p>Ostatnie wpisy</p>
 					<div class="recent-post-img max-w-[60px] max-h-[60px] overflow-hidden">	
 						<?php echo get_the_post_thumbnail($post_item['ID'], 'recommendation'); ?>
 					</div>
