@@ -37,7 +37,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</ul>
 	</div>
 
-	<hr class="border-[#ccc]">
+	<hr class="text-[]">
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

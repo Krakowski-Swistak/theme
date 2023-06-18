@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside id="secondary" class="widget-area">
 	<div class="recent-posts-wrapper">
-		<p class="font-medium text-[24px] mb-[25px]">Ostatnie wpisy</p>
+		<p class="font-medium text-[24px] mb-[5px]">Ostatnie wpisy</p>
 		<ul id="slider-id" class="slider-class">
 			<?php
 			$recent_posts = wp_get_recent_posts(array(
@@ -37,7 +37,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</ul>
 	</div>
 
-	<hr class="border-[#ccc]">
+	<hr>
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
