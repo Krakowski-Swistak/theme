@@ -22,9 +22,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		foreach( $recent_posts as $post_item ) : ?>
 			<li>
 				<a href="<?php echo get_permalink($post_item['ID']) ?>">
-					<div class="recent-post-img max-w-[50px]">	
-						<?php echo get_the_post_thumbnail($post_item['ID'], 'full'); ?>
-					</div>
+					<?php echo get_the_post_thumbnail($post_item['ID'], 'full'); ?>
 					<p class="slider-caption-class"><?php echo $post_item['post_title'] ?></p>
 					<p class="post-date"><?php echo get_the_date(); ?></p>
 				</a>
