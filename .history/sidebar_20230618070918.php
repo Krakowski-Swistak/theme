@@ -45,7 +45,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<?php
 		while ( have_posts() ) :
 			the_post(); 
+			$avatarUrl = get_avatar_url(get_the_author_id());
 		?>
+
 			<div class="share-wrapper mb-[40px] flex items-center gap-[20px]">
 				<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
 				<?php
@@ -74,5 +76,16 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					<?php }; ?>
 				</ul>
 			</div>
-		<?php endwhile; ?>
+
+			<?php
+				the_post_navigation($args = array(
+					'prev_text' => '<span class="text-[20px]"> &larr;</span> Poprzedni wpis',
+					'next_text' => 'Następny wpis <span class="text-[20px]"> &rarr;</span>'
+				));
+
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+		endwhile;
+	?>
 </aside><!-- #secondary -->

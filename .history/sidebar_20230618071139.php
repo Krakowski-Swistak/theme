@@ -74,5 +74,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					<?php }; ?>
 				</ul>
 			</div>
+
 		<?php endwhile; ?>
 </aside><!-- #secondary -->
