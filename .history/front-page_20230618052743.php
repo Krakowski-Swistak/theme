@@ -326,8 +326,7 @@ get_header();
 					</div>
 				</div>
 			</section>
-			
-			<!-- hidden -->
+
 			<section id="ks-career-offer" class="hidden ks-career-offer ks-fade mb-[135px]">
 				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-career-offer__info">
