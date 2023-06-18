@@ -376,7 +376,7 @@ get_header();
 			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px] bg-[#f6f6f6]">
 				<div class="ks-container ks-fadeInBottom">
 					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
-					<p class="mb-[40px] text-[20px] font-medium "><?php the_field('blog_subtitle'); ?></p>
+					<p class="mb-[40px] text-[20px] font-medium "><?php the_field(''); ?></p>
 					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px]">
 						<?php 
 							$homepagePost = new WP_Query(array(
