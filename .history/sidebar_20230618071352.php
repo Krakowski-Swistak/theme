@@ -40,39 +40,4 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<!-- <hr class="wp-block-separator has-alpha-channel-opacity "> -->
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-
-	<!-- recent posts -->
-	<?php
-		while ( have_posts() ) :
-			the_post(); 
-		?>
-			<div class="share-wrapper mb-[40px] flex items-center gap-[20px]">
-				<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
-				<?php
-					$url = get_permalink();
-					$title = get_the_title();
-					$socialMedia = array(
-						'facebook' => array(
-							'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . $url,
-							'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/facebook-square-1.svg" alt="fb-icon">'
-						),
-						'linkedin' => array(
-							'url' => 'https://www.linkedin.com/shareArticle?url=' . $url . '&title=' . $title,
-							'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
-						),
-					); 
-				?>
-				<ul class="share-links flex gap-[30px]">
-					<?php
-						foreach ($socialMedia as $platform => $data) {
-					?>
-						<li class="scale-[2]">
-							<a href="<?php echo $data['url']; ?>" target="_blank">
-								<?php echo $data['icon']; ?>
-							</a>
-						</li>
-					<?php }; ?>
-				</ul>
-			</div>
-	<?php endwhile; ?>
 </aside><!-- #secondary -->
