@@ -392,7 +392,7 @@ get_header();
 									bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat
 								">
 								</div>
-								<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] transition ease-out duration-200">
+								<a href="<?php the_permalink(); ?>" class="text-black hover:text-[]">
 									<?php the_title('<h3 class="text-[24px] font-semibold mb-[7px]">', '</h3>'); ?></php>
 								</a>
 								<p class="text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
