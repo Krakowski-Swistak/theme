@@ -392,7 +392,7 @@ get_header();
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper relative mb-[30px]">
-								<div class="post-img desktop:h-[300px] h-[180px] rounded-[10px] mb-[20px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat">
+								<div class="post-img desktop:h-[300px] h-[140px] rounded-[10px] mb-[20px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat">
 								</div>
 								<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] transition ease-out duration-200">
 									<?php the_title('<h3 class="desktop:text-[24px] text-[22px] font-semibold mb-0 desktop:leading-[30px] leading-[26px]">', '</h3>'); ?></php>
