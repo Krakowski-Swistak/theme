@@ -88,8 +88,8 @@ get_header();
 
 								<?php
 									the_post_navigation($args = array(
-										'prev_text' => '<span> &larr;</span> Poprzedni wpis',
-										'next_text' => 'Następny wpis <span> &rarr;</span>'
+										'prev_text' => '<< Poprzedni wpis',
+										'next_text' => 'Następny wpis >>'
 									));
 
 									if ( comments_open() || get_comments_number() ) :
@@ -99,7 +99,7 @@ get_header();
 						?>
 						
 						<button class="ks-button ks-button--primary inverted mt-[20px] mb-[50px]">
-								<a href="https://swistak.webo.design/blog/"><span> &larr;</span> Wszystkie posty</a>
+								<a href="https://swistak.webo.design/blog/"><span> &rarr;</span> Wszystkie posty</a>
 							</button>
 
 						<div class="page-nav-wrapper flex gap-[30px]">
