@@ -380,7 +380,7 @@ get_header();
 					<button class="ks-button ks-button--primary inverted mt-[20px] mb-[50px] absolute desktop:top-[65px] top-[-15px] right-0">
 							<a href="https://swistak.webo.design/blog/">Wszystkie posty <span class="text-[20px]"> &rarr;</span></a>
 						</button>
-					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] desktop:flex-nowrap flex-wrap">
+					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px]">
 						<?php 
 							$homepagePost = new WP_Query(array(
 								'posts_per_page' => 3
@@ -392,7 +392,7 @@ get_header();
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper relative mb-[30px] w-1/2">
-								<div class="post-img desktop:h-[300px] h-[140px] rounded-[10px] mb-[20px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat">
+								<div class="post-img desktop:h-[300px] h-[100px] rounded-[10px] mb-[20px] overflow-hidden bg-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat">
 								</div>
 								<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] transition ease-out duration-200">
 									<?php the_title('<h3 class="text-[24px] font-semibold mb-0 leading-[30px]">', '</h3>'); ?></php>

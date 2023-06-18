@@ -380,7 +380,7 @@ get_header();
 					<button class="ks-button ks-button--primary inverted mt-[20px] mb-[50px] absolute desktop:top-[65px] top-[-15px] right-0">
 							<a href="https://swistak.webo.design/blog/">Wszystkie posty <span class="text-[20px]"> &rarr;</span></a>
 						</button>
-					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] desktop:flex-nowrap flex-wrap">
+					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] deskt">
 						<?php 
 							$homepagePost = new WP_Query(array(
 								'posts_per_page' => 3
