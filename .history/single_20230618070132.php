@@ -23,7 +23,7 @@ get_header();
 				<div class="page-content-container flex justify-between gap-[80px]">
 					<div class="page-post-content-container basis-[70%]">
 						<button class="ks-button mb-[50px]">
-							<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><- Powrót do Bloga</a>
+							<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-300"><- Powrót do Bloga</a>
 						</button>
 
 						<?php
