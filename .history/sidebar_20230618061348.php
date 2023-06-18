@@ -21,7 +21,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		));
 		foreach( $recent_posts as $post_item ) : ?>
 			<li>
-				<a href="<?php echo get_permalink($post_item['ID']) ?>" class="flex gap-[15px]">
+				<a href="<?php echo get_permalink($post_item['ID']) ?>">
 					<div class="recent-post-img w-[60px] h-[60px]">	
 						<?php echo get_the_post_thumbnail($post_item['ID'], 'full'); ?>
 					</div>
