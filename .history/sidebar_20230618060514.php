@@ -28,8 +28,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			</li>
 		<?php endforeach; ?>
 	</ul>
-
-	<hr>
-	
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
