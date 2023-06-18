@@ -13,7 +13,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main ks-container">
 			<div class="ks-container">
-				<div class="blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background',443); ?>')] bg-no-repeat bg-fill bg-[right_-5px] h-[300px] mb-[40px]">
+				<div class="hidden blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background',443); ?>')] bg-no-repeat bg-fill bg-[right_-5px] h-[300px] mb-[40px]">
 					<?php the_field('blog_page_title_text', 443); ?>
 					<p class="text-[22px] w-[420px] leading-[35px]">
 						<?php echo get_field('blog_page_subtitle', 443); ?>
@@ -21,7 +21,7 @@ get_header();
 				</div>
 
 				<div class="page-content-container flex justify-between gap-[80px]">
-					<div class="page-post-content-container">
+					<div class="page-post-content-container basis-[70%]">
 						<button class="ks-button ks-button--primary mb-[50px]">
 							<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
 						</button>
@@ -112,8 +112,6 @@ get_header();
 								);
 							?>
 						</div>
-						
-						<!-- related posts -->
 
 					</div>
 
