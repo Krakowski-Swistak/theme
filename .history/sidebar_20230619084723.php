@@ -43,9 +43,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 	<!-- share post -->
-	<?php 
-		if(is_single()){ 
-		?>
+	<?php if(is_single()){ ?>
 		<div class="share-wrapper mb-[40px] flex items-center gap-[20px]">
 			<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
 			<?php
