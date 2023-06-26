@@ -323,7 +323,7 @@ get_header();
 									// print_r($clients_brands);
 								?>	
 								<?php
-									foreach ($clients_brands as $client_img){
+									foreach ($clients_brands as $key => $client_img){
 										?>
 									<li class="swiper-slide">	
 										<?php  
