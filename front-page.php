@@ -377,7 +377,7 @@ get_header();
 				<div class="relative ks-container ks-fadeInBottom">
 					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
 					<p class="mb-[40px] text-[20px] font-semibold "><?php the_field('blog_subtitle'); ?></p>
-					<button class="ks-button mb-[25px]">
+					<button class="ks-button mb-[25px] mt-[20px] mb-[50px] absolute desktop:top-[65px] top-[-15px] right-0">
 						<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px]"> &rarr;</span></a>
 					</button>
 					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] desktop:flex-nowrap flex-wrap">
