@@ -94,7 +94,7 @@
       }),
       new Swiper("[data-slider-clients]", {
         slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 0,
         autoplay: {
           delay: 1000,
           disableOnInteraction: false,
