@@ -18,11 +18,11 @@
 									the_post();
 									$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 							?>
-									<div class="relativev post-wrapper group mb-[30px] h-[200px] flex gap-[30px] justify-between overflow-hidden">
+									<div class="relativev post-wrapper group mb-[30px] flex gap-[30px] justify-between overflow-hidden">
 										<?php
 											if ($postImageUrl){
 											?>
-												<a href="<?php the_permalink(); ?>" class="post-img basis-1/3 rounded-[10px] overflow-hidden">
+												<a href="<?php the_permalink(); ?>" class="post-img basis-1/3 h-[200px] rounded-[10px] overflow-hidden">
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 												</a>
 											<?php }; ?>
