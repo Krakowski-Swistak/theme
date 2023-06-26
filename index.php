@@ -51,6 +51,7 @@
 													<?php }; ?>
 												</ul>
 											</div>
+											<p class="text-[#252525] mb-[45px]"><?php echo get_the_excerpt(); ?></p>
 											<p class="mb-0"><?php wp_trim_words(get_the_excerpt(), 10); ?></p>
 											<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 										</div>
