@@ -293,7 +293,8 @@ get_header();
 						$clients_chunks = array_chunk($clients_brands, $board_size, true);
 						foreach ($clients_chunks as $key => $chunk) {
 							?>
-							<div class="ks-clients__board">
+							<!-- hidden clients logo board -->
+							<div class="hidden ks-clients__board">
 										<?php
 											foreach ($chunk as $key => $brand) {
 												?>
@@ -320,13 +321,12 @@ get_header();
 							<ul class="swiper-wrapper">
 								<?php
 									$clients_brands = get_field('clients_brands');
-									// print_r($clients_brands);
 								?>	
 								<?php
 									foreach ($clients_brands as $key => $client_img){
 								?>
 									<li class="swiper-slide max-w-[180px] self-center">	
-										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-h-[100px] object-contain">
+										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-h-[130px] object-contain">
 									</li>
 								<?php
 									};
