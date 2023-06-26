@@ -18,17 +18,17 @@
 									the_post();
 									$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 							?>
-									<div class="relativev post-wrapper mb-[30px] h-[250px] flex gap-[30px] justify-between overflow-hidden">
+									<div class="relativev post-wrapper mb-[30px] h-[200px] flex gap-[30px] justify-between overflow-hidden">
 										<?php
 											if ($postImageUrl){
 											?>
-												<div class="post-img basis-1/3 rounded-[10px]">
+												<div class="post-img basis-1/3 rounded-[10px] overflow-hidden">
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 												</div>
 											<?php }; ?>
 			
 										<div class="post-date mx-auto pt-[50px] text-center leading-[60px]">
-											<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="52" class="inline">
+											<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
 											<div class="date-text-wrapper">
 												<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
 												<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
