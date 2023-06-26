@@ -316,7 +316,7 @@ get_header();
 						}
 					?>
 					<div class="ks-swiper">
-						<div class="swiper-container ks-clients__swiper-container" data-slider-client >
+						<div class="swiper-container ks-clients__swiper-container" data-slider-clients >
 							<ul class="swiper-wrapper">
 								<?php
 									$clients_brands = get_field('clients_brands');
