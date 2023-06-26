@@ -95,6 +95,7 @@
       new Swiper("[data-slider-clients]", {
         slidesPerView: 3,
         spaceBetween: 30,
+        freeMode: true,
         autoplay: {
           delay: 2000,
           disableOnInteraction: false,
