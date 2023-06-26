@@ -23,12 +23,12 @@
 											if ($postImageUrl){
 											?>
 												<div class="post-img basis-1/3 rounded-[10px] overflow-hidden">
-													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
+													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
 												</div>
 											<?php }; ?>
 			
 										<div class="post-date mx-auto pt-[50px] text-center leading-[60px]">
-											<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline scale-[1] group-hover:scale-[1.06] transition ease-out duration-[700ms]">
+											<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
 											<div class="date-text-wrapper">
 												<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
 												<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
