@@ -99,9 +99,6 @@
           delay: 2000,
           disableOnInteraction: false,
         },
-        pagination: {
-          el: ".ks-clients__swiper-pagination",
-        },
         breakpoints: { 1024: { slidesPerView: 2 } },
       });
   },
