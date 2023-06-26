@@ -23,7 +23,7 @@
 											if ($postImageUrl){
 											?>
 												<div class="post-img basis-1/3 rounded-[10px] overflow-hidden">
-													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
+													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 												</div>
 											<?php }; ?>
 			
