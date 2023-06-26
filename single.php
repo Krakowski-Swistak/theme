@@ -74,7 +74,8 @@ get_header();
 							<a href="https://swistak.webo.design/blog/"><span class="text-[20px]"> &larr;</span> Wszystkie posty</a>
 						</button>
 
-						<div class="page-nav-wrapper flex gap-[30px]">
+						<!-- hidden page nav -->
+						<div class="page-nav-wrapper hidden flex gap-[30px]">
 							<?php
 								wp_link_pages(
 									array(
@@ -92,7 +93,7 @@ get_header();
 					</div>
 				</div>
 				
-				<!-- hidden -->
+				<!-- hidden related posts -->
 				<div class="hidden related-posts-container">
 					<div class="category-list mb-[15px] inline-block">
 						<span class="text-[14px]"> Powiązane posty z kategorii: </span>
