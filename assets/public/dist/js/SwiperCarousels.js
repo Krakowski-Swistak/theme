@@ -91,6 +91,15 @@
           clickable: !0,
         },
         breakpoints: { 1024: { slidesPerView: 2 } },
+      }),
+      new Swiper("[data-slider-clients]", {
+        slidesPerView: 1,
+        spaceBetween: 95,
+        pagination: {
+          el: ".ks-clients__swiper-pagination",
+          clickable: !0,
+        },
+        breakpoints: { 1024: { slidesPerView: 2 } },
       });
   },
 });
