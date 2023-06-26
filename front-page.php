@@ -321,11 +321,19 @@ get_header();
 								<?php
 									$clients_brands = get_field('clients_brands');
 								?>	
-								<li class="swiper-slide">	
-									<?php  
-										print_r($clients_brands);
-									?>
-								</li>
+								<?php
+									foreach ($clients_brands as $client_img){
+										?>
+									<li class="swiper-slide">	
+										<?php  
+											print_r($clients_brands);
+											print_r($client_img);
+										?>
+									</li>
+								<?php
+									}
+								?>
+
 							</ul>
 						</div>
 						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
