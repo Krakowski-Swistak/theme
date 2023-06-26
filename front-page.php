@@ -376,7 +376,7 @@ get_header();
 			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px] bg-[#f6f6f6]">
 				<div class="relative ks-container ks-fadeInBottom">
 					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
-					<p class="mb-[40px] text-[20px] font-semibold "><?php the_field('blog_subtitle'); ?></p>
+					<p class="mb-[40px] text-[20px]"><?php the_field('blog_subtitle'); ?></p>
 					<button class="ks-button absolute desktop:top-[100px] top-[15px] right-0">
 						<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px]"> &rarr;</span></a>
 					</button>
@@ -392,7 +392,7 @@ get_header();
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper relative mb-[30px] desktop:w-1/3 w-fit">
-								<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] transition ease-out duration-200">
+								<a href="<?php the_permalink(); ?>" class="text-black  hover:text-[#00b3a7] transition ease-out duration-200">
 									<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden bg1-[url('<?php echo $postImageUrl[0]; ?>')] bg-center bg-cover bg-no-repeat ">
 										<img src="<?php echo $postImageUrl[0]; ?>" alt="post-image" class="object-cover scale-[1] group-hover:scale-[1.06] transition ease-out duration-[700ms]">
 									</div>
