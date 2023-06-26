@@ -38,9 +38,7 @@
 											<h3 class="text-[25px] font-medium leading-[30px] mb-[10px]">
 												<a href="<?php the_permalink(); ?> " class="text-black text-black hover:text-[#00b3a7] transition ease-out duration-200"><?php echo the_title(); ?></a>
 											</h3>
-											<p class="text-[14px] text-neutral-500 mb-[0px] inline">Autor: <?php the_author(); ?>,</p>
 											<div class="category-list mb-[15px] inline-block">
-												<span class="text-[14px] text-neutral-500"> Kategoria: </span>
 												<ul class="inline text-[14px] text-neutral-500">
 													<?php 
 														$categories = get_the_category();
@@ -53,10 +51,8 @@
 													<?php }; ?>
 												</ul>
 											</div>
-											<p><?php wp_trim_words(get_the_excerpt(), 10); ?></p>
-											<button class="hidden ks-button ks-button--primary absolute bottom-0 left-[70%]">
-												<a href="<?php the_permalink(); ?>">więcej >></a>
-											</button>
+											<p class="mb-0"><?php wp_trim_words(get_the_excerpt(), 10); ?></p>
+											<a href="<?php the_permalink(); ?>" class="absolute bottom-0 left-0 text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 										</div>
 									</div>
 								<?php	
