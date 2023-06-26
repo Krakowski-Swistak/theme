@@ -327,7 +327,7 @@ get_header();
 										?>
 									<li class="swiper-slide">	
 										<?php  
-											print_r($client_img);
+											print_r($client_img['clients_brand_logotype']['url']);
 										?>
 									</li>
 								<?php
