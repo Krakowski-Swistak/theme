@@ -93,9 +93,8 @@
         breakpoints: { 1024: { slidesPerView: 2 } },
       }),
       new Swiper("[data-slider-clients]", {
-        slidesPerView: 3,
+        slidesPerView: "auto",
         spaceBetween: 30,
-        freeMode: true,
         autoplay: {
           delay: 2000,
           disableOnInteraction: false,
