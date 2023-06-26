@@ -320,7 +320,7 @@ get_header();
 							<ul class="swiper-wrapper">
 								<?php
 									$clients_brands = get_field('clients_brands');
-									print_r($clients_brands);
+									// print_r($clients_brands);
 								?>	
 								<?php
 									foreach ($clients_brands as $client_img){
