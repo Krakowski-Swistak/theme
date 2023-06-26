@@ -24,7 +24,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			foreach( $recent_posts as $post_item ) : ?>
 				<li>
 					<a href="<?php echo get_permalink($post_item['ID']) ?>" class="flex gap-[15px] text-black hover:text-[#00b3a7] transition ease-out duration-200">
-						<div class="recent-post-img min-w-[60px] max-h-[60px] overflow-hidden">	
+						<div class="recent-post-img min-w-[60px] max-h-[60px] overflow-hidden rounded-[10px]">	
 							<?php echo get_the_post_thumbnail($post_item['ID'], 'recentPost'); ?>
 						</div>
 						<div class="recent-post-info leading-[20px]">
@@ -66,7 +66,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				<?php
 					foreach ($socialMedia as $platform => $data) {
 				?>
-					<li class="scale-[2]">
+					<li class="scale-[1.7]">
 						<a href="<?php echo $data['url']; ?>" target="_blank">
 							<?php echo $data['icon']; ?>
 						</a>
