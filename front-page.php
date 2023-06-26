@@ -375,7 +375,7 @@ get_header();
 
 			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px] bg-[#f6f6f6]">
 				<div class="relative ks-container ks-fadeInBottom">
-					<h2><a href="https://swistak.webo.design/blog" class="ks-util-color-primary">Blog</a></h2>
+					<h2>Blog</h2>
 					<p class="mb-[40px] text-[20px]"><?php the_field('blog_subtitle'); ?></p>
 					<button class="ks-button absolute desktop:top-[100px] top-[15px] right-0">
 						<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px]"> &rarr;</span></a>
