@@ -57,11 +57,6 @@ get_header();
 								</article>
 
 								<?php
-									the_post_navigation($args = array(
-										'prev_text' => '<span class="text-[20px]"> &larr;</span> Poprzedni wpis',
-										'next_text' => 'Następny wpis <span class="text-[20px]"> &rarr;</span>'
-									));
-
 									if ( comments_open() || get_comments_number() ) :
 										comments_template();
 									endif;
@@ -71,7 +66,7 @@ get_header();
 						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
 						<!-- hidden page nav -->
-						<div class="page-nav-wrapper hidden flex gap-[30px]">
+						<div class="page-nav-wrapper flex gap-[30px]">
 							<?php
 								wp_link_pages(
 									array(
