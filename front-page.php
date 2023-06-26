@@ -326,9 +326,7 @@ get_header();
 									foreach ($clients_brands as $key => $client_img){
 										?>
 									<li class="swiper-slide">	
-										<?php  
-											print_r($client_img['clients_brand_logotype']['url']);
-										?>
+										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="">
 									</li>
 								<?php
 									}
