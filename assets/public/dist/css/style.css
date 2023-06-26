@@ -2552,3 +2552,6 @@ img {
 .post strong {
   font-weight: 700;
 }
+.cat-item {
+  display: inline;
+}
