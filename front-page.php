@@ -319,26 +319,13 @@ get_header();
 						<div class="swiper-container ks-clients__swiper-container" data-slider-client >
 							<ul class="swiper-wrapper">
 								<?php
-									if( have_rows('clients_items') ):
-										while ( have_rows('clients_items') ) : the_row();
-											$image = get_sub_field('client_image');
-											$author_role = get_sub_field('client_author_role');
-											$author_name = get_sub_field('client_author_name');
-											$description = get_sub_field('client_description');
-											
-											?>	
-												<li class="swiper-slide">	
-													<img
-														src="<?php echo $brand['clients_brand_logotype']['url']; ?>"
-														alt="<?php echo $brand['clients_brand_logotype']['alt']; ?>"
-														title="<?php echo $brand['clients_brand_logotype']['title']; ?>"
-													/>
-												</li>
-											<?php
-										endwhile;
-									else :
-									endif;
-								?>
+									$clients_brands = get_field('clients_brands');
+								?>	
+								<li class="swiper-slide">	
+									<?php  
+										print_r($clients_brands);
+									?>
+								</li>
 							</ul>
 						</div>
 						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
