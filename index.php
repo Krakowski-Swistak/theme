@@ -22,9 +22,9 @@
 										<?php
 											if ($postImageUrl){
 											?>
-												<div class="post-img basis-1/3 rounded-[10px] overflow-hidden">
+												<a href="<?php the_permalink(); ?>" class="post-img basis-1/3 rounded-[10px] overflow-hidden">
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
-												</div>
+												</a>
 											<?php }; ?>
 			
 										<div class="post-date mx-auto text-center leading-[60px] flex flex-col justify-center items-center">
