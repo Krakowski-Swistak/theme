@@ -21,7 +21,7 @@ get_header();
 					</p>
 				</div>
 
-				<div class="page-content-container flex justify-between gap-[80px]">
+				<div class="page-content-container mb-[40px] flex justify-between gap-[80px]">
 					<div class="page-post-content-container basis-[70%]">
 						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
@@ -63,9 +63,8 @@ get_header();
 							endwhile;
 						?>
 						
-						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
+						<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
-						<!-- hidden page nav -->
 						<div class="page-nav-wrapper flex gap-[30px]">
 							<?php
 								wp_link_pages(
