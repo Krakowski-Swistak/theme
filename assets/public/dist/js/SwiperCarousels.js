@@ -95,12 +95,10 @@
       new Swiper("[data-slider-clients]", {
         slidesPerView: "auto",
         spaceBetween: 30,
-        loop: true,
         autoplay: {
           delay: 2000,
           disableOnInteraction: false,
         },
-        breakpoints: { 1024: { slidesPerView: 2 } },
       });
   },
 });
