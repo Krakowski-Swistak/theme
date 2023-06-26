@@ -62,7 +62,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					),
 				); 
 			?>
-			<ul class="share-links flex gap-[30px]">
+			<ul class="share-links flex gap-[25px]">
 				<?php
 					foreach ($socialMedia as $platform => $data) {
 				?>
