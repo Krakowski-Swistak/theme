@@ -326,10 +326,10 @@ get_header();
 									foreach ($clients_brands as $key => $client_img){
 								?>
 									<li class="swiper-slide max-w-[200px] self-center">	
-										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-w-fit max-h-[130px]">
+										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-w-fit max-h-[100px]">
 									</li>
 								<?php
-									}
+									};
 								?>
 
 							</ul>
