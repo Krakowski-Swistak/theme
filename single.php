@@ -23,9 +23,7 @@ get_header();
 
 				<div class="page-content-container flex justify-between gap-[80px]">
 					<div class="page-post-content-container basis-[70%]">
-						<button class="ks-button mb-[25px]">
-							<a href="https://swistak.webo.design/blog/" class="text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
-						</button>
+						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
 						<?php
 							// post content
@@ -70,9 +68,7 @@ get_header();
 							endwhile;
 						?>
 						
-						<button class="ks-button ks-button--primary inverted mt-[20px] mb-[50px]">
-							<a href="https://swistak.webo.design/blog/"><span class="text-[20px]"> &larr;</span> Wszystkie posty</a>
-						</button>
+						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-black hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
 						<!-- hidden page nav -->
 						<div class="page-nav-wrapper hidden flex gap-[30px]">
