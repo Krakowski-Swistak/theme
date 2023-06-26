@@ -14,19 +14,15 @@
 				<div class="page-content-container flex justify-between gap-[80px]">
 					<div class="posts-wrapper mb-[30px] basis-[70%]">
 							<?php
-								$counter = 0;
 								while ( have_posts() ) :
 									the_post();
-									$counter++;
 									$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 							?>
-									<div class="relativev post-wrapper mb-[30px] h-[250px] flex gap-[30px] justify-between overflow-hidden rounded-tl-[60px] rounded-br-[60px]
-									<?php if (($counter % 2)) echo 'bg-[#f6f6f6]'; else echo 'bg-white'; ?> 
-									">
+									<div class="relativev post-wrapper mb-[30px] h-[250px] flex gap-[30px] justify-between overflow-hidden">
 										<?php
 											if ($postImageUrl){
 											?>
-												<div class="post-img basis-1/3">
+												<div class="post-img basis-1/3 rounded-[10px]">
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
 												</div>
 											<?php }; ?>
