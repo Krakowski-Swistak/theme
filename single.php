@@ -32,7 +32,7 @@ get_header();
 								$avatarUrl = get_avatar_url(get_the_author_id());
 							?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-									<h1 class="mb-[50px]"><?php the_title(); ?></h1>
+									<h1 class="my-[40px]"><?php the_title(); ?></h1>
 
 									<div class="category-list mb-[35px] ml-[-40px] inline-block">
 										<ul class="inline text-[14px] text-neutral-500">
