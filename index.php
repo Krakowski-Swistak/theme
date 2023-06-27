@@ -27,9 +27,9 @@
 												</a>
 											<?php }; ?>
 										<div class="post-text-wrapper relative basis-2/3 desktop:pr-[50px] pr-0">
-											<div class="post-date mx-auto text-center leading-[60px] desktop:flex hidden flex-row justify-center items-center">
+											<div class="post-date mx-auto text-center leading-[60px] desktop:flex hidden">
 												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
-												<div class="date-text-wrapper desktop:block hidden">
+												<div class="date-text-wrapper leading-0 desktop:block hidden">
 													<!--  -->
 													<span class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></span>  
 													<span class="month mb-0 mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></span>
