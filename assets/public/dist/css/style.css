@@ -1381,7 +1381,9 @@ h3 {
   transform: translateY(0);
 }
 .ks-menu-toggler--active .ks-menu-toggler__line:first-child {
-  opacity: 0;
+  -webkit-transform: translateY(0) rotate(-45deg);
+  -ms-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
 }
 .ks-menu-toggler--active .ks-menu-toggler__line:nth-child(2) {
   -webkit-transform: translateY(0) rotate(-45deg);
@@ -1389,9 +1391,7 @@ h3 {
   transform: translateY(0) rotate(-45deg);
 }
 .ks-menu-toggler--active .ks-menu-toggler__line:nth-child(3) {
-  -webkit-transform: translateY(0) rotate(45deg);
-  -ms-transform: translateY(0) rotate(45deg);
-  transform: translateY(0) rotate(45deg);
+  opacity: 0;
 }
 .ks-button {
   border: none;
