@@ -26,7 +26,7 @@
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover w-[100%] h-[100%]">
 												</a>
 											<?php }; ?>
-										<div class="post-text-wrapper relative basis-2/3 desktop:pr-[50px] pr-0">
+										<div class="post-text-wrapper relative basis-2/3">
 											<div class="post-date desktop:flex hidden">
 												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
 												<div class="date-text-wrapper ml-[6px] leading-0 desktop:block hidden">
