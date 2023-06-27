@@ -27,7 +27,7 @@
 												</a>
 											<?php }; ?>
 										<div class="post-text-wrapper relative basis-2/3">
-											<div class="post-date desktop:flex hidden">
+											<div class="post-date leading-[36px] desktop:flex hidden">
 												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
 												<div class="date-text-wrapper ml-[6px] leading-0 desktop:block hidden">
 													<!--  -->
