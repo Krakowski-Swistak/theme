@@ -424,7 +424,7 @@ get_header();
 									}else{
 										?>
 										<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden">
-											<img src="<?php echo get_template_directory_uri() . '/assets/images/video-plug.png' ?>" alt="post-image-default" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
+											<img src="<?php echo get_template_directory_uri() . '/assets/images/logo-swistak.png' ?>" alt="post-image-default" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
 										</div>
 										<?php
 									}
