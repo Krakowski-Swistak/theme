@@ -25,7 +25,13 @@
 												<a href="<?php the_permalink(); ?>" class="post-img basis-1/3 h-[200px] rounded-[10px] overflow-hidden">
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover w-[100%] h-[100%]">
 												</a>
-											<?php }; ?>
+											<?php }else{
+												?>
+												<a href="<?php the_permalink(); ?>" class="post-img basis-1/3 h-[200px] rounded-[10px] overflow-hidden">
+													<img src="<?php echo get_template_directory_uri() . '/assets/images/logo-swistak.png' ?>" alt="post-img" class="object-cover w-[100%] h-[100%]">
+												</a>
+												<?php
+											}; ?>
 										<div class="post-text-wrapper relative basis-2/3">
 											<div class="post-date leading-[36px] desktop:flex hidden">
 												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
