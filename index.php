@@ -11,7 +11,7 @@
 					</p>
 				</div>
 
-				<div class="page-content-container flex justify-between gap-[80px]">
+				<div class="page-content-container desktop:flex justify-between gap-[80px]">
 					<div class="posts-wrapper mb-[30px] desktop:basis-[70%] basis-[100%]">
 							<?php
 								while ( have_posts() ) :
@@ -61,7 +61,7 @@
 							?>
 					</div>
 
-					<div class="sidebar-wrapper basis-[30%] desktop:block hidden">
+					<div class="sidebar-wrapper basis-[30%]">
 						<?php get_sidebar(); ?>
 					</div>
 				</div>
