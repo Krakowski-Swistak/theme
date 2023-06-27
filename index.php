@@ -38,7 +38,7 @@
 												<div class="date-text-wrapper ml-[6px] leading-[42px] desktop:block hidden">
 													<!--  -->
 													<span class="day mb-0 font-medium"><?php the_time('d'); ?></span>  
-													<span class="month mb-0 mt-[-30px] font-light"><?php the_time('M'); ?></span>
+													<span class="month mb-0 mt-[-30px] ml-[-2px] font-light"><?php the_time('M'); ?></span>
 												</div>
 											</div>
 											<h3 class="text-[25px] font-medium leading-[30px] mb-[10px]">
