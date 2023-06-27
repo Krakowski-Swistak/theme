@@ -34,7 +34,7 @@
 												<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
 											</div>
 										</div>
-										<div class="post-text-wrapper relative basis-2/3 pr-[50px]">
+										<div class="post-text-wrapper relative basis-2/3 desktop:pr-[50px] pr-0">
 											<h3 class="text-[25px] font-medium leading-[30px] mb-[10px]">
 												<a href="<?php the_permalink(); ?> " class="text-black text-black hover:text-[#00b3a7] transition ease-out duration-200"><?php echo the_title(); ?></a>
 											</h3>
