@@ -332,9 +332,6 @@ get_header();
 								<?php
 									};
 								?>
-									<!-- <li class="swiper-slide max-w-[180px] self-center">	
-
-									</li>		 -->
 							</ul>
 						</div>
 						<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
