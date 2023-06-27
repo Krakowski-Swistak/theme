@@ -2549,6 +2549,11 @@ img {
   margin-left: 40px;
   list-style-type: disc;
 }
+.post ol {
+  margin-bottom: 20px;
+  margin-left: 40px;
+  list-style-type: decimal;
+}
 .post strong {
   font-weight: 700;
 }
