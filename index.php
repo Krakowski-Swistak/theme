@@ -52,7 +52,7 @@
 												</ul>
 											</div>
 											<p class="mb-[40px] text-[15px] leading-[22px]"><?php echo wp_trim_words(get_the_excerpt(), 16); ?></p>
-											<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] text-[16px] font-medium transition ease-out duration-200 absolute bottom-[10px] desktop:right-[50px] left-[20px]">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
+											<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] text-[16px] font-medium transition ease-out duration-200 absolute bottom-[10px] desktop:left-auto desktop:right-[50px] left-[20px]">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 										</div>
 									</div>
 								<?php	
