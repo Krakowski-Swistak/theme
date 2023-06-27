@@ -22,7 +22,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				'post_status' => 'publish' 
 			));
 			foreach( $recent_posts as $post_item ) : ?>
-				<li class="mb-[16px]">
+				<li class="desktop:mb-0 mb-[16px]">
 					<a href="<?php echo get_permalink($post_item['ID']) ?>" class="flex gap-[15px] text-black hover:text-[#00b3a7] transition ease-out duration-200">
 					<?php
 						if(get_the_post_thumbnail($post_item['ID'])){
