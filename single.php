@@ -78,7 +78,7 @@ get_header();
 
 					</div>
 
-					<div class="sidebar-wrapper basis-[30%]">
+					<div class="sidebar-wrapper basis-[30%] desktop:block hidden">
 							<?php get_sidebar(); ?>
 					</div>
 				</div>
