@@ -310,11 +310,11 @@ get_header();
 														</div>
 													</div>
 												<?php
-											}
+											};
 										?>
 								</div>
 							<?php
-						}
+						};
 					?>
 					<div class="ks-swiper">
 						<div class="swiper-container ks-clients__swiper-container" data-slider-clients >
