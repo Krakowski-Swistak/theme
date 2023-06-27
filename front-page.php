@@ -433,7 +433,7 @@ get_header();
 									<?php the_title('<h3 class="desktop:text-[24px] text-[22px] font-semibold mb-0 desktop:leading-[30px] leading-[26px]">', '</h3>'); ?></php>
 								</a>
 								<p class="mb-[10px] text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
-								<p class="text-[#252525] mb-[45px]"><?php echo wp_trim_words(get_the_excerpt(), 80); ?></p>
+								<p class="text-[#252525] mb-[45px]"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
 								<a href="<?php the_permalink(); ?>" class="absolute bottom-0 left-0 text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 							</div>
 						<?php };
