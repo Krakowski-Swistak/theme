@@ -4,7 +4,7 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="ks-container">
-				<div class="blog-title-wrapper mb-[30px] desktop:mb-0 flex desktop:flex-row flex-col desktop:gap-[30px] gap-[0px] gap-[30px] items-center">
+				<div class="blog-title-wrapper mb-[30px] desktop:mb-0 flex desktop:flex-row flex-col desktop:gap-[30px] gap-y-[0px] items-center">
 					<?php the_field('blog_page_title_text', 443); ?>
 					<p class="text-[22px]">
 						<?php echo get_field('blog_page_subtitle', 443); ?>
