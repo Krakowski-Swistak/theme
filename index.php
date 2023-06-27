@@ -4,7 +4,7 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="ks-container">
-				<div class="blog-title-wrapper flex gap-[30px] items-center">
+				<div class="blog-title-wrapper mb-[30px] desktop:mb-0 flex desktop:flex-row flex-col desktop:gap-[30px] gap-[0px] gap-[30px] items-center">
 					<?php the_field('blog_page_title_text', 443); ?>
 					<p class="text-[22px]">
 						<?php echo get_field('blog_page_subtitle', 443); ?>
@@ -27,9 +27,9 @@
 												</a>
 											<?php }; ?>
 			
-										<div class="post-date mx-auto text-center leading-[60px] flex flex-col justify-center items-center">
+										<div class="post-date mx-auto text-center leading-[60px] desktop:flex hidden flex-col justify-center items-center">
 											<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
-											<div class="date-text-wrapper">
+											<div class="date-text-wrapper desktop:block hidden">
 												<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
 												<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
 											</div>
