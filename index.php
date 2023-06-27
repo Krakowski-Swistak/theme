@@ -12,7 +12,7 @@
 				</div>
 
 				<div class="page-content-container flex justify-between gap-[80px]">
-					<div class="posts-wrapper mb-[30px] basis-[70%]">
+					<div class="posts-wrapper mb-[30px] desktop:basis-[70%] basis-[100%]">
 							<?php
 								while ( have_posts() ) :
 									the_post();
