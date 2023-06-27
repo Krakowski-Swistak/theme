@@ -30,8 +30,9 @@
 											<div class="post-date mx-auto text-center leading-[60px] desktop:flex hidden flex-row justify-center items-center">
 												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
 												<div class="date-text-wrapper desktop:block hidden">
-													<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
-													<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
+													<!--  -->
+													<span class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></span>  
+													<span class="month mb-0 mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></span>
 												</div>
 											</div>
 											<h3 class="text-[25px] font-medium leading-[30px] mb-[10px]">
