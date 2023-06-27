@@ -328,7 +328,6 @@ get_header();
 									<li class="swiper-slide max-w-[180px] self-center">	
 										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-h-[130px] object-contain">
 									</li>
-
 								<?php
 									};
 								?>
