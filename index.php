@@ -18,7 +18,7 @@
 									the_post();
 									$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(),'portrait');
 							?>
-									<div class="relativev post-wrapper group mb-[30px] flex gap-[30px] justify-between overflow-hidden">
+									<div class="relativev post-wrapper group mb-[30px] flex desktop:flex-row flex-col gap-[30px] gap-[30px] justify-between overflow-hidden">
 										<?php
 											if ($postImageUrl){
 											?>
