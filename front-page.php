@@ -418,7 +418,7 @@ get_header();
 									if($postImageUrl){
 									?>
 									<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden">
-										<img src="<?php echo $postImageUrl[0]; ?>" alt="post-image" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
+										<img src="<?php echo $postImageUrl[0]; ?>" alt="post-image" class="object-cover h-[100%] scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
 									</div>
 								<?php
 									}else{
@@ -430,9 +430,6 @@ get_header();
 									}
 									
 								?>
-
-
-				
 									<?php the_title('<h3 class="desktop:text-[24px] text-[22px] font-semibold mb-0 desktop:leading-[30px] leading-[26px]">', '</h3>'); ?></php>
 								</a>
 								<p class="mb-[10px] text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
