@@ -26,15 +26,14 @@
 													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover w-[100%] h-[100%]">
 												</a>
 											<?php }; ?>
-			
-										<div class="post-date mx-auto text-center leading-[60px] desktop:flex hidden flex-col justify-center items-center">
-											<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
-											<div class="date-text-wrapper desktop:block hidden">
-												<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
-												<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
-											</div>
-										</div>
 										<div class="post-text-wrapper relative basis-2/3 desktop:pr-[50px] pr-0">
+											<div class="post-date mx-auto text-center leading-[60px] desktop:flex hidden flex-row justify-center items-center">
+												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="35" class="inline">
+												<div class="date-text-wrapper desktop:block hidden">
+													<p class="day mb-0 text-[36px] font-medium"><?php the_time('d'); ?></p>  
+													<p class="month mt-[-30px] text-[20px] font-light"><?php the_time('M'); ?></p>
+												</div>
+											</div>
 											<h3 class="text-[25px] font-medium leading-[30px] mb-[10px]">
 												<a href="<?php the_permalink(); ?> " class="text-black text-black hover:text-[#00b3a7] transition ease-out duration-200"><?php echo the_title(); ?></a>
 											</h3>
