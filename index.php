@@ -23,7 +23,7 @@
 											if ($postImageUrl){
 											?>
 												<a href="<?php the_permalink(); ?>" class="post-img basis-1/3 h-[200px] rounded-[10px] overflow-hidden">
-													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover">
+													<img src="<?php echo $postImageUrl[0]; ?>" alt="post-img" class="object-cover h-[100%]">
 												</a>
 											<?php }; ?>
 			
