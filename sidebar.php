@@ -28,7 +28,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 						if(get_the_post_thumbnail($post_item['ID'])){
 						?>
 						<div class="recent-post-img min-w-[60px] max-h-[60px] overflow-hidden rounded-[10px]">	
-							<?php echo get_the_post_thumbnail($post_item['ID'], 'recentPost'); ?>
+							<?php echo get_the_post_thumbnail($post_item['ID'], 'help2'); ?>
 						</div>
 					<?php
 						};
