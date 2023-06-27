@@ -2490,8 +2490,9 @@ img {
 .navigation.post-navigation {
   margin-bottom: 25px;
 }
-.nav-links .nav-previous {
-  font-weight: 500;
+.nav-links .nav-previous a {
+  font-size: 16px;
+  font-weight: 600;
 }
 .sidebar-wrapper hr {
   border-color: #ccc;
