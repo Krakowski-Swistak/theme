@@ -413,9 +413,25 @@ get_header();
 						?>
 							<div class="post-wrapper relative mb-[30px] desktop:w-1/3 w-fit">
 								<a href="<?php the_permalink(); ?>" class="text-black  hover:text-[#00b3a7] transition ease-out duration-200">
+
+								<?php
+									if(get_the_post_thumbnail($post_item['ID'])){
+									?>
 									<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden">
 										<img src="<?php echo $postImageUrl[0]; ?>" alt="post-image" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
 									</div>
+								<?php
+									}else{
+										?>
+										<div class="post-img group desktop:h-[300px] h-[200px] rounded-[10px] mb-[20px] overflow-hidden">
+											<img src="<?php echo get_template_directory_uri() . '/assets/images/video-plug.png' ?>" alt="post-image-default" class="object-cover scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
+										</div>
+										<?php
+									}
+									
+								?>
+
+
 				
 									<?php the_title('<h3 class="desktop:text-[24px] text-[22px] font-semibold mb-0 desktop:leading-[30px] leading-[26px]">', '</h3>'); ?></php>
 								</a>
