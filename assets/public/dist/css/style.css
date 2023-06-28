@@ -2539,6 +2539,10 @@ img {
   padding: 4px 8px;
   border-radius: 999px;
   margin-bottom: 5px;
+  transition: all 0.2s ease-out;
+}
+.cat-item a:hover {
+  background-color: #008077;
 }
 .cat-item {
   margin-bottom: 8px;
