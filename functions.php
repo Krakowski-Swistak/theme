@@ -211,7 +211,7 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function add_menu_items_classname( $atts, $item, $args ) {
-	$atts['class'] = 'scroll';
+	$atts['class'] = '';
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_menu_items_classname', 10, 3 );
