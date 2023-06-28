@@ -73,7 +73,7 @@ get_header();
 						?>
 
 						<div class="post-contact mb-[25px]">
-							<p class="mt-[40px] mb-0">Zainteresował Cię ten materiał? Zapraszam do dyskusji:</p>
+							<p class="mt-[40px] mb-0 font-medium">Zainteresował Cię ten materiał? Zapraszam do dyskusji:</p>
 							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
 							<div class="ks-copyright__social-media">
 								<?php
