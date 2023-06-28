@@ -64,7 +64,7 @@
 								<?php	
 								endwhile;
 								the_posts_navigation($args = array(
-									'class' => 'test'
+									'class' = 'test'
 								));
 							?>
 					</div>
