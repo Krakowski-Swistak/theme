@@ -93,16 +93,16 @@
         breakpoints: { 1024: { slidesPerView: 2 } },
       }),
       new Swiper("[data-slider-clients]", {
-        slidesPerView: 5,
-        spaceBetween: 40,
+        slidesPerView: 2,
+        spaceBetween: 20,
         autoplay: {
           delay: 2000,
           disableOnInteraction: false,
         },
         breakpoints: {
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 5,
+            spaceBetween: 40,
           },
         },
       });
