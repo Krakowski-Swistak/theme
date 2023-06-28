@@ -72,25 +72,12 @@ get_header();
 							endif;
 						?>
 
-						<div class="post-contact mb-[25px]">
-							<p class="mt-[40px] mb-0 font-medium">Zainteresował Cię ten materiał? Zapraszam do dyskusji:</p>
-							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
-							<div class="ks-copyright__social-media">
-								<?php
-									if( have_rows('social_images', 'option') ):
-										while ( have_rows('social_images', 'option') ) : the_row();
-											$image = get_sub_field('social_image');
-											$link = get_sub_field('social_url');
-											?>	
-											<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="text-black">
-												<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
-											</a>
-											<?php
-										endwhile;
-									else :
-									endif;
-								?>
-							</div>
+						<div class="post-cta mb-[25px] bg-[#F4F4F4] p-[30px_60px]">
+							<h2 class="mt-[40px] mb-0 font-medium">Zainteresował Cię ten materiał? Zapraszam do dyskusji:</h2>
+							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>" class="text-[20px] text-black font-semibold"><?php echo esc_html( $footer_email_title ); ?></a>
+							<button class="ks-button ks-button--primary">
+								<a class="scroll" href="https://www.linkedin.com/in/swistak-krakow/" target="_self">Porozmawiajmy na Linked-in</a>
+							</button>
 						</div>
 						
 						<a href="https://swistak.webo.design/blog/" class="text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
