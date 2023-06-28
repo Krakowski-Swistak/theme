@@ -15,7 +15,6 @@ get_header();
 				<div class="page-content-container mb-[40px] desktop:flex desktop:justify-between desktop:gap-[80px]">
 					<div class="page-post-content-container basis-[70%]">
 						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
-
 						<?php
 							while ( have_posts() ) :
 								the_post(); 
@@ -23,7 +22,6 @@ get_header();
 							?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 									<h1 class="my-[40px] text-[36px] leading-[50px]"><?php the_title(); ?></h1>
-
 									<div class="category-list mb-[35px] ml-[-40px] inline-block">
 										<ul class="inline text-[14px] text-neutral-500">
 											<?php 
@@ -156,9 +154,7 @@ get_header();
 			</div>
 		</main>
 	</div>
-
 <?php
 	get_sidebar();
-
 	get_footer();
 ?>
