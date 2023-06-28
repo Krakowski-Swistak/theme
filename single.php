@@ -17,7 +17,6 @@ get_header();
 						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
 						<?php
-							// post content
 							while ( have_posts() ) :
 								the_post(); 
 								$avatarUrl = get_avatar_url(get_the_author_id());
@@ -43,17 +42,14 @@ get_header();
 										<span class="mb-0">Autor: <?php the_author(); ?>,</span>
 										<span class="mb-0 text-neutral-500"><?php the_time('j F Y'); ?></span>
 									</div>
-
 									<?php the_content(); ?>
 								</article>
-
 								<?php
 									if ( comments_open() || get_comments_number() ) :
 										comments_template();
 									endif;
 							endwhile;
 						?>
-
 						<?php
 							$footer_email = get_field('footer_e-mail', 'option');
 							if( $footer_email ): 
@@ -62,7 +58,6 @@ get_header();
 									$footer_email_target = $footer_email['target'] ? $footer_email['target'] : '_self';
 							endif;
 						?>
-
 						<div class="post-cta mb-[25px] bg-[#F4F4F4] desktop:p-[60px_80px] p-[40px_20px] text-center">
 							<h2 class="[&>div]:left-[50%] [&>div]:translate-x-[-50%]">Zainteresował Cię ten materiał?</h2>
 							<h3 class="desktop:mb-[20px] mb-[15px] desktop:text-[26px] text-[20px]">Zapraszam do dyskusji</h2>
@@ -71,9 +66,7 @@ get_header();
 								<a href="https://www.linkedin.com/in/swistak-krakow/" target="_self">Porozmawiajmy na Linked-in</a>
 							</button>
 						</div>
-						
 						<a href="https://swistak.webo.design/blog/" class="text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
-
 						<div class="page-nav-wrapper flex gap-[30px]">
 							<?php
 								wp_link_pages(
@@ -84,9 +77,7 @@ get_header();
 								);
 							?>
 						</div>
-
 					</div>
-
 					<div class="sidebar-wrapper basis-[30%] desktop:block hidden">
 							<?php get_sidebar(); ?>
 					</div>
@@ -164,8 +155,7 @@ get_header();
 
 			</div>
 		</main>
-		<!-- #main -->
-	</div><!-- #primary -->
+	</div>
 
 <?php
 	get_sidebar();
