@@ -9,18 +9,9 @@
 
 get_header();
 ?>
-<!-- test -->
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main ks-container">
 			<div class="ks-container">
-				<!-- hidden -->
-				<div class="hidden blog-title-wrapper bg-[url('<?php the_field('blog_page_title_background',443); ?>')] bg-no-repeat bg-fill bg-[right_-5px] h-[300px] mb-[40px]">
-					<?php the_field('blog_page_title_text', 443); ?>
-					<p class="text-[22px] w-[420px] leading-[35px]">
-						<?php echo get_field('blog_page_subtitle', 443); ?>
-					</p>
-				</div>
-
 				<div class="page-content-container mb-[40px] desktop:flex desktop:justify-between desktop:gap-[80px]">
 					<div class="page-post-content-container basis-[70%]">
 						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
