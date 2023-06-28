@@ -23,7 +23,7 @@ get_header();
 
 				<div class="page-content-container mb-[40px] desktop:flex desktop:justify-between desktop:gap-[80px]">
 					<div class="page-post-content-container basis-[70%]">
-						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-black text-[16px] font-semibold hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
+						<a href="https://swistak.webo.design/blog/" class="mb-[25px] text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
 						<?php
 							// post content
@@ -93,7 +93,7 @@ get_header();
 							</div>
 						</div>
 						
-						<a href="https://swistak.webo.design/blog/" class="text-black text-[16px] font-semibold hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
+						<a href="https://swistak.webo.design/blog/" class="text-[#00b3a7] hover:text-[#008077] text-[16px] font-semibold hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
 						<div class="page-nav-wrapper flex gap-[30px]">
 							<?php
