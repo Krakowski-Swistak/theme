@@ -10,7 +10,6 @@
 						<?php echo get_field('blog_page_subtitle', 443); ?>
 					</p>
 				</div>
-
 				<div class="page-content-container desktop:flex justify-between gap-[80px]">
 					<div class="posts-wrapper mb-[30px] desktop:basis-[70%] basis-[100%]">
 							<?php
@@ -36,7 +35,6 @@
 											<div class="post-date h-[36px] text-[20px] leading-[36px] desktop:flex hidden">
 												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="20" class="inline">
 												<div class="date-text-wrapper ml-[6px] leading-[42px] desktop:block hidden">
-													<!--  -->
 													<span class="day mb-0 font-medium"><?php the_time('d'); ?></span>  
 													<span class="month mb-0 mt-[-30px] ml-[-2px] font-light"><?php the_time('M'); ?></span>
 												</div>
@@ -66,7 +64,6 @@
 								the_posts_navigation();
 							?>
 					</div>
-
 					<div class="sidebar-wrapper basis-[30%]">
 						<?php get_sidebar(); ?>
 					</div>
