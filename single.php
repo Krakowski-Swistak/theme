@@ -74,8 +74,8 @@ get_header();
 
 						<div class="post-cta mb-[25px] bg-[#F4F4F4] p-[30px_60px]">
 							<h2 class="">Zainteresował Cię ten materiał? Zapraszam do dyskusji:</h2>
-							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>" class="mb-[30px] text-[20px] text-black font-semibold"><?php echo esc_html( $footer_email_title ); ?></a>
-							<button class="ks-button ks-button--primary">
+							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>" class="text-[20px] text-black font-semibold"><?php echo esc_html( $footer_email_title ); ?></a>
+							<button class="ks-button ks-button--primary mt-[25px]">
 								<a class="scroll" href="https://www.linkedin.com/in/swistak-krakow/" target="_self">Porozmawiajmy na Linked-in</a>
 							</button>
 						</div>
