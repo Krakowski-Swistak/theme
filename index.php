@@ -63,7 +63,9 @@
 									</div>
 								<?php	
 								endwhile;
-								// the_posts_navigation();
+								the_posts_navigation($args = array(
+									'class' => 'test'
+								));
 							?>
 					</div>
 
