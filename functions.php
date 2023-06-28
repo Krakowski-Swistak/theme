@@ -211,7 +211,7 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function add_menu_items_classname( $atts, $item, $args ) {
-	if(is_front_page() || is_home()){
+	if(is_front_page()){
 		$atts['class'] = 'scroll';
     return $atts;
 	}else return;
