@@ -72,24 +72,26 @@ get_header();
 							endif;
 						?>
 
-						<p>Zainteresował Cię ten materiał? Zapraszam do dyskusji link do Linked-in</p>
-						<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
-						<div class="ks-copyright__social-media">
-							<?php
-								if( have_rows('social_images', 'option') ):
-									while ( have_rows('social_images', 'option') ) : the_row();
-										$image = get_sub_field('social_image');
-										$link = get_sub_field('social_url');
-										?>	
-										<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="last-of-type:ml-[2px]">
-											<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
-										</a>
-										<?php
-									endwhile;
-								else :
-								endif;
-							?>
+						<div class="post-contact mb-[25px]">
+							<p class="mt-[40px] mb-0">Zainteresował Cię ten materiał? Zapraszam do dyskusji:</p>
+							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
+							<div class="ks-copyright__social-media">
+								<?php
+									if( have_rows('social_images', 'option') ):
+										while ( have_rows('social_images', 'option') ) : the_row();
+											$image = get_sub_field('social_image');
+											$link = get_sub_field('social_url');
+											?>	
+											<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="last-of-type:ml-[2px]">
+												<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+											</a>
+											<?php
+										endwhile;
+									else :
+									endif;
+								?>
 							</div>
+						</div>
 						
 						<a href="https://swistak.webo.design/blog/" class="text-black text-[16px] font-semibold hover:text-[#00b3a7] transition-text ease-out duration-200"><span class="text-[20px]">&larr; </span> Powrót do Bloga</a>
 
