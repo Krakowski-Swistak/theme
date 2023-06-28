@@ -99,6 +99,12 @@
           delay: 2000,
           disableOnInteraction: false,
         },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
       });
   },
 });
