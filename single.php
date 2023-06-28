@@ -82,7 +82,7 @@ get_header();
 											$image = get_sub_field('social_image');
 											$link = get_sub_field('social_url');
 											?>	
-											<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="last-of-type:ml-[2px]">
+											<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="text-black">
 												<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
 											</a>
 											<?php
