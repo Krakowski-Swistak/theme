@@ -93,7 +93,7 @@
         breakpoints: { 1024: { slidesPerView: 2 } },
       }),
       new Swiper("[data-slider-clients]", {
-        slidesPerView: 6,
+        slidesPerView: 5,
         spaceBetween: 0,
         autoplay: {
           delay: 2000,
