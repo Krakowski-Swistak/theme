@@ -6,9 +6,7 @@
  */
 
 get_header();
-
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<section class="ks-hero">
@@ -20,7 +18,6 @@ get_header();
 							<p><?php echo the_field('hero_description'); ?></p>
 							<div class="ks-hero__buttons">
 								<?php
-								
 									$hero_button_1 = get_field('hero_button_1');
 									if( $hero_button_1 ): 
 										$hero_button_1_url = $hero_button_1['url'];
@@ -34,9 +31,7 @@ get_header();
 										$hero_button_2_title = $hero_button_2['title'];
 										$hero_button_2_target = $hero_button_2['target'] ? $hero_button_2['target'] : '_self';
 									endif;
-
 								?>
-
 								<button class="ks-button ks-button--primary">
 									<a class="scroll" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 								</button>
