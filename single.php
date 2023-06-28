@@ -77,7 +77,7 @@ get_header();
 							<h3 class="mb-[25px] text-[26px]">Zapraszam do dyskusji</h2>
 							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>" class="text-[20px] text-[#00b3a7] hover:text-[#008077] font-medium transition ease-out duration-200"><?php echo esc_html( $footer_email_title ); ?></a>
 							<button class="ks-button ks-button--primary mt-[25px]">
-								<a class="scroll" href="https://www.linkedin.com/in/swistak-krakow/" target="_self">Porozmawiajmy na Linked-in</a>
+								<a href="https://www.linkedin.com/in/swistak-krakow/" target="_self">Porozmawiajmy na Linked-in</a>
 							</button>
 						</div>
 						
