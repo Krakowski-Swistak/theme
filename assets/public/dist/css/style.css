@@ -2548,6 +2548,9 @@ img {
 }
 .widget ul {
   margin-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .post ul {
   margin-bottom: 20px;
