@@ -215,7 +215,7 @@ function add_menu_items_classname( $atts, $item, $args ) {
 		$atts['class'] = 'scroll';
     return $atts;
 	}else{
-		$atts['class'] = 'blog';
+		$atts['class'] = '';
     return $atts;
 	}
 };
