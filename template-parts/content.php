@@ -11,7 +11,6 @@
 
 <div class="ks-container">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	content.php
 		<header class="entry-header">
 			<?php
 			if ( is_singular() ) :
