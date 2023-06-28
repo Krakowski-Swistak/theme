@@ -64,7 +64,8 @@
 								<?php	
 								endwhile;
 								the_posts_navigation($args = array(
-									'class' = 'test'
+									'prev_text' => 'Kolejne wpisy',
+									'class' => 'test'
 								));
 							?>
 					</div>
