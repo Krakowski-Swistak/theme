@@ -11,7 +11,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 };
 ?>
-
 <aside id="secondary" class="widget-area">
 	<div class="recent-posts-wrapper">
 		<p class="font-medium text-[24px] mb-[25px]">Ostatnie wpisy</p>
@@ -43,12 +42,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</ul>
 	</div>
 
-	<!-- <hr class="wp-block-separator has-alpha-channel-opacity "> -->
-
 	<!-- wp admin panel -->
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-	<!-- share post -->
 	<?php 
 		if(is_single()){ 
 		?>
