@@ -214,7 +214,10 @@ function add_menu_items_classname( $atts, $item, $args ) {
 	if(is_front_page()){
 		$atts['class'] = 'scroll';
     return $atts;
-	}else return;
+	}else{
+		$atts['class'] = 'blog';
+    return $atts;
+	}
 };
 add_filter( 'nav_menu_link_attributes', 'add_menu_items_classname', 10, 3 );
 
