@@ -72,7 +72,7 @@ get_header();
 							endif;
 						?>
 
-						<div class="post-cta mb-[25px] bg-[#F4F4F4] p-[60px_80px]">
+						<div class="post-cta mb-[25px] bg-[#F4F4F4] p-[60px_80px] text-center">
 							<h2 class="">Zainteresował Cię ten materiał? Zapraszam do dyskusji</h2>
 							<h3 class="">Zainteresował Cię ten materiał? Zapraszam do dyskusji</h2>
 							<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>" class="text-[20px] text-black hover:text-[#00b3a7] font-medium transition ease-out duration-200"><?php echo esc_html( $footer_email_title ); ?></a>
