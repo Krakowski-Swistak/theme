@@ -2586,5 +2586,6 @@ img {
   border: 2px solid #00b3a7;
 }
 .navigation .nav-links .nav-previous a:hover {
-  background: #008077;
+  background: #00b3a7;
+  color: white;
 }
