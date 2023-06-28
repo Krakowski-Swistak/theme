@@ -405,15 +405,12 @@ get_header();
 							$homepagePost = new WP_Query(array(
 								'posts_per_page' => 3
 							));
-
-							// blog posts
 							while ($homepagePost -> have_posts()){
 								$homepagePost -> the_post(); 
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper relative mb-[30px] desktop:w-1/3 w-fit">
 								<a href="<?php the_permalink(); ?>" class="text-black  hover:text-[#00b3a7] transition ease-out duration-200">
-
 								<?php
 									if($postImageUrl){
 									?>
@@ -427,8 +424,7 @@ get_header();
 											<img src="<?php echo get_template_directory_uri() . '/assets/images/logo-swistak.png' ?>" alt="post-image-default" class="object-contain scale-1 group-hover:scale-[1.06] transition ease-out duration-[700ms]">
 										</div>
 										<?php
-									}
-									
+									};
 								?>
 									<?php the_title('<h3 class="desktop:text-[24px] text-[22px] font-semibold mb-0 desktop:leading-[30px] leading-[26px]">', '</h3>'); ?></php>
 								</a>
