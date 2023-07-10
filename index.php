@@ -67,7 +67,7 @@
 								));
 							?>
 					</div>
-					<div class="sidebar-wrapper basis-[30%]">
+					<div class="sidebar-wrapper basis-[30%] mb-[50px]">
 						<?php get_sidebar(); ?>
 					</div>
 				</div>
