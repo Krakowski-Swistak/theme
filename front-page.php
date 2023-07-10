@@ -393,7 +393,7 @@ get_header();
 					<h2>Blog</h2>
 					<p class="mb-[40px] text-[20px]"><?php the_field('blog_subtitle'); ?></p>
 					<button class="ks-button absolute desktop:top-[100px] top-[15px] right-0">
-						<a href="https://swistak.webo.design/blog/" class="text-[#00b3a7] hover:text-[#008077] font-semibold transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px]"> &rarr;</span></a>
+						<a href="https://swistak.webo.design/blog/" class="text-[14px] text-[#00b3a7] hover:text-[#008077] font-semibold transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px]"> &rarr;</span></a>
 					</button>
 					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] desktop:flex-nowrap flex-wrap">
 						<?php 
@@ -425,7 +425,7 @@ get_header();
 								</a>
 								<p class="mb-[10px] text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
 								<p class="text-[#252525] mb-[45px]"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
-								<a href="<?php the_permalink(); ?>" class="absolute bottom-0 left-0 text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
+								<a href="<?php the_permalink(); ?>" class="flex items-center absolute bottom-0 left-0 text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 							</div>
 						<?php };
 							wp_reset_postdata(); 
