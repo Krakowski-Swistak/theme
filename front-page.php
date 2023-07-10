@@ -434,7 +434,7 @@ get_header();
 				</div>
 			</section>
 
-			<section id="ks-content" class="ks-content ks-fade">
+			<section id="ks-content" class="ks-content ks-fade hidden">
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('materials_heading'); ?>
 					<?php echo the_field('materials_description'); ?>
