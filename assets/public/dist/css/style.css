@@ -2590,6 +2590,13 @@ img {
   margin-top: -40px;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 480px) {
+  .navigation .nav-links .nav-previous a,
+  .navigation .nav-links .nav-next a {
+    margin-top: -40px;
+    margin-bottom: 40px;
+  }
+}
 .navigation .nav-links .nav-previous a:hover,
 .navigation .nav-links .nav-next a:hover {
   background: #00b3a7;
