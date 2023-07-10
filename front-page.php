@@ -230,7 +230,7 @@ get_header();
 				<div class="ks-container ks-fadeInBottom relative flex flex-col justify-center ">
 					<?php echo the_field('recommendations_heading'); ?>
 					<button class="ks-button w-fit font-semibold desktop:absolute desktop:top-[10px] desktop:right-0">
-						<a class="text-[#00b3a7] hover:text-[#008077] transition-text ease-out duration-200" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?> <span class="text-[20px]">	&rarr;</span></a>
+						<a class="text-[14px] text-[#00b3a7] hover:text-[#008077] flex items-center gap-[6px] transition-text ease-out duration-200" href="https://www.linkedin.com/in/swistak-krakow/details/recommendations/?detailScreenTabIndex=0" target="_blank"><?php the_field('recomendation_button_text'); ?> <span class="text-[20px]">	&rarr;</span></a>
 					</button>
 					<div class="ks-swiper">
 						<div class="swiper-container ks-recommendations__swiper-container" data-slider-recommendation >
@@ -425,7 +425,7 @@ get_header();
 								</a>
 								<p class="mb-[10px] text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
 								<p class="text-[#252525] mb-[45px]"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
-								<a href="<?php the_permalink(); ?>" class="flex items-center gap-[6px] absolute bottom-0 left-0 text-[14px] text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
+								<a href="<?php the_permalink(); ?>" class="flex items-center gap-[6px] absolute bottom-0 left-0 text-[14px] text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px] mb-[2px]">&rarr;</span></a>
 							</div>
 						<?php };
 							wp_reset_postdata(); 
