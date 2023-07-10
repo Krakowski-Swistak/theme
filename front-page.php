@@ -425,7 +425,7 @@ get_header();
 								</a>
 								<p class="mb-[10px] text-[14px] text-neutral-400"><?php the_time('d F Y') ?></p>
 								<p class="text-[#252525] mb-[45px]"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
-								<a href="<?php the_permalink(); ?>" class="flex items-center absolute bottom-0 left-0 text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
+								<a href="<?php the_permalink(); ?>" class="flex items-center absolute bottom-0 left-0 text-[14px] text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 							</div>
 						<?php };
 							wp_reset_postdata(); 
