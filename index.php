@@ -63,7 +63,7 @@
 								endwhile;
 								the_posts_navigation($args = array(
 									'prev_text' => 'Kolejne wpisy',
-									'class' => 'test'
+									'class' => 'mt-[-40px] mb-[40px]'
 								));
 							?>
 					</div>
