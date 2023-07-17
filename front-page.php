@@ -19,14 +19,14 @@ get_header();
 							<div class="ks-hero__buttons">
 								<?php
 									$hero_button_1 = get_field('hero_button_1');
-									if( $hero_button_1 ): 
+									if( $hero_button_1 ):
 										$hero_button_1_url = $hero_button_1['url'];
 										$hero_button_1_title = $hero_button_1['title'];
 										$hero_button_1_target = $hero_button_1['target'] ? $hero_button_1['target'] : '_self';
 									endif;
 
 									$hero_button_2 = get_field('hero_button_2');
-									if( $hero_button_2 ): 
+									if( $hero_button_2 ):
 										$hero_button_2_url = $hero_button_2['url'];
 										$hero_button_2_title = $hero_button_2['title'];
 										$hero_button_2_target = $hero_button_2['target'] ? $hero_button_2['target'] : '_self';
@@ -43,25 +43,25 @@ get_header();
 					</div>
 				</div>
 			</section>
-	
+
 			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-about__inner">
 						<div class="ks-image ks-image--big">
 							<?php
-							
+
 								$about_img = get_field('about_image');
-								if( $about_img ): 
+								if( $about_img ):
 									$about_img_url = $about_img['url'];
 									$about_img_alt = $about_img['alt'];
 									$about_img_title = $about_img['title'];
 								endif;
 
 								if($about_img): $about_img_sizes = $about_img['sizes'];?>
-								<img 
-									src="<?php echo $about_img_sizes['portrait']; ?>" 
+								<img
+									src="<?php echo $about_img_sizes['portrait']; ?>"
 									width="<?php echo $about_img_sizes['portrait-width']; ?>"
-									height="<?php echo $about_img_sizes['portrait-height']; ?>" 
+									height="<?php echo $about_img_sizes['portrait-height']; ?>"
 									alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
 							<?php endif; ?>
 						</div>
@@ -74,7 +74,7 @@ get_header();
 									while ( have_rows('about_facilities') ) : the_row();
 										$image = get_sub_field('about_facility_image');
 										$content = get_sub_field('about_facility_info');
-										?>	
+										?>
 											<div class="ks-facility">
 												<img width="67" height="67" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
 												<h3 class="ks-facility__title"><?php echo $content; ?></h3>
@@ -88,10 +88,10 @@ get_header();
 
 							<div class="ks-about__text"><?php echo the_field('about_content'); ?></div>
 						</div>
-					</div>	
+					</div>
 				</div>
 			</section>
-			
+
 			<section id="ks-how-do-i-help" class="ks-help ks-background-shape ks-background-shape__rectangle ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-help__info">
@@ -101,16 +101,16 @@ get_header();
 						</div>
 						<div class="ks-help__images">
 							<?php
-								 
+
 								$help_img_1 = get_field('help_image_1');
-								if( $help_img_1 ): 
+								if( $help_img_1 ):
 									$help_img_1_url = $help_img_1['url'];
 									$help_img_1_alt = $help_img_1['alt'];
 									$help_img_1_title = $help_img_1['title'];
 								endif;
 
 								$help_img_2 = get_field('help_image_2');
-								if( $help_img_2 ): 
+								if( $help_img_2 ):
 									$help_img_2_url = $help_img_2['url'];
 									$help_img_2_alt = $help_img_2['alt'];
 									$help_img_2_title = $help_img_2['title'];
@@ -123,7 +123,7 @@ get_header();
 										alt="<?php echo $help_img_1['alt']; ?>"
 										title="<?php echo $help_img_1['title']; ?>"
 										width="<?php echo $help_img_1_sizes['help1-width']; ?>"
-										height="<?php echo $help_img_1_sizes['help1-height']; ?>" 
+										height="<?php echo $help_img_1_sizes['help1-height']; ?>"
 									/>
 								</div>
 							<?php endif; ?>
@@ -134,7 +134,7 @@ get_header();
 										alt="<?php echo $help_img_2['alt']; ?>"
 										title="<?php echo $help_img_2['title']; ?>"
 										width="<?php echo $help_img_2_sizes['help2-width']; ?>"
-										height="<?php echo $help_img_2_sizes['help2-height']; ?>" 
+										height="<?php echo $help_img_2_sizes['help2-height']; ?>"
 									/>
 								</div>
 							<?php endif; ?>
@@ -147,7 +147,7 @@ get_header();
 									$icon = get_sub_field('help_facility_icon');
 									$title = get_sub_field('help_facility_title');
 									$description = get_sub_field('help_facility_description');
-									?>	
+									?>
 										<div class="ks-facility ks-facility--extended">
 											<div>
 												<img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
@@ -173,14 +173,14 @@ get_header();
 							<?php echo the_field('strategy_content'); ?>
 						</div>
 						<?php
-							
+
 							$strategy_image = get_field('strategy_image');
-							if( $strategy_image ): 
+							if( $strategy_image ):
 								$strategy_image_url = $strategy_image['url'];
 								$strategy_image_alt = $strategy_image['alt'];
 								$strategy_image_title = $strategy_image['title'];
 							endif;
-							
+
 						?>
 						<div class="ks-strategy__column ks-strategy__column--image">
 							<img src="<?php echo $strategy_image['url']; ?>" alt="<?php echo $strategy_image['alt']; ?>" title="<?php echo $strategy_image['title']; ?>" width="772" height="576"/>
@@ -188,7 +188,7 @@ get_header();
 					</div>
 				</div>
 			</section>
-			
+
 			<section id="ks-case-studies" class="ks-case-studies ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('case_studies_heading'); ?>
@@ -200,7 +200,7 @@ get_header();
 										while ( have_rows('case_studies_cases') ) : the_row();
 											$title = get_sub_field('case_study_title');
 											$description = get_sub_field('case_study_description');
-											?>	
+											?>
 												<li class="swiper-slide" data-case-slide>
 													<div class="ks-case-studies__slide">
 														<div class="ks-facility">
@@ -242,9 +242,9 @@ get_header();
 											$author_role = get_sub_field('recommendation_author_role');
 											$author_name = get_sub_field('recommendation_author_name');
 											$description = get_sub_field('recommendation_description');
-											
-											?>	
-												<li class="swiper-slide">	
+
+											?>
+												<li class="swiper-slide">
 													<div class="ks-recommendation">
 														<?php if($image): $image_sizes = $image['sizes'];?>
 															<div class="ks-image ks-image--small">
@@ -253,7 +253,7 @@ get_header();
 																	alt="<?php echo $image['alt']; ?>"
 																	title="<?php echo $image['title']; ?>"
 																	width="<?php echo $image_sizes['recommendation-width']; ?>"
-																	height="<?php echo $image_sizes['recommendation-height']; ?>" 
+																	height="<?php echo $image_sizes['recommendation-height']; ?>"
 																/>
 															</div>
 														<?php endif; ?>
@@ -316,11 +316,11 @@ get_header();
 							<ul class="swiper-wrapper">
 								<?php
 									$clients_brands = get_field('clients_brands');
-								?>	
+								?>
 								<?php
 									foreach ($clients_brands as $key => $client_img){
 								?>
-									<li class="swiper-slide max-w-[285px] self-center">	
+									<li class="swiper-slide max-w-[285px] self-center">
 										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-h-[150px] object-contain">
 									</li>
 								<?php
@@ -362,7 +362,7 @@ get_header();
 										$title = get_sub_field('career_offer_title');
 										$description = get_sub_field('career_offer_description');
 										$button = get_sub_field('career_offer_button');
-										?>	
+										?>
 											<div class="ks-option__wrapper bg-[#f3f3f3] p-[40px] drop-shadow-lg basis-full flex flex-col justify-center">
 												<div class="flex justify-center items-center flex-col gap-[40px] text-center">
 													<div class="temp-icon w-[110px] h-[110px] rounded-full bg-[#00b3a7]">icon</div>
@@ -396,12 +396,12 @@ get_header();
 						<a href="https://swistak.webo.design/blog/" class="text-[14px] text-[#00b3a7] hover:text-[#008077] flex items-center gap-[6px] font-semibold transition-text ease-out duration-200">Wszystkie wpisy <span class="text-[20px] mb-[2px]">&rarr;</span></a>
 					</button>
 					<div class="blog-wrapper mb-[60px] flex justify-between gap-[30px] desktop:flex-nowrap flex-wrap">
-						<?php 
+						<?php
 							$homepagePost = new WP_Query(array(
 								'posts_per_page' => 3
 							));
 							while ($homepagePost -> have_posts()){
-								$homepagePost -> the_post(); 
+								$homepagePost -> the_post();
 								$postImageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post');
 						?>
 							<div class="post-wrapper relative mb-[30px] desktop:w-1/3 w-fit">
@@ -428,7 +428,7 @@ get_header();
 								<a href="<?php the_permalink(); ?>" class="flex items-center gap-[6px] absolute bottom-0 left-0 text-[14px] text-black hover:text-[#00b3a7] transition ease-out duration-200">Czytaj więcej <span class="text-[20px] mb-[2px]">&rarr;</span></a>
 							</div>
 						<?php };
-							wp_reset_postdata(); 
+							wp_reset_postdata();
 						?>
 					</div>
 				</div>
@@ -443,7 +443,7 @@ get_header();
 							<div class="ks-image ks-image--no-shadow">
 								<img src="<?php echo get_template_directory_uri() . '/assets/images/video-plug.png' ?>" alt="<?php bloginfo( 'name' ); ?>" />
 								<div class="ks-overlay"></div>
-								
+
 								<button class="ks-button ks-button__video ks-button__video--white">
 									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>" data-video-trigger><?php echo esc_html( $hero_button_2_title ); ?></a>
 								</button>
@@ -460,7 +460,7 @@ get_header();
 									foreach ($materials_chunks as $key => $chunk) {
 										?>
 											<li class="swiper-slide">
-												<div class="ks-content__links">	
+												<div class="ks-content__links">
 													<?php
 														foreach ($chunk as $key => $article) {
 															?>
@@ -480,14 +480,14 @@ get_header();
 					</div>
 				</div>
 			</section>
-			
+
 			<div id="ks-video-popup" class="ks-popup">
 				<div class="ks-popup__content">
 					<?php echo str_replace('src', "data-lazy-src", get_field('main_page_video')); ?>
 				</div>
 				<div class="ks-overlay"></div>
 			</div>
-			
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
