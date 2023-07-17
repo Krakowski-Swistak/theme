@@ -11,11 +11,11 @@ archive.php
 
 get_header();
 ?>
-	
+
 	<div id="primary" class="content-area ks-container">
 		<main id="main" class="site-main">
 		<button class="ks-button ks-button--primary">
-			<a href="https://swistak.webo.design/blog/"><- Powrót do Bloga</a>
+			<a href="/blog/"><- Powrót do Bloga</a>
 		</button>
 		<?php if ( have_posts() ) : ?>
 

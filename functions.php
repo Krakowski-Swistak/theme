@@ -224,7 +224,7 @@ add_filter( 'nav_menu_link_attributes', 'add_menu_items_classname', 10, 3 );
 
 
 function allow_nbsp_in_tinymce( $mceInit ) {
-    $mceInit['entities'] = '160,nbsp,38,amp,60,lt,62,gt';   
+    $mceInit['entities'] = '160,nbsp,38,amp,60,lt,62,gt';
     $mceInit['entity_encoding'] = 'named';
     return $mceInit;
 }
@@ -242,7 +242,7 @@ function custom_menu_item_links($items, $args) {
 	}else{
 		foreach ($items as $item) {
 			if ($item->title == 'Blog') {
-					$item->url = 'https://swistak.webo.design/blog/';
+					$item->url = '/blog/';
 			};
 		};
 	};

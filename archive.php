@@ -1,5 +1,5 @@
-<?php 
-	get_header(); 
+<?php
+	get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -33,9 +33,9 @@
 											}; ?>
 										<div class="post-text-wrapper relative basis-2/3">
 											<div class="post-date h-[36px] text-[20px] leading-[36px] desktop:flex hidden">
-												<img src="https://swistak.webo.design/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="20" class="inline">
+												<img src="/wp-content/uploads/2023/06/calendar2.png" alt="calendar-icon" width="20" class="inline">
 												<div class="date-text-wrapper ml-[6px] leading-[42px] desktop:block hidden">
-													<span class="day mb-0 font-medium"><?php the_time('d'); ?></span>  
+													<span class="day mb-0 font-medium"><?php the_time('d'); ?></span>
 													<span class="month mb-0 mt-[-30px] ml-[-2px] font-light"><?php the_time('M'); ?></span>
 												</div>
 											</div>
@@ -44,7 +44,7 @@
 											</h3>
 											<div class="category-list mb-[15px] inline-block">
 												<ul class="inline text-[14px] text-neutral-500">
-													<?php 
+													<?php
 														$categories = get_the_category();
 														foreach ($categories as $category) {
 														$category_link = get_category_link($category->term_id);
@@ -59,7 +59,7 @@
 											<a href="<?php the_permalink(); ?>" class="text-black hover:text-[#00b3a7] text-[16px] font-semibold transition ease-out duration-200 absolute bottom-[0px] left-0">Czytaj więcej <span class="text-[20px]">&rarr;</span></a>
 										</div>
 									</div>
-								<?php	
+								<?php
 								endwhile;
 								the_posts_navigation();
 							?>
