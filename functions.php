@@ -46,10 +46,12 @@ if ( ! function_exists( 'swistak_theme_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'post', 500, 395 );
 		add_image_size( 'portrait', 325, 488, true );
 		add_image_size( 'help1', 260, 356, true );
 		add_image_size( 'help2', 260, 316, true );
 		add_image_size( 'recommendation', 130, 130 );
+		add_image_size( 'recentPost', 60, 60 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -186,10 +188,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function swistak_theme_styles_and_scripts() {
-	wp_register_style('custom-styles', get_template_directory_uri().'/assets/public/dist/css/style.css');
+	wp_register_style('custom-styles', get_template_directory_uri().'/assets/public/dist/css/style.css', array(), rand(111,9999), 'all');
 	wp_enqueue_style('custom-styles');
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/modernizr.js', array (), 1.5, true);
-	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array (), 1.5, true);
+	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array (), rand(111,9999), true);
 	wp_enqueue_script( 'anchor-scroll', get_template_directory_uri() . '/assets/js/anchor-scroll-master/scroll.min.js', array (), 1.5, true);
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/public/dist/js/Main.js', array(), 1.5, true);
 	wp_enqueue_script( 'FadeInBottom', get_template_directory_uri() . '/assets/public/dist/js/FadeInBottom.js', array(), 1.5, true);
@@ -197,7 +199,7 @@ function swistak_theme_styles_and_scripts() {
 	wp_enqueue_script( 'FormRodo', get_template_directory_uri() . '/assets/public/dist/js/FormRodo.js', array(), 1.5, true);
 	wp_enqueue_script( 'HeaderPosition', get_template_directory_uri() . '/assets/public/dist/js/HeaderPosition.js', array('anchor-scroll'), 1.5, true);
 	wp_enqueue_script( 'StringLimitation', get_template_directory_uri() . '/assets/public/dist/js/StringLimitation.js', array(), 1.5, true);
-	wp_enqueue_script( 'SwiperCarousels', get_template_directory_uri() . '/assets/public/dist/js/SwiperCarousels.js', array('swiper'), 1.5, true);
+	wp_enqueue_script( 'SwiperCarousels', get_template_directory_uri() . '/assets/public/dist/js/SwiperCarousels.js', array('swiper'), rand(111,9999), true);
 	wp_enqueue_script( 'VideoHandler', get_template_directory_uri() . '/assets/public/dist/js/VideoHandler.js', array(), 1.5, true);
 	wp_enqueue_script( 'WaveStore', get_template_directory_uri() . '/assets/public/dist/js/WaveStore.js', array(), 1.5, true);
 }
@@ -209,9 +211,14 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function add_menu_items_classname( $atts, $item, $args ) {
-	$atts['class'] = 'scroll';
+	if(is_front_page()){
+		$atts['class'] = 'scroll';
     return $atts;
-}
+	}else{
+		$atts['class'] = '';
+    return $atts;
+	}
+};
 add_filter( 'nav_menu_link_attributes', 'add_menu_items_classname', 10, 3 );
 
 
@@ -222,3 +229,35 @@ function allow_nbsp_in_tinymce( $mceInit ) {
     return $mceInit;
 }
 add_filter( 'tiny_mce_before_init', 'allow_nbsp_in_tinymce' );
+
+
+// tk test
+function custom_menu_item_links($items, $args) {
+	if (is_front_page()) {
+			foreach ($items as $item) {
+					if ($item->title == 'Blog') {
+							$item->url = '#ks-blog';
+					};
+			};
+	}else{
+		foreach ($items as $item) {
+			if ($item->title == 'Blog') {
+					$item->url = 'https://swistak.webo.design/blog/';
+			};
+		};
+	};
+	return $items;
+};
+add_filter('wp_nav_menu_objects', 'custom_menu_item_links', 10, 2);
+
+function posts_link_next_class($format){
+	$format = str_replace('href=', 'class="next ks-button ks-button--primary inverted" href=', $format);
+	return $format;
+}
+add_filter('next_post_link', 'posts_link_next_class');
+
+function posts_link_prev_class($format) {
+	$format = str_replace('href=', 'class="prev ks-button ks-button--primary inverted" href=', $format);
+	return $format;
+}
+add_filter('previous_post_link', 'posts_link_prev_class');

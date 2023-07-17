@@ -36,7 +36,7 @@ endif;
 					</div>
 					<div>
 						<h2 class="ks-util-color-primary"><?php echo get_field('footer_heading', 'option'); ?></h2>
-					</div>
+					</div>	
 					<div class="ks-contact-label ks-contact-label--phone">
 						<a href="<?php echo esc_url( $footer_phone_url ); ?>" target="<?php echo esc_attr( $footer_phone_target ); ?>"><?php echo esc_html( $footer_phone_title ); ?></a>
 					</div>
@@ -59,7 +59,7 @@ endif;
 		<div class="ks-container">
 			<div class="site-info ks-copyright">
 				<div class="ks-copyright__rights">
-					<span>&copy; 2020 All Rights Reserved</span>
+					<span>&copy; <?php echo date('Y') ?> date All Rights Reserved</span>
 				</div>
 				<div class="ks-copyright__social-media">
 				<?php
@@ -68,7 +68,7 @@ endif;
 							$image = get_sub_field('social_image');
 							$link = get_sub_field('social_url');
 							?>	
-							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="last-of-type:ml-[2px]">
 								<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
 							</a>
 							<?php

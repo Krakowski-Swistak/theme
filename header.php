@@ -27,8 +27,21 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+				corePlugins: {
+          preflight: false,
+        },
+				theme: {
+					screens: {
+						'desktop': '1024px',
+					},
+				}
+      }
+  </script>
 
-	
 	<?php wp_head(); ?>
 	<script>
 		var acf = {};
@@ -50,48 +63,50 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle ks-menu-toggler" aria-controls="primary-menu" aria-expanded="false">
-					<span class="ks-sr-only">Menu</span>
-					<div class="ks-menu-toggler__line"></div>
-					<div class="ks-menu-toggler__line"></div>
-					<div class="ks-menu-toggler__line"></div>
-				</button>
-				<div class="ks-menu-items-container">
-					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-							)
-						);
-					?>
-					<div class="ks-contact-info">
-						<div class="ks-contact-info__social-media">
+					<button class="menu-toggle ks-menu-toggler" aria-controls="primary-menu" aria-expanded="false">
+						<span class="ks-sr-only">Menu</span>
+						<div class="ks-menu-toggler__line"></div>
+						<div class="ks-menu-toggler__line"></div>
+						<div class="ks-menu-toggler__line"></div>
+					</button>
+					<div class="ks-menu-items-container">
 						<?php
-							if( have_rows('social_images', 'option') ):
-								while ( have_rows('social_images', 'option') ) : the_row();
-									$image = get_sub_field('social_image');
-									$link = get_sub_field('social_url');
-									?>	
-									<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-										<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
-									</a>
-									<?php
-								endwhile;
-							else :
-							endif;
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								)
+							);
 						?>
+						<div class="ks-contact-info">
+							<div class="ks-contact-info__social-media">
+							<?php
+								if( have_rows('social_images', 'option') ):
+									while ( have_rows('social_images', 'option') ) : the_row();
+										$image = get_sub_field('social_image');
+										$link = get_sub_field('social_url');
+										?>	
+										<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="last-of-type:ml-[5px]">
+											<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+										</a>
+										<?php
+									endwhile;
+								else :
+								endif;
+							?>
+							</div>
+							<button class="ks-button ks-button--primary inverted">
+								<a class="scroll" href="#kontakt">Skontaktuj się</a>
+							</button>
+
+							<style>
+								.ks-button--primary.inverted{color: #00b3a7;background: transparent;border: 2px solid #00b3a7;}
+								.ks-button--primary.inverted a{color: #00b3a7; transition: all 0.3}
+								.ks-button--primary.inverted:hover{background: #00b3a7;color: #fff}
+								.ks-button--primary.inverted:hover a{color: #fff}
+							</style>
 						</div>
-						<button class="ks-button ks-button--primary inverted">
-							<a class="scroll" href="#kontakt">Skontaktuj się</a>
-						</button>
-						<style>.ks-button--primary.inverted{color: #00b3a7;background: transparent;border: 2px solid #00b3a7;}
-							   .ks-button--primary.inverted a{color: #00b3a7; transition: all 0.3}
-.ks-button--primary.inverted:hover{background: #00b3a7;color: #fff}
-.ks-button--primary.inverted:hover a{color: #fff}
-</style>
 					</div>
-				</div>
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
