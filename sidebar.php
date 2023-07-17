@@ -18,7 +18,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			<?php
 			$recent_posts = wp_get_recent_posts(array(
 				'numberposts' => 4,
-				'post_status' => 'publish' 
+				'post_status' => 'publish'
 			));
 			foreach( $recent_posts as $post_item ) : ?>
 				<li class="desktop:mb-0 mb-[16px]">
@@ -26,7 +26,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					<?php
 						if(get_the_post_thumbnail($post_item['ID'])){
 						?>
-						<div class="recent-post-img min-w-[60px] max-h-[60px] overflow-hidden rounded-[10px]">	
+						<div class="recent-post-img min-w-[60px] max-h-[60px] overflow-hidden rounded-[10px]">
 							<?php echo get_the_post_thumbnail($post_item['ID'], 'recentPost'); ?>
 						</div>
 					<?php
@@ -45,8 +45,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<!-- wp admin panel -->
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-	<?php 
-		if(is_single()){ 
+	<?php
+		if(is_single()){
 		?>
 		<div class="share-wrapper mb-[40px] flex items-center gap-[20px]">
 			<p class="mb-0 font-medium text-[22px]">Udostępnij post:  </p>
@@ -56,13 +56,13 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				$socialMedia = array(
 					'facebook' => array(
 						'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . $url,
-						'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/facebook-square-1.svg" alt="fb-icon">'
+						'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="/wp-content/uploads/2020/07/facebook-square-1.svg" alt="fb-icon">'
 					),
 					'linkedin' => array(
 						'url' => 'https://www.linkedin.com/shareArticle?url=' . $url . '&title=' . $title,
-						'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="https://swistak.webo.design/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
+						'icon' => '<img width="46" height="46" class="ks-social-img lazyloaded" src="/wp-content/uploads/2020/07/linkedin-square.svg" alt="linkedin-icon">'
 					),
-				); 
+				);
 			?>
 			<ul class="share-links flex gap-[25px]">
 				<?php
