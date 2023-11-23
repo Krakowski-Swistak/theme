@@ -19,6 +19,7 @@ $lesson_url           = tutor_utils()->get_course_first_lesson();
 $is_privileged_user   = tutor_utils()->has_user_course_content_access();
 $tutor_course_sell_by = apply_filters( 'tutor_course_sell_by', null );
 $is_public            = get_post_meta( get_the_ID(), '_tutor_is_public_course', true ) == 'yes';
+$course_categories    = get_tutor_course_categories();
 
 // Monetization info.
 $monetize_by    = tutor_utils()->get_option( 'monetize_by' );
@@ -64,11 +65,53 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 ?>
 
 <div class="tutor-card tutor-card-md tutor-sidebar-card">
+	<!-- Course Info -->
+	<div class="tutor-card-body">
+		<ul class="tutor-ul">
+			<?php foreach ( $sidebar_meta as $key => $meta ) : ?>
+				<?php
+				if ( ! $meta['value'] ) {
+					continue;
+				}
+				?>
+				<li class="tutor-d-flex<?php echo $key > 0 ? ' tutor-mt-12' : ''; ?>">
+					<span class="<?php echo esc_attr( $meta['icon_class'] ); ?> tutor-color-black tutor-mt-4 tutor-mr-12" aria-labelledby="<?php echo esc_html( $meta['label'] ); ?>"></span>
+					<span class="tutor-fs-6 tutor-color-secondary">
+						<?php echo wp_kses_post( $meta['value'] ); ?>
+					</span>
+				</li>
+			<?php endforeach; ?>
+			<?php if ( ! empty( $course_categories ) && is_array( $course_categories ) && count( $course_categories ) ) : ?>
+				<li class="tutor-d-flex">
+					<span class="tutor-color-black tutor-mt-4 tutor-mr-12" aria-labelledby="Categories">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+							<path d="M8 20C3.664 20 0 17.965 0 15.556V4.444C0 2.035 3.664 0 8 0C12.336 0 16 2.035 16 4.444V15.556C16 17.965 12.337 20 8 20ZM2 12.9V15.559C2.07 16.112 4.309 17.781 8 17.781C11.691 17.781 13.931 16.107 14 15.553V12.9C12.1794 13.9554 10.1039 14.4905 8 14.447C5.89606 14.4906 3.82058 13.9554 2 12.9ZM2 7.341V10C2.07 10.553 4.309 12.222 8 12.222C11.691 12.222 13.931 10.548 14 9.994V7.341C12.1795 8.39678 10.104 8.93226 8 8.889C5.89596 8.93231 3.82046 8.39683 2 7.341ZM8 2.222C4.308 2.222 2.069 3.896 2 4.451C2.07 5 4.311 6.666 8 6.666C11.689 6.666 13.931 4.992 14 4.438C13.93 3.887 11.689 2.222 8 2.222Z" fill="#22272F"/>
+						</svg>
+						<?php esc_html_e( 'Categories:', 'tutor' ); ?>
+					</span>
+					<?php
+						$category_links = array();
+					foreach ( $course_categories as $course_category ) :
+						$category_name    = $course_category->name;
+						$category_link    = get_term_link( $course_category->term_id );
+						$category_links[] = wp_sprintf( '<a href="%1$s">%2$s</a>', esc_url( $category_link ), esc_html( $category_name ) );
+						endforeach;
+						echo wp_kses(
+							implode( ', ', $category_links ),
+							array( 'a' => array( 'href' => true ) )
+						);
+					?>
+
+				</li>
+			<?php endif; ?>
+		</ul>
+	</div>
+
 	<?php
 	$tutor_load_sidebar_actions = apply_filters( 'tutor_load_single_sidebar_actions', true, get_the_ID() );
 	if ( $tutor_load_sidebar_actions ) :
 		?>
-	<div class="tutor-card-body">
+	<div class="tutor-card-footer">
 		<?php
 		if ( $is_enrolled || $is_privileged_user ) {
 			ob_start();
@@ -279,24 +322,6 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 		?>
 	</div>
 	<?php endif; ?>
-	<!-- Course Info -->
-	<div class="tutor-card-footer <?php echo esc_attr( $tutor_load_sidebar_actions ? '' : 'tutor-no-border' ); ?>">
-		<ul class="tutor-ul">
-			<?php foreach ( $sidebar_meta as $key => $meta ) : ?>
-				<?php
-				if ( ! $meta['value'] ) {
-					continue;
-				}
-				?>
-				<li class="tutor-d-flex<?php echo $key > 0 ? ' tutor-mt-12' : ''; ?>">
-					<span class="<?php echo esc_attr( $meta['icon_class'] ); ?> tutor-color-black tutor-mt-4 tutor-mr-12" aria-labelledby="<?php echo esc_html( $meta['label'] ); ?>"></span>
-					<span class="tutor-fs-6 tutor-color-secondary">
-						<?php echo wp_kses_post( $meta['value'] ); ?>
-					</span>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-	</div>
 </div>
 
 <?php
