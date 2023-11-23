@@ -34,7 +34,7 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 
 <?php do_action( 'tutor_course/single/before/wrap' ); ?>
 <div <?php tutor_post_class( 'tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent' ); ?>>
-	<div class="tutor-course-details-page tutor-container">
+	<div class="tutor-course-details-page tutor-container text-[#22272F]">
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<div class="flex flex-col desktop:flex-row">
 			<main class="w-full desktop:w-2/3">
@@ -47,32 +47,31 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 					</div>
 				<?php endif; ?>
 
-				<div class="tutor-course-details-tab tutor-mt-32">
+				<div class="mt-16 desktop:mt-20">
 					<?php if ( is_array( $course_nav_item ) && count( $course_nav_item ) > 1 ) : ?>
 						<div class="tutor-is-sticky">
 							<?php tutor_load_template( 'single.course.enrolled.nav', array( 'course_nav_item' => $course_nav_item ) ); ?>
 						</div>
 					<?php endif; ?>
-					<div class="tutor-tab tutor-pt-24">
-						<?php foreach ( $course_nav_item as $key => $subpage ) : ?>
-							<div id="tutor-course-details-tab-<?php echo esc_attr( $key ); ?>" class="tutor-tab-item<?php echo 'info' == $key ? ' is-active' : ''; ?>">
-								<?php
-									do_action( 'tutor_course/single/tab/' . $key . '/before' );
+					<?php foreach ( $course_nav_item as $key => $subpage ) : ?>
+						<div id="tutor-course-details-tab-<?php echo esc_attr( $key ); ?>" class="tutor-tab-item<?php echo 'info' == $key ? ' is-active' : ''; ?>">
+							<?php
+								do_action( 'tutor_course/single/tab/' . $key . '/before' );
 
-									$method = $subpage['method'];
-								if ( is_string( $method ) ) {
-									$method();
-								} else {
-									$_object = $method[0];
-									$_method = $method[1];
-									$_object->$_method( get_the_ID() );
-								}
+								$method = $subpage['method'];
+							if ( is_string( $method ) ) {
+								$method();
+							} else {
+								$_object = $method[0];
+								$_method = $method[1];
+								$_object->$_method( get_the_ID() );
+							}
 
-									do_action( 'tutor_course/single/tab/' . $key . '/after' );
-								?>
-							</div>
-						<?php endforeach; ?>
-					</div>
+								do_action( 'tutor_course/single/tab/' . $key . '/after' );
+							?>
+						</div>
+					<?php endforeach; ?>
+					<a href="https://swistak.webo.design/courses/" class="inline-block my-20 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200"> Powrót do listy</a>
 				</div>
 				<?php do_action( 'tutor_course/single/after/inner-wrap' ); ?>
 			</main>
