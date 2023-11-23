@@ -64,9 +64,10 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 
 ?>
 
-<div class="tutor-card tutor-card-md tutor-sidebar-card">
+<div class="border border-[#DDE3EE] border-solid rounded-sm p-6">
 	<!-- Course Info -->
 	<div class="tutor-card-body">
+		<span class="text-xl desktop:text-2xl font-semibold mb-6">Informacje:</span>
 		<ul class="tutor-ul">
 			<?php foreach ( $sidebar_meta as $key => $meta ) : ?>
 				<?php
@@ -74,7 +75,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 					continue;
 				}
 				?>
-				<li class="tutor-d-flex<?php echo $key > 0 ? ' tutor-mt-12' : ''; ?>">
+				<li class="py-6 first:border-y border-b border-solid border-[#DDE3EE]">
 					<span class="<?php echo esc_attr( $meta['icon_class'] ); ?> tutor-color-black tutor-mt-4 tutor-mr-12" aria-labelledby="<?php echo esc_html( $meta['label'] ); ?>"></span>
 					<span class="tutor-fs-6 tutor-color-secondary">
 						<?php echo wp_kses_post( $meta['value'] ); ?>
@@ -111,7 +112,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 	$tutor_load_sidebar_actions = apply_filters( 'tutor_load_single_sidebar_actions', true, get_the_ID() );
 	if ( $tutor_load_sidebar_actions ) :
 		?>
-	<div class="tutor-card-footer">
+	<div class="mt-8">
 		<?php
 		if ( $is_enrolled || $is_privileged_user ) {
 			ob_start();
@@ -294,7 +295,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 				ob_start();
 				?>
 					<div class="tutor-course-single-pricing">
-						<span class="tutor-fs-4 tutor-fw-bold tutor-color-black">
+						<span class="text-4xl font-semibold text-[#132787]">
 							<?php esc_html_e( 'Free', 'tutor' ); ?>
 						</span>
 					</div>
