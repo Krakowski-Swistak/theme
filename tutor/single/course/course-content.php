@@ -25,12 +25,12 @@ if ( tutor_utils()->get_option( 'enable_course_about', true, true ) ) {
 	}
 	?>
 	<?php if ( ! empty( $string ) ) : ?>
-	<div class="tutor-course-details-content<?php echo $has_show_more ? ' tutor-toggle-more-content tutor-toggle-more-collapsed' : ''; ?>"<?php echo $has_show_more ? ' data-tutor-toggle-more-content data-toggle-height="200" style="height: 200px;"' : ''; ?>>
-		<h2 class="tutor-fs-5 tutor-fw-bold tutor-color-black tutor-mb-12">
+	<div class="mb-20 tutor-course-details-content<?php echo $has_show_more ? ' tutor-toggle-more-content tutor-toggle-more-collapsed' : ''; ?>"<?php echo $has_show_more ? ' data-tutor-toggle-more-content data-toggle-height="200" style="height: 200px;"' : ''; ?>>
+		<h2 class="text-xl mb-5 font-semibold [&>div]:hidden">
 			<?php echo esc_html( apply_filters( 'tutor_course_about_title', __( 'About Course', 'tutor' ) ) ); ?>
 		</h2>
 		
-		<div class="tutor-fs-6 tutor-color-secondary">
+		<div class="text-base font-light">
 			<?php echo apply_filters( 'the_content', $string ); //phpcs:ignore ?>
 		</div>
 	</div>
