@@ -24,9 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<header class="tutor-course-details-header tutor-mb-44">
-	<h1>Szkolenie</h1>
-	<h2 class="tutor-course-details-title tutor-fs-4 tutor-fw-bold tutor-color-black tutor-mt-12 tutor-mb-0">
+<header class="">
+	<h1 class="mb-4 text-4xl desktop:text-5xl font-light [&>div]:hidden">Szkolenie</h1>
+	<h2 class="mb-10 text-2xl desktop:text-[32px] font-semibold [&>div]:hidden ">
 		<?php the_title(); ?>
 	</h2>	
 </header>

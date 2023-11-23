@@ -66,9 +66,12 @@ if ( $product ) {
             <?php echo apply_filters( 'tutor_course_details_wc_add_to_cart_price', ob_get_clean(), $product ); //phpcs:ignore ?>
 		</div>
 		<form action="<?php echo esc_url( apply_filters( 'tutor_course_add_to_cart_form_action', get_permalink( get_the_ID() ) ) ); ?>" method="post" enctype="multipart/form-data">
-			<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>"  class="tutor-btn tutor-btn-primary tutor-btn-lg tutor-btn-block tutor-mt-24 tutor-add-to-cart-button <?php echo esc_attr( $required_loggedin_class ); ?>">
-				<span class="btn-icon tutor-icon-cart-filled"></span>
-				<span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span>
+			<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>"  class="w-full flex items-end p-4 border border-solid border-[#132787] bg-[#132787] group hover:bg-white rounded-sm shadow-[12px_12px_24px_0px] shadow-[rgba(51_79_211/0.16)] transition duration-200 <?php echo esc_attr( $required_loggedin_class ); ?>">
+				<span class="text-white group-hover:text-[#132787] uppercase font-medium text-sm transition duration-200"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span>
+				<svg class="ml-1 stroke-white group-hover stroke-[#132787] transition duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<rect x="5" y="7" width="14" height="12" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
 			</button>
 		</form>
 		<?php
