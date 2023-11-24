@@ -78,19 +78,13 @@ endif;
 								do_action( 'tutor_course/single/tab/' . $key . '/after' );
 							?>
 						</div>
-					<?php endforeach; ?>
-					
-					<?php if ( $course_back_url && $course_back_title ) : ?>
-						<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block my-20 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
-							<?php echo esc_html( $course_back_title); ?>
-						</a>
-					<?php endif; ?>				
+					<?php endforeach; ?>			
 				
 				</div>
 				<?php do_action( 'tutor_course/single/after/inner-wrap' ); ?>
 			</main>
 
-			<aside class="w-full desktop:w-1/3 pt-10 desktop:pl-8 desktop:pt-0">
+			<aside class="w-full desktop:w-1/3 pt-20 desktop:pl-8 desktop:pt-0">
 				<?php $sidebar_attr = apply_filters( 'tutor_course_details_sidebar_attr', '' ); ?>
 				<div class="tutor-single-course-sidebar tutor-mt-xl-0" <?php echo esc_attr( $sidebar_attr ); ?> >
 					<?php do_action( 'tutor_course/single/before/sidebar' ); ?>
@@ -103,6 +97,11 @@ endif;
 				</div>
 			</aside>
 		</div>
+		<?php if ( $course_back_url && $course_back_title ) : ?>
+			<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block my-20 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
+				<?php echo esc_html( $course_back_title); ?>
+			</a>
+		<?php endif; ?>	
 	</div>
 </div>
 
