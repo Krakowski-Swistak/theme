@@ -15,6 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$course_header = get_field( 'course_header' );
+$course_back_btn = get_field( 'course_back_button' );
+
+if ( $course_type ): 
+	$course_back_url = $course_type['url'];
+    $course_back_title = $course_type['title'];
+endif;
+
 /**
  * Global $course_rating get null for third party
  * who only include this file without single-course.php file.
@@ -25,8 +33,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <header>
-	<a href="https://swistak.webo.design/courses/" class="inline-block mb-6 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200"> Powrót do listy</a>
-	<h1 class="mb-6 text-4xl desktop:text-5xl font-light [&>div]:hidden">Szkolenie</h1>
+	<?php if ( $course_back_url && $course_back_title ) : ?>
+		<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block mb-6 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
+			<?php echo esc_url( $course_back_title); ?>
+		</a>
+	<?php endif; ?>
+
+	<?php if ( $course_header ) : ?>
+		<h1 class="mb-6 text-4xl desktop:text-5xl font-light [&>div]:hidden">
+			<?php echo esc_url($course_header); ?>
+		</h1>
+	<?php endif; ?>
 	<h2 class="mb-10 text-2xl desktop:text-[32px] font-semibold [&>div]:hidden ">
 		<?php the_title(); ?>
 	</h2>	
