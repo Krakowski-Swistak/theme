@@ -15,12 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$course_header = get_field( 'course_header' );
+$course_header = get_field( 'course_header_text' );
 $course_back_btn = get_field( 'course_back_button' );
 
-if ( $course_type ): 
-	$course_back_url = $course_type['url'];
-    $course_back_title = $course_type['title'];
+if ( $course_back_btn ): 
+	$course_back_url = $course_back_btn['url'];
+    $course_back_title = $course_back_btn['title'];
 endif;
 
 /**

@@ -66,7 +66,6 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 
 ?>
 
-<?php echo var_dump($sidebar_meta) ?>
 <div class="border border-[#DDE3EE] border-solid rounded-sm p-6">
 	<!-- Course Info -->
 	<div class="">
@@ -84,7 +83,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 			<?php endif; ?>
 			<?php foreach ( $sidebar_meta as $key => $meta ) : ?>
 				<?php
-				if ( ! $meta['value'] ) {
+				if ( ! $meta['value'] || ( $meta['icon_class'] != "tutor-icon-level" )   ) {
 					continue;
 				}
 				?>
