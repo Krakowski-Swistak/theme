@@ -46,7 +46,7 @@ endif;
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<main class="w-full">
 			<div class="flex flex-col desktop:flex-row">
-				<div class="w-full dekstop:w-2/3 [&_.tutor-course-thumbnail]:rounded-sm [&_.tutor-course-thumbnail]:overflow-hidden">
+				<div class="w-full desktop:w-2/3 [&_.tutor-course-thumbnail]:rounded-sm [&_.tutor-course-thumbnail]:overflow-hidden">
 					<?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
 				</div>
 				<aside class="w-full desktop:w-1/3 py-10 desktop:pl-8 desktop:py-0">

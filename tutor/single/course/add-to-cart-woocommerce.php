@@ -22,8 +22,10 @@ if ( ! $is_logged_in && ! $enable_guest_course_cart ) {
 if ( $product ) {
 	if ( tutor_utils()->is_course_added_to_cart( $product_id, true ) ) {
 		?>
-			<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="tutor-btn tutor-btn-outline-primary tutor-btn-lg tutor-btn-block tutor-woocommerce-view-cart">
-				<?php esc_html_e( 'View Cart', 'tutor' ); ?>
+			<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="w-full flex justify-center items-end mt-6 p-4 border border-solid border-[#132787] hover:bg-[#132787] group bg-white rounded-sm shadow-[12px_12px_24px_0px] shadow-[rgba(51_79_211/0.16)] transition duration-200">
+				<span class="group-hover:text-white text-[#22272F] uppercase font-medium text-sm transition duration-200">
+					<?php esc_html_e( 'View Cart', 'tutor' ); ?>
+				</span>
 			</a>
 		<?php
 	} else {
