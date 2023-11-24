@@ -45,7 +45,7 @@ endif;
 	<div class="tutor-course-details-page tutor-container text-[#22272F]">
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<div class="flex flex-col desktop:flex-row">
-			<main class="w-full desktop:w-2/3">
+			<main class="w-full desktop:w-2/3 [&_.tutor-course-thumbnail]:rounded-sm [&_.tutor-course-thumbnail]:overflow-hidden">
 				<?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
 				<?php do_action( 'tutor_course/single/before/inner-wrap' ); ?>
 
