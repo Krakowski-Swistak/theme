@@ -20,6 +20,7 @@ $is_privileged_user   = tutor_utils()->has_user_course_content_access();
 $tutor_course_sell_by = apply_filters( 'tutor_course_sell_by', null );
 $is_public            = get_post_meta( get_the_ID(), '_tutor_is_public_course', true ) == 'yes';
 $course_categories    = get_tutor_course_categories();
+$course_type          = get_field( 'course_type' );
 
 // Monetization info.
 $monetize_by    = tutor_utils()->get_option( 'monetize_by' );
@@ -62,13 +63,25 @@ if ( tutor_utils()->get_option( 'enable_course_level', true, true ) ) {
 $sidebar_meta = apply_filters( 'tutor/course/single/sidebar/metadata', $default_meta, get_the_ID() );
 $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, true, true ) ? '' : wp_login_url( tutor()->current_url );
 
+
 ?>
 
+<?php echo var_dump($sidebar_meta) ?>
 <div class="border border-[#DDE3EE] border-solid rounded-sm p-6">
 	<!-- Course Info -->
 	<div class="">
 		<span class="block text-xl desktop:text-2xl font-semibold mb-6">Informacje:</span>
 		<ul class="tutor-ul">
+			<?php if ( $course_type ) : ?>
+				<li class="py-6 first:border-y border-b border-solid border-[#DDE3EE]">
+					<span>
+						<?php esc_html_e( 'Rodzaj:', 'tutor' ); ?>
+					</span>
+					<span>
+						<?php echo esc_html( $course_type ) ?>
+					</span>
+				</li>
+			<?php endif; ?>
 			<?php foreach ( $sidebar_meta as $key => $meta ) : ?>
 				<?php
 				if ( ! $meta['value'] ) {
