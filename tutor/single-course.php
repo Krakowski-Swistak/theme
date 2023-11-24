@@ -81,8 +81,8 @@ endif;
 					<?php endforeach; ?>
 					
 					<?php if ( $course_back_url && $course_back_title ) : ?>
-						<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block mb-6 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
-							<?php echo esc_url( $course_back_title); ?>
+						<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block my-20 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
+							<?php echo esc_html( $course_back_title); ?>
 						</a>
 					<?php endif; ?>				
 				
