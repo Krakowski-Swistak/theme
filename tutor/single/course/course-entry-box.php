@@ -38,7 +38,7 @@ $default_meta            = array(
 	array(
 		'icon_class' => 'tutor-icon-clock-line',
 		'label'      => __( 'Duration', 'tutor' ),
-		'value'      => get_tutor_option( 'enable_course_duration' ) ? ( get_tutor_course_duration_context() ? . '<div class="font-bold uppercase">' . __( 'Duration', 'tutor' ) . '</div>' . get_tutor_course_duration_context()  : false ) : null,
+		'value'      => get_tutor_option( 'enable_course_duration' ) ? ( get_tutor_course_duration_context() ? '<div class="font-bold uppercase">' . __( 'Duration', 'tutor' ) . '</div>' . get_tutor_course_duration_context()  : false ) : null,
 	),
 	array(
 		'icon_class' => 'tutor-icon-refresh-o',
