@@ -38,7 +38,7 @@ $default_meta            = array(
 	array(
 		'icon_class' => 'tutor-icon-clock-line',
 		'label'      => __( 'Duration', 'tutor' ),
-		'value'      => get_tutor_option( 'enable_course_duration' ) ? ( get_tutor_course_duration_context() ? get_tutor_course_duration_context() . ' ' . __( 'Duration', 'tutor' ) : false ) : null,
+		'value'      => get_tutor_option( 'enable_course_duration' ) ? ( get_tutor_course_duration_context() ? . '<div class="font-bold uppercase">' . __( 'Duration', 'tutor' ) . '</div>' . get_tutor_course_duration_context()  : false ) : null,
 	),
 	array(
 		'icon_class' => 'tutor-icon-refresh-o',
@@ -73,7 +73,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 		<ul class="tutor-ul text-sm">
 			<?php if ( $course_type ) : ?>
 				<li class="py-6 first:border-y border-b border-solid border-[#DDE3EE] flex items-center justify-between">
-					<span class="flex gap-2 font-bold uppercase" aria-labelledby="<?php esc_html_e( 'Rodzaj', 'tutor' ) ?>">
+					<span class="flex gap-2 items-center font-bold uppercase" aria-labelledby="<?php esc_html_e( 'Rodzaj', 'tutor' ) ?>">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 							<path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21ZM5 10V19H19V10H5ZM5 5V8H19V5H5Z" fill="#22272F"></path>
 						</svg>
@@ -98,8 +98,8 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 				</li>
 			<?php endforeach; ?>
 			<?php if ( ! empty( $course_categories ) && is_array( $course_categories ) && count( $course_categories ) ) : ?>
-				<li class="py-6 border-b border-solid border-[#DDE3EE] flex items-center justify-between">
-					<span class="flex gap-2 font-bold uppercase" aria-labelledby="Categories">
+				<li class="py-6 border-b border-solid border-[#DDE3EE] flex items-center justify-between [&_a]:font-normal [&_a]:!text-[#132787]">
+					<span class="flex gap-2 items-center font-bold uppercase" aria-labelledby="Categories">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
 							<path d="M8 20C3.664 20 0 17.965 0 15.556V4.444C0 2.035 3.664 0 8 0C12.336 0 16 2.035 16 4.444V15.556C16 17.965 12.337 20 8 20ZM2 12.9V15.559C2.07 16.112 4.309 17.781 8 17.781C11.691 17.781 13.931 16.107 14 15.553V12.9C12.1794 13.9554 10.1039 14.4905 8 14.447C5.89606 14.4906 3.82058 13.9554 2 12.9ZM2 7.341V10C2.07 10.553 4.309 12.222 8 12.222C11.691 12.222 13.931 10.548 14 9.994V7.341C12.1795 8.39678 10.104 8.93226 8 8.889C5.89596 8.93231 3.82046 8.39683 2 7.341ZM8 2.222C4.308 2.222 2.069 3.896 2 4.451C2.07 5 4.311 6.666 8 6.666C11.689 6.666 13.931 4.992 14 4.438C13.93 3.887 11.689 2.222 8 2.222Z" fill="#22272F"/>
 						</svg>
@@ -110,7 +110,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 					foreach ( $course_categories as $course_category ) :
 						$category_name    = $course_category->name;
 						$category_link    = get_term_link( $course_category->term_id );
-						$category_links[] = wp_sprintf( '<a href="%1$s" class="font-normal text-[#132787]">%2$s</a>', esc_url( $category_link ), esc_html( $category_name ) );
+						$category_links[] = wp_sprintf( '<a href="%1$s" >%2$s</a>', esc_url( $category_link ), esc_html( $category_name ) );
 						endforeach;
 						echo wp_kses(
 							implode( ', ', $category_links ),
