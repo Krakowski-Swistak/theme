@@ -30,6 +30,14 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 	tutor_utils()->tutor_custom_footer();
 	return;
 }
+
+$course_back_btn = get_field( 'course_back_button' );
+
+if ( $course_back_btn ): 
+	$course_back_url = $course_back_btn['url'];
+    $course_back_title = $course_back_btn['title'];
+endif;
+
 ?>
 
 <?php do_action( 'tutor_course/single/before/wrap' ); ?>
@@ -71,7 +79,13 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 							?>
 						</div>
 					<?php endforeach; ?>
-					<a href="https://swistak.webo.design/courses/" class="inline-block my-20 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200"> Powrót do listy</a>
+					
+					<?php if ( $course_back_url && $course_back_title ) : ?>
+						<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block mb-6 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
+							<?php echo esc_url( $course_back_title); ?>
+						</a>
+					<?php endif; ?>				
+				
 				</div>
 				<?php do_action( 'tutor_course/single/after/inner-wrap' ); ?>
 			</main>
