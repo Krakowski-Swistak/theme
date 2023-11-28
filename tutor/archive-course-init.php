@@ -1,10 +1,3 @@
-<header class="entry-header">
-	<h1 class="entry-title"><?php single_post_title(); ?></h1>
-</header>
-<div class="entry-content">
-	<?php get_post(); ?>
-</div>
-
 <?php
 /**
  * Template for course archive init
@@ -143,6 +136,15 @@ if ( isset( $the_query ) ) {
 	<?php endif; ?>
 
 	<div class="tutor-row tutor-gx-xl-5">
+		<div class="tutor-col-12">
+			<header class="entry-header">
+				<h1 class="entry-title"><?php get_the_archive_title(); ?></h1>
+			</header>
+			<div class="entry-content">
+				
+			</div>
+		</div>
+
 		<?php if ( $has_course_filters ) : ?>
 			<div class="tutor-col-3 tutor-course-filter-container">
 				<div class="tutor-course-filter" tutor-course-filter>
