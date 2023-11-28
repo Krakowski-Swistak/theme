@@ -141,7 +141,7 @@ if ( isset( $the_query ) ) {
 				<h1 class="entry-title"><?php get_the_archive_title(); ?></h1>
 			</header>
 			<div class="entry-content">
-				
+				<?php var_dump(); ?>
 			</div>
 		</div>
 
