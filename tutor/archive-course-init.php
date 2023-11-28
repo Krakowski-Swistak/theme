@@ -125,24 +125,6 @@ if ( isset( $the_query ) ) {
 	$supported_filters_keys = array_keys( $supported_filters );
 	?>
 	
-<header class="entry-header">
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-</header>
-
-<?php swistak_theme_post_thumbnail(); ?>
-
-<div class="entry-content">
-	<?php
-	the_content();
-
-	wp_link_pages(
-		array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'swistak-theme' ),
-			'after'  => '</div>',
-		)
-	);
-	?>
-</div>
 <div class="tutor-wrap tutor-wrap-parent tutor-courses-wrap tutor-container course-archive-page" data-tutor_courses_meta="<?php echo esc_attr( json_encode( $GLOBALS['tutor_course_archive_arg'] ) ); ?>">
 	<?php if ( $has_course_filters && in_array( 'search', $supported_filters_keys ) ) : ?>
 		<div class="tutor-d-block tutor-d-lg-none tutor-mb-32">
