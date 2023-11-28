@@ -124,7 +124,7 @@ if ( isset( $the_query ) ) {
 
 	$supported_filters_keys = array_keys( $supported_filters );
 	?>
-	<?php echo get_field('footer_text', 'option'); ?>
+	
 <div class="tutor-wrap tutor-wrap-parent tutor-courses-wrap tutor-container course-archive-page" data-tutor_courses_meta="<?php echo esc_attr( json_encode( $GLOBALS['tutor_course_archive_arg'] ) ); ?>">
 	<?php if ( $has_course_filters && in_array( 'search', $supported_filters_keys ) ) : ?>
 		<div class="tutor-d-block tutor-d-lg-none tutor-mb-32">
