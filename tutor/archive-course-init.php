@@ -138,10 +138,10 @@ if ( isset( $the_query ) ) {
 	<div class="tutor-row tutor-gx-xl-5">
 		<div class="tutor-col-12">
 			<header class="entry-header">
-				<h1 class="entry-title"><?php echo get_field('header_text'); ?></h1>
+				<h1 class="entry-title"><?php echo get_field('courses_header_text','option'); ?></h1>
 			</header>
 			<div class="entry-content">
-				<?php echo get_field('description'); ?>
+				<?php echo get_field('courses_description','option'); ?>
 			</div>
 		</div>
 
