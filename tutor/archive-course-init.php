@@ -125,7 +125,7 @@ if ( isset( $the_query ) ) {
 	$supported_filters_keys = array_keys( $supported_filters );
 	?>
 	
-<div class="tutor-wrap tutor-wrap-parent tutor-courses-wrap tutor-container course-archive-page" data-tutor_courses_meta="<?php echo esc_attr( json_encode( $GLOBALS['tutor_course_archive_arg'] ) ); ?>">
+<div class="tutor-wrap tutor-wrap-parent tutor-courses-wrap tutor-container course-archive-page mb-20" data-tutor_courses_meta="<?php echo esc_attr( json_encode( $GLOBALS['tutor_course_archive_arg'] ) ); ?>">
 	<?php if ( $has_course_filters && in_array( 'search', $supported_filters_keys ) ) : ?>
 		<div class="tutor-d-block tutor-d-lg-none tutor-mb-32">
 			<div class="tutor-d-flex tutor-align-center tutor-justify-between">
@@ -138,10 +138,10 @@ if ( isset( $the_query ) ) {
 	<div class="tutor-row tutor-gx-xl-5">
 		<div class="tutor-col-12">
 			<header class="entry-header">
-				<h1 class="entry-title"><?php echo get_field('header_text'); ?></h1>
+				<h1 class="entry-title"><?php echo get_field('courses_header_text','option'); ?></h1>
 			</header>
 			<div class="entry-content">
-				<?php echo get_field('description'); ?>
+				<?php echo get_field('courses_description','option'); ?>
 			</div>
 		</div>
 
