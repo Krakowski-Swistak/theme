@@ -28,7 +28,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-	<link rel="manifest" href="/manifest.json">
 	<script src="https://cdn.tailwindcss.com"></script>
   <script>
       tailwind.config = {
