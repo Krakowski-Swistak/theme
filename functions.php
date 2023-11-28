@@ -261,3 +261,8 @@ function posts_link_prev_class($format) {
 	return $format;
 }
 add_filter('previous_post_link', 'posts_link_prev_class');
+
+add_action( 'wp_head', 'inc_manifest_link' );
+function inc_manifest_link() {   
+        echo '<link rel="manifest" href="'.get_template_directory_uri().'/manifest.json">';
+}
