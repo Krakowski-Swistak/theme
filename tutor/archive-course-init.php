@@ -1,3 +1,10 @@
+<header class="entry-header">
+	<h1 class="entry-title"><?php single_post_title(); ?></h1>
+</header>
+<div class="entry-content">
+	<?php get_post(); ?>
+</div>
+
 <?php
 /**
  * Template for course archive init
