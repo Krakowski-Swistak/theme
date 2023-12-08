@@ -34,13 +34,13 @@ endif;
 
 <header>
 	<?php if ( $course_back_url && $course_back_title ) : ?>
-		<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block mb-6 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
+		<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block inverted ks-button ks-button--primary mb-5 px-4 py-2">
 			<?php echo esc_html( $course_back_title); ?>
 		</a>
 	<?php endif; ?>
 
 	<?php if ( $course_header ) : ?>
-		<h1 class="mb-6 text-4xl desktop:text-5xl font-light [&>div]:hidden">
+		<h1 class="mb-20">
 			<?php echo esc_html($course_header); ?>
 		</h1>
 	<?php endif; ?>

@@ -42,7 +42,7 @@ endif;
 
 <?php do_action( 'tutor_course/single/before/wrap' ); ?>
 <div <?php tutor_post_class( 'tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent' ); ?>>
-	<div class="tutor-course-details-page tutor-container text-[#22272F]">
+	<div class="tutor-course-details-page tutor-container text-[#252525]">
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<main class="w-full">
 			<div class="flex flex-col desktop:flex-row">
@@ -96,7 +96,7 @@ endif;
 				<?php endforeach; ?>
 				
 				<?php if ( $course_back_url && $course_back_title ) : ?>
-					<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block my-20 py-2 px-4 border border-solid border-[#132787] bg-white hover:bg-[#132787] text-[#22272F] hover:text-white uppercase font-medium text-sm transition duration-200">
+					<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block inverted ks-button ks-button--primary mb-5 px-4 py-2">
 						<?php echo esc_html( $course_back_title); ?>
 					</a>
 				<?php endif; ?>				
