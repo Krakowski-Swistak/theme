@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<div class="flex flex-col deskrop:flex-row">
+<div class="flex flex-col desktop:flex-row">
 	<form class="woocommerce-cart-form w-full desktop:w-2/3 desktop:pr-5" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -158,7 +158,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<tr>
 					<td colspan="6" class="actions">
 
-						<button type="submit" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					<?php if ( wc_coupons_enabled() ) { ?>
+						<div class="coupon flex gap-2.5">
+							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="border border-solid border-[#252525] rounded-[5px] text-base px-2" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="ks-button ks-button--primary inverted py-2 px-4 button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+						</div>
+					<?php } ?>
+
+						<button type="submit" class="!hidden button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 
 						<?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -174,7 +181,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
-	<div class="cart-collaterals w-full desktop:w-1/3 desktop:pl-5">
+	<div class="cart-collaterals w-full shrink-0 grow-0 desktop:w-1/3 desktop:pl-5">
 		<?php
 			/**
 			 * Cart collaterals hook.
