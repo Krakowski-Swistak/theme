@@ -66,7 +66,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 
 ?>
 
-<div class="border border-[#DDE3EE] border-solid rounded-sm p-6">
+<div class="border border-[#DDE3EE] border-solid rounded-[10px] p-6">
 	<!-- Course Info -->
 	<div class="">
 		<span class="block text-xl desktop:text-2xl font-semibold mb-6">Informacje:</span>
@@ -317,7 +317,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 				ob_start();
 				?>
 					<div class="tutor-course-single-pricing">
-						<span class="text-4xl font-semibold text-[#132787]">
+						<span class="text-4xl font-semibold text-[#00b3a7]">
 							<?php esc_html_e( 'Free', 'tutor' ); ?>
 						</span>
 					</div>
