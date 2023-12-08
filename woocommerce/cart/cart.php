@@ -23,10 +23,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<form class="woocommerce-cart-form w-full desktop:w-2/3 desktop:pr-5 mb-10" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents w-full" cellspacing="0">
 			<thead>
-				<tr class="[&_th]:py-2 [&_th]:border-b [&_th]:border-solid [&_th]:border-gray-300 [&_th]:text-sm">
-					<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<tr class="[&_th]:py-2 [&_th]:text-left [&_th]:border-b [&_th]:border-solid [&_th]:border-gray-300 [&_th]:text-xs uppercase">
+					<th class="product-name pl-4"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
 					<th></th>
 					<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
 				</tr>
@@ -51,9 +51,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 						?>
-						<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+						<tr class="woocommerce-cart-form__cart-item border-b border-solid border-gray-300 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-							<td class="product-thumbnail">
+							<td class="product-thumbnail pl-4 py-4 [&_img]:!w-16 desktop:[&_img]:!w-[90px]">
 							<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 							</td>
 
-							<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+							<td class="product-name py-4" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 								<div>
 									<?php
 									if ( ! $product_permalink ) {
@@ -91,9 +91,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 									?>
 
 
-									<?php
-										echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
-									?>
+									<div>
+										<?php
+											echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
+										?>
+									</div>
 
 
 									<?php
@@ -125,12 +127,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 										echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 											'woocommerce_cart_item_remove_link',
 											sprintf(
-												'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+												'<a href="%s" class="remove underline !text-[#252525] hover:!text-[#252525]" aria-label="%s" data-product_id="%s" data-product_sku="%s">%s</a>',
 												esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 												/* translators: %s is the product name */
 												esc_attr( sprintf( __( 'Remove %s from cart', 'woocommerce' ), wp_strip_all_tags( $product_name ) ) ),
 												esc_attr( $product_id ),
-												esc_attr( $_product->get_sku() )
+												esc_attr( $_product->get_sku() ),
+												esc_attr__( 'Remove', 'woocommerce' )
 											),
 											$cart_item_key
 										);
@@ -138,7 +141,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								</div>
 							</td>
 
-							<td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
+							<td class="product-subtotal py-4" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 								?>
