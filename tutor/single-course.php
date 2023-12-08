@@ -96,7 +96,7 @@ endif;
 				<?php endforeach; ?>
 				
 				<?php if ( $course_back_url && $course_back_title ) : ?>
-					<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block inverted ks-button ks-button--primary mb-5 px-4 py-2">
+					<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block inverted ks-button ks-button--primary my-20 px-4 py-2">
 						<?php echo esc_html( $course_back_title); ?>
 					</a>
 				<?php endif; ?>				
