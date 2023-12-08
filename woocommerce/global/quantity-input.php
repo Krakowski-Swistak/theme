@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'woocommerce' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'woocommerce' );
 
 ?>
-<div class="quantity">
+<div class="ml-auto tablet:ml-0 quantity my-2 border border-solid border-gray-300 rounded-[5px]">
 	<?php
 	/**
 	 * Hook to output something before the quantity input field.
@@ -33,12 +33,13 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 	 */
 	do_action( 'woocommerce_before_quantity_input_field' );
 	?>
+	<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus bg-transparent border-0 text-xl text-gray-300 hover:text-[#252525] transition duration-200">－</button>
 	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
 	<input
 		type="<?php echo esc_attr( $type ); ?>"
 		<?php echo $readonly ? 'readonly="readonly"' : ''; ?>
 		id="<?php echo esc_attr( $input_id ); ?>"
-		class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
+		class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?> border-0 !text-base font-semibold text-center py-1"
 		name="<?php echo esc_attr( $input_name ); ?>"
 		value="<?php echo esc_attr( $input_value ); ?>"
 		aria-label="<?php esc_attr_e( 'Product quantity', 'woocommerce' ); ?>"
@@ -52,6 +53,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 		<?php endif; ?>
 	/>
+	<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus bg-transparent border-0 text-xl text-gray-300 hover:text-[#252525] transition duration-200">＋</button>
 	<?php
 	/**
 	 * Hook to output something after quantity input field
