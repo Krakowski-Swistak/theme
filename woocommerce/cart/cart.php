@@ -51,9 +51,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 						?>
-						<tr class="woocommerce-cart-form__cart-item flex flex-wrap justify-between tablet:table-row border-b border-solid border-gray-300 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+						<tr class="woocommerce-cart-form__cart-item !flex flex-wrap justify-between tablet:!table-row border-b border-solid border-gray-300 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-							<td class="product-thumbnail before:hidden shrink-0 !w-20 tablet:!w-[100px] desktop:!w-[120px] [&_img]:!w-full tablet:pl-4 py-4">
+							<td class="product-thumbnail !block tablet:!table-cell before:hidden shrink-0 !w-20 tablet:!w-[100px] desktop:!w-[120px] [&_img]:!w-full tablet:pl-4 py-4">
 							<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 							</td>
 
-							<td class="w-[] product-name py-4 pl-4" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+							<td class="product-name py-4 pl-4" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 								<div>
 									<?php
 									if ( ! $product_permalink ) {
@@ -141,7 +141,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								</div>
 							</td>
 
-							<td class="product-subtotal py-4" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
+							<td class="w-full tablet:w-auto product-subtotal py-4" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 								?>
