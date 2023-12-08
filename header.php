@@ -36,6 +36,7 @@
         },
 				theme: {
 					screens: {
+						'tablet': '786px',
 						'desktop': '1024px',
 					},
 				}

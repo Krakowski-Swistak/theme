@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="flex flex-col desktop:flex-row mb-20">
-	<form class="woocommerce-cart-form w-full desktop:w-2/3 desktop:pr-5 mb-10" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+	<form class="woocommerce-cart-form w-full desktop:w-2/3 desktop:pr-10 mb-10" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents w-full" cellspacing="0">
@@ -51,9 +51,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 						?>
-						<tr class="woocommerce-cart-form__cart-item border-b border-solid border-gray-300 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+						<tr class="woocommerce-cart-form__cart-item flex flex-wrap justify-between tablet:table-row border-b border-solid border-gray-300 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-							<td class="product-thumbnail pl-4 py-4 [&_img]:!w-16 desktop:[&_img]:!w-[90px]">
+							<td class="product-thumbnail before:hidden shrink-0 !w-20 tablet:!w-[100px] desktop:!w-[120px] [&_img]:!w-full tablet:pl-4 py-4">
 							<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 							</td>
 
-							<td class="product-name py-4" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+							<td class="w-[] product-name py-4 pl-4" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 								<div>
 									<?php
 									if ( ! $product_permalink ) {
@@ -127,7 +127,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 										echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 											'woocommerce_cart_item_remove_link',
 											sprintf(
-												'<a href="%s" class="remove underline !text-[#252525] hover:!text-[#252525]" aria-label="%s" data-product_id="%s" data-product_sku="%s">%s</a>',
+												'<a href="%s" class="remove underline !text-[#252525] hover:!text-[#252525] !text-xs" aria-label="%s" data-product_id="%s" data-product_sku="%s">%s</a>',
 												esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 												/* translators: %s is the product name */
 												esc_attr( sprintf( __( 'Remove %s from cart', 'woocommerce' ), wp_strip_all_tags( $product_name ) ) ),
@@ -159,7 +159,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon flex gap-2.5 mt-10">
-							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="border border-solid border-[#252525] rounded-[5px] text-base px-2" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="ks-button ks-button--primary inverted py-2 px-4 button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="border border-solid border-[#252525] rounded-[5px] text-base px-2" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="ks-button ks-button--primary inverted py-2 px-4 text-sm button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>
