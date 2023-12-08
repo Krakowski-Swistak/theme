@@ -18,17 +18,17 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<div class="cart_totals p-4 border border-solid border-gray-300 rounded-[10px] pb-0.5 <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+<div class="cart_totals !w-full p-4 border border-solid border-gray-300 rounded-[10px] pb-0.5 <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
 	<span class="block py-2 border-b border-solid border-gray-300 font-semibold text-sm uppercase font-semibold text-right "><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></span>
 
-	<table cellspacing="0" class="shop_table shop_table_responsive w-full [&_th]:py-4 [&_td]:py-4 [&_th]:text-left [&_td]:text-right [&_tr]:text-sm [&_tr]desktop::text-base [&_tr_th]:!border-gray-300 [&_tr_td]:!border-gray-300">
+	<table cellspacing="0" class="shop_table shop_table_responsive w-full [&_th]:py-4 [&_th]:pl-4 [&_td]:py-4 [&_td]:pr-4 [&_th]:text-left [&_td]:text-right [&_tr]:text-sm [&_tr]:desktop:text-base [&_tr_th]:!border-gray-300 [&_tr_td]:!border-gray-300">
 
 		<tr class="cart-subtotal">
 			<th ><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<td class="!font-bold" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -95,8 +95,8 @@ defined( 'ABSPATH' ) || exit;
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th class="!text-base dekstop:!text-xl font-bold"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
-			<td class="!text-base dekstop:!text-xl font-bold" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			<th class="!text-base desktop:!text-xl font-bold"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+			<td class="!text-base desktop:!text-xl font-bold" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
