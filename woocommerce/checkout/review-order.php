@@ -28,6 +28,7 @@ defined( 'ABSPATH' ) || exit;
 			$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 
 			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 				?>
 				<div class="flex justify-between <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<div class="product flex flex-row">
@@ -75,13 +76,13 @@ defined( 'ABSPATH' ) || exit;
 	
 	</div>
 
-	<div class="cart-subtotal flex justify-center px-4 border-b border-solid border-gray-300">
+	<div class="cart-subtotal flex justify-between px-4 border-b border-solid border-gray-300">
 		<span><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></span>
 		<span class="!font-bold"><?php wc_cart_totals_subtotal_html(); ?></span>
 	</div>
 
 	<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-		<div class="flex justify-center px-4 border-b border-solid border-gray-300 cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+		<div class="flex justify-between px-4 border-b border-solid border-gray-300 cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 			<span><?php wc_cart_totals_coupon_label( $coupon ); ?></span>
 			<span><?php wc_cart_totals_coupon_html( $coupon ); ?></span>
 		</div>
@@ -98,7 +99,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php endif; ?>
 
 	<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
-		<div class="fee flex justify-center px-4 border-b border-solid border-gray-300">
+		<div class="fee flex justify-between px-4 border-b border-solid border-gray-300">
 			<span><?php echo esc_html( $fee->name ); ?></span>
 			<span><?php wc_cart_totals_fee_html( $fee ); ?></span>
 		</div>
@@ -107,13 +108,13 @@ defined( 'ABSPATH' ) || exit;
 	<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) : ?>
 		<?php if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
 			<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
-				<div class="tax-rate flex justify-center px-4 border-b border-solid border-gray-300 tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+				<div class="tax-rate flex justify-between px-4 border-b border-solid border-gray-300 tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 					<span><?php echo esc_html( $tax->label ); ?></span>
 					<span><?php echo wp_kses_post( $tax->formatted_amount ); ?></span>
 				</div>
 			<?php endforeach; ?>
 		<?php else : ?>
-			<div class="tax-total flex justify-center px-4 border-b border-solid border-gray-300">
+			<div class="tax-total flex justify-between px-4 border-b border-solid border-gray-300">
 				<span><?php echo esc_html( WC()->countries->tax_or_vat() ); ?></span>
 				<span><?php wc_cart_totals_taxes_total_html(); ?></span>
 			</div>
@@ -122,7 +123,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
-	<div class="order-total flex justify-center">
+	<div class="order-total flex justify-between">
 		<span class="!text-base desktop:!text-xl font-bold"><?php esc_html_e( 'Total', 'woocommerce' ); ?></span>
 		<span class="!text-base desktop:!text-xl font-bold"><?php wc_cart_totals_order_total_html(); ?></span>
 	</div>
