@@ -14,8 +14,6 @@ function initCartCounters() {
     const quantityDecButtons = document.querySelectorAll('.woocommerce-cart-form__cart-item .wc-block-components-quantity-selector__button--minus');
     const updateCartButton = document.querySelector('[name="update_cart"]');
     
-    if (updateCartButton) document.querySelector('[name="update_cart"]').disabled = false
-    
     quantityIncButtons.forEach((button)=>{
         button.addEventListener('click',()=>{
             let quantityInput = button.parentElement?.querySelector('input')
@@ -52,6 +50,7 @@ function initCartCounters() {
                     if (currentQuantity == 0) {
                         quantityInput.parentElement?.parentElement?.querySelector('.remove').click()
                     }else{
+                        if (updateCartButton) document.querySelector('[name="update_cart"]').disabled = false
                         updateCartButton.click();
                     }
                 }
