@@ -37,15 +37,16 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
-				<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 				<?php do_action( 'woocommerce_checkout_payment_hook' ); ?>
 			</div>
-
+			
 			<div class="w-full tablet:w-1/3 shrink-0 grow-0 relative">
 				<div class="w-full sticky top-0">
 					<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
 					<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+					<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 					<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 				</div>
 			</div>
