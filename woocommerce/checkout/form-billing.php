@@ -31,9 +31,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
-	<div class="woocommerce-billing-fields__field-wrapper [&_abbr]:!no-underline 
-	[&_.input-text]:border [&_.input-text]:border-solid [&_.input-text]:border-[#252525] [&_.input-text]:rounded-[5px] [&_.input-text]:text-base [&_.input-text]:p-2 
-	[&_.select2-selection]:!h-11 [&_#select2-billing_country-container]:p-2 [&_#select2-billing_country-container]:text-basis [&_.select2-selection\_\_arrow]:!top-2" >
+	<div class="woocommerce-billing-fields__field-wrapper" >
 		<?php
 		$fields = $checkout->get_checkout_fields( 'billing' );
 
