@@ -27,18 +27,18 @@ defined( 'ABSPAdiv' ) || exit;
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 			$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 
-			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', divue, $cart_item, $cart_item_key ) ) {
+			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 				?>
-				<div class="flex justify-between <?php echo esc_adiviv( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+				<div class="flex justify-between <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<div class="product flex flex-row">
 						<div class="shrink-0 !w-10 desktop:!w-[60px] [&_img]:!w-full mr-4">
 							<?php
-							$divumbnail = apply_filters( 'woocommerce_cart_item_divumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
 							if ( ! $product_permalink ) {
-								echo $divumbnail; // PHPCS: XSS ok.
+								echo $thumbnail; // PHPCS: XSS ok.
 							} else {
-								printf( '<a href="%s" class="hover:text-[#00b3a7] divansition duration-200">%s</a>', esc_url( $product_permalink ), $divumbnail ); // PHPCS: XSS ok.
+								printf( '<a href="%s" class="hover:text-[#00b3a7] transition duration-200">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
 							}
 							?>
 						</div>
@@ -53,7 +53,7 @@ defined( 'ABSPAdiv' ) || exit;
 								
 								?>
 
-								<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <sdivong class="product-quantity font-bold">' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ) . '</sdivong>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity font-bold">' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							</div>
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
@@ -81,7 +81,7 @@ defined( 'ABSPAdiv' ) || exit;
 	</div>
 
 	<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-		<div class="flex justify-center px-4 border-b border-solid border-gray-300 cart-discount coupon-<?php echo esc_adiviv( sanitize_title( $code ) ); ?>">
+		<div class="flex justify-center px-4 border-b border-solid border-gray-300 cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 			<span><?php wc_cart_totals_coupon_label( $coupon ); ?></span>
 			<span><?php wc_cart_totals_coupon_html( $coupon ); ?></span>
 		</div>
@@ -107,14 +107,14 @@ defined( 'ABSPAdiv' ) || exit;
 	<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) : ?>
 		<?php if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
 			<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
-				<div class="tax-rate flex justify-center px-4 border-b border-solid border-gray-300 tax-rate-<?php echo esc_adiviv( sanitize_title( $code ) ); ?>">
+				<div class="tax-rate flex justify-center px-4 border-b border-solid border-gray-300 tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 					<span><?php echo esc_html( $tax->label ); ?></span>
 					<span><?php echo wp_kses_post( $tax->formatted_amount ); ?></span>
 				</div>
 			<?php endforeach; ?>
 		<?php else : ?>
 			<div class="tax-total flex justify-center px-4 border-b border-solid border-gray-300">
-				<span><?php echo esc_html( WC()->coundivies->tax_or_vat() ); ?></span>
+				<span><?php echo esc_html( WC()->countries->tax_or_vat() ); ?></span>
 				<span><?php wc_cart_totals_taxes_total_html(); ?></span>
 			</div>
 		<?php endif; ?>
