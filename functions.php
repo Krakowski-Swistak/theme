@@ -262,3 +262,6 @@ function posts_link_prev_class($format) {
 	return $format;
 }
 add_filter('previous_post_link', 'posts_link_prev_class');
+
+remove_action('woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action('woocommerce_checkout_payment_hook', 'woocommerce_checkout_payment', 10 ); 

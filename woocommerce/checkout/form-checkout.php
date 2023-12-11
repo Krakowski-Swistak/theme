@@ -31,35 +31,27 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
-	<?php if ( $checkout->get_checkout_fields() ) : ?>
-
-		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
-
-		<div class="col2-set" id="customer_details">
-			<div class="col-1">
+	<?php if ( $checkout->get_checkout_fields() ) : ?>		
+		<div class="flex flex-col tablet:flex-row" id="customer_details">
+			<div class="w-full tablet:w-2/3 pr-10 mb-10">
+				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+				<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				<?php do_action( 'woocommerce_checkout_payment_hook' ); ?>
 			</div>
 
-			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+			<div class="w-full tablet:w-1/3 shrink-0 grow-0 relative">
+				<div class="w-full sticky top-0">
+					<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+					<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+					<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+				</div>
 			</div>
 		</div>
-
-		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
-
-	<?php endif; ?>
-	
-	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-	
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
-	
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-	</div>
-
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+		
+	<?php endif; ?>	
 
 </form>
 
