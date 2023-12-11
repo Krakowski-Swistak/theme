@@ -33,7 +33,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 	<?php if ( $checkout->get_checkout_fields() ) : ?>		
 		<div class="flex flex-col-reverse tablet:flex-row" id="customer_details">
-			<div class="w-full tablet:w-2/3 tablet:pr-10 mb-10">
+			<div class="w-full tablet:w-2/3 tablet:pr-10 mb-20">
 				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
