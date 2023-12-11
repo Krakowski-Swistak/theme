@@ -42,8 +42,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			</div>
 			
 			<div class="w-full tablet:w-1/3 shrink-0 grow-0 relative">
-				<div class="w-full sticky top-0">
-					<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+				<div class="w-full sticky top-20 cart_totals !w-full p-4 border border-solid border-gray-300 rounded-[10px]">
 					<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 					<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
