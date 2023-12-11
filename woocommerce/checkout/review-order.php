@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="woocommerce-checkout-review-order-table">
 	<div class="flex flex-col px-4 border-b border-solid border-gray-300">
-		<h4 class="pb-4"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h4>
+		<h4 class="pb-4 text-base font-semibold"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h4>
 		<?php
 		do_action( 'woocommerce_review_order_before_cart_contents' );
 
@@ -83,7 +83,7 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 
 	<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-		<div class="flex justify-between px-4 py-4 border-b border-solid border-gray-300 cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+		<div class="flex justify-between px-4 py-4 border-b border-solid border-gray-300 [&_a]:!text-[#00b3a7] [&_a]:ml-1 cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 			<span><?php wc_cart_totals_coupon_label( $coupon ); ?></span>
 			<span><?php wc_cart_totals_coupon_html( $coupon ); ?></span>
 		</div>
