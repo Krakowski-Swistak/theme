@@ -32,8 +32,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
 	<?php if ( $checkout->get_checkout_fields() ) : ?>		
-		<div class="flex flex-col tablet:flex-row" id="customer_details">
-			<div class="w-full tablet:w-2/3 pr-10 mb-10">
+		<div class="flex flex-col-reverse tablet:flex-row" id="customer_details">
+			<div class="w-full tablet:w-2/3 tablet:pr-10 mb-10">
 				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
@@ -42,7 +42,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			</div>
 			
 			<div class="w-full tablet:w-1/3 shrink-0 grow-0 relative">
-				<div class="w-full sticky top-20 cart_totals !w-full p-4 border border-solid border-gray-300 rounded-[10px]">
+				<div id="order_review" class="woocommerce-checkout-review-order w-full sticky top-20 cart_totals !w-full p-4 border border-solid border-gray-300 rounded-[10px] mb-10">
 					<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 					<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
