@@ -267,3 +267,6 @@ add_action( 'wp_head', 'inc_manifest_link' );
 function inc_manifest_link() {   
         echo '<link rel="manifest" href="'.get_template_directory_uri().'/manifest.json">';
 }
+
+remove_action('woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action('woocommerce_checkout_payment_hook', 'woocommerce_checkout_payment', 10 ); 
