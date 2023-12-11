@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <li class="wc_payment_method payment_method_<?php echo esc_attr( $gateway->id ); ?>">
-	<input id="payment_method_<?php echo esc_attr( $gateway->id ); ?>" type="radio" class="input-radio appearance-none w-4 h-4 !mr-2 !-mb-0.5 rounded-full bg-white border-gray-300 border-solid border-0.5 checked:bg-[#00b3a7] checked:border-[#00b3a7] transition duration-200 hover:border-[#00b3a7] checked:hover:bg-[#00b3a7]/50" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
+	<input id="payment_method_<?php echo esc_attr( $gateway->id ); ?>" type="radio" class="input-radio appearance-none w-4 h-4 !mr-2 !-mb-0.5 rounded-full bg-white border-gray-300 border-solid border-0.5 checked:bg-[#00b3a7] checked:border-[#00b3a7] transition duration-200 hover:border-[#00b3a7] cursor-pointer" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
 
 	<label for="payment_method_<?php echo esc_attr( $gateway->id ); ?>" class="[&_img]:!max-h-6">
 		<?php echo $gateway->get_title(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?> <?php echo $gateway->get_icon(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?>
