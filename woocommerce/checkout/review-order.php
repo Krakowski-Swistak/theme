@@ -2,20 +2,20 @@
 /**
  * Review order table
  *
- * divis template can be overridden by copying it to yourdiveme/woocommerce/checkout/review-order.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/checkout/review-order.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (dive diveme developer) will need to copy dive new files to your diveme to
- * maintain compatibility. We divy to do divis as little as possible, but it does
- * happen. When divis occurs dive version of dive template file will be bumped and
- * dive readme will list any important changes.
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-sdivucture/
+ * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 5.2.0
  */
 
-defined( 'ABSPAdiv' ) || exit;
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <div>
