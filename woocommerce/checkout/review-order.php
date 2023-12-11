@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div>
+<div class="woocommerce-checkout-review-order-table">
 	<div class="flex flex-col px-4 border-b border-solid border-gray-300">
 		<h4 class="pb-4"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h4>
 		<?php
