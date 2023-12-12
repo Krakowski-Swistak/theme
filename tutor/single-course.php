@@ -45,13 +45,14 @@ endif;
 	<div class="tutor-course-details-page tutor-container text-[#252525]">
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<main class="w-full">
-			<div class="flex flex-col desktop:flex-row">
-				<div class="w-full dekstop:w-2/3 [&_.tutor-course-thumbnail]:rounded-sm [&_.tutor-course-thumbnail]:overflow-hidden">
+			<div class="desktop:grid grid-cols-3">
+				<div class="col-span-2 w-full [&_.tutor-course-thumbnail]:overflow-hidden [&_.tutor-course-thumbnail]:rounded-sm ">
 					<?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
+				
 				</div>
-				<aside class="w-full desktop:w-1/3 py-10 desktop:pl-8 desktop:py-0">
+				<aside class="desktop:pl-8 desktop:pt-0 h-full py-10 relative row-span-2 w-full">
 					<?php $sidebar_attr = apply_filters( 'tutor_course_details_sidebar_attr', '' ); ?>
-					<div class="tutor-single-course-sidebar tutor-mt-xl-0" <?php echo esc_attr( $sidebar_attr ); ?> >
+					<div class="msticky top-20 tutor-mt-xl-0 tutor-single-course-sidebar" <?php echo esc_attr( $sidebar_attr ); ?> >
 						<?php do_action( 'tutor_course/single/before/sidebar' ); ?>
 
 						<?php if ( ( $is_mobile && 'bottom' === $enrollment_box_position ) || ! $is_mobile ) : ?>
@@ -61,48 +62,54 @@ endif;
 						<?php do_action( 'tutor_course/single/after/sidebar' ); ?>
 					</div>
 				</aside>
-			</div>
-			<?php do_action( 'tutor_course/single/before/inner-wrap' ); ?>
+				<div class="col-span-2 desktop:mt-20 mt-16">
 
-			<?php if ( $is_mobile && 'top' === $enrollment_box_position ) : ?>
-				<div class="tutor-mt-32">
-					<?php tutor_load_template( 'single.course.course-entry-box' ); ?>
+					<?php do_action( 'tutor_course/single/before/inner-wrap' ); ?>
+
+					<?php if ( $is_mobile && 'top' === $enrollment_box_position ) : ?>
+						<div class="tutor-mt-32">
+							<?php tutor_load_template( 'single.course.course-entry-box' ); ?>
+						</div>
+					<?php endif; ?>
+
+					<div>
+						<?php if ( is_array( $course_nav_item ) && count( $course_nav_item ) > 1 ) : ?>
+							<div class="tutor-is-sticky">
+								<?php tutor_load_template( 'single.course.enrolled.nav', array( 'course_nav_item' => $course_nav_item ) ); ?>
+							</div>
+						<?php endif; ?>
+						<?php foreach ( $course_nav_item as $key => $subpage ) : ?>
+							<div id="tutor-course-details-tab-<?php echo esc_attr( $key ); ?>" class="tutor-tab-item<?php echo 'info' == $key ? ' is-active' : ''; ?>">
+								<?php
+									do_action( 'tutor_course/single/tab/' . $key . '/before' );
+
+									$method = $subpage['method'];
+								if ( is_string( $method ) ) {
+									$method();
+								} else {
+									$_object = $method[0];
+									$_method = $method[1];
+									$_object->$_method( get_the_ID() );
+								}
+
+									do_action( 'tutor_course/single/tab/' . $key . '/after' );
+								?>
+							</div>
+						<?php endforeach; ?>
+						
+						<?php if ( $course_back_url && $course_back_title ) : ?>
+							<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block inverted ks-button ks-button--primary my-20 px-4 py-2">
+								<?php echo esc_html( $course_back_title); ?>
+							</a>
+						<?php endif; ?>				
+
+					</div>
+					<?php do_action( 'tutor_course/single/after/inner-wrap' ); ?>
+
+
+
 				</div>
-			<?php endif; ?>
-
-			<div class="mt-16 desktop:mt-20 desktop:w-2/3">
-				<?php if ( is_array( $course_nav_item ) && count( $course_nav_item ) > 1 ) : ?>
-					<div class="tutor-is-sticky">
-						<?php tutor_load_template( 'single.course.enrolled.nav', array( 'course_nav_item' => $course_nav_item ) ); ?>
-					</div>
-				<?php endif; ?>
-				<?php foreach ( $course_nav_item as $key => $subpage ) : ?>
-					<div id="tutor-course-details-tab-<?php echo esc_attr( $key ); ?>" class="tutor-tab-item<?php echo 'info' == $key ? ' is-active' : ''; ?>">
-						<?php
-							do_action( 'tutor_course/single/tab/' . $key . '/before' );
-
-							$method = $subpage['method'];
-						if ( is_string( $method ) ) {
-							$method();
-						} else {
-							$_object = $method[0];
-							$_method = $method[1];
-							$_object->$_method( get_the_ID() );
-						}
-
-							do_action( 'tutor_course/single/tab/' . $key . '/after' );
-						?>
-					</div>
-				<?php endforeach; ?>
-				
-				<?php if ( $course_back_url && $course_back_title ) : ?>
-					<a href="<?php echo esc_url( $course_back_url ); ?>" class="inline-block inverted ks-button ks-button--primary my-20 px-4 py-2">
-						<?php echo esc_html( $course_back_title); ?>
-					</a>
-				<?php endif; ?>				
-			
 			</div>
-			<?php do_action( 'tutor_course/single/after/inner-wrap' ); ?>
 		</main>
 </div>
 </div>
