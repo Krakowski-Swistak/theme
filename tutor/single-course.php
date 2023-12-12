@@ -52,7 +52,7 @@ endif;
 				</div>
 				<aside class="desktop:pl-8 desktop:pt-0 h-full py-10 relative row-span-2 w-full">
 					<?php $sidebar_attr = apply_filters( 'tutor_course_details_sidebar_attr', '' ); ?>
-					<div class="msticky top-20 tutor-mt-xl-0 tutor-single-course-sidebar" <?php echo esc_attr( $sidebar_attr ); ?> >
+					<div class="sticky top-20 tutor-mt-xl-0 tutor-single-course-sidebar" <?php echo esc_attr( $sidebar_attr ); ?> >
 						<?php do_action( 'tutor_course/single/before/sidebar' ); ?>
 
 						<?php if ( ( $is_mobile && 'bottom' === $enrollment_box_position ) || ! $is_mobile ) : ?>
