@@ -388,7 +388,7 @@ get_header();
 				</div>
 			</section>
 
-			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px] bg-gray-300">
+			<section id="ks-blog" class="ks-blog ks-fade mb-[135px] pt-[64px] bg-[#f4f4f4]">
 				<div class="relative ks-container ks-fadeInBottom">
 					<h2>Blog</h2>
 					<p class="mb-[40px] text-[20px]"><?php the_field('blog_subtitle'); ?></p>

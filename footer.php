@@ -43,11 +43,11 @@ endif;
 					<div class="ks-contact-label ks-contact-label--email">
 						<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
 					</div>
-					<div class="ks-form">
+					<!-- <div class="ks-form">
 						<?php 
-							acfe_form('footer-contact-form'); 
+							// acfe_form('footer-contact-form'); 
 						?>
-					</div>
+					</div> -->
 					<?php if( get_field('hero_button_1') ): ?>
 						<button class="ks-button ks-button--primary">
 							<a class="scroll" href="<?php echo get_field('hero_button_1')['url']; ?>" target="_self"  title="<?php echo get_field('hero_button_1')['title']; ?>"><?php echo get_field('hero_button_1')['title']; ?></a>
