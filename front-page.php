@@ -278,7 +278,7 @@ get_header();
 				</div>
 			</section>
 
-			<section id="ks-clients" class="ks-clients ks-fade">
+			<section id="ks-clients" class="ks-clients ks-fade test">
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('clients_heading'); ?>
 					<?php
