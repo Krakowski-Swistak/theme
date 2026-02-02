@@ -281,6 +281,27 @@ get_header();
 			<section id="ks-clients" class="ks-clients ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('clients_heading'); ?>
+
+					<div class="ks-container ks-fadeInBottom mb-10 pb-10 border-solid border-b border-gray-300">
+						<?php
+							$clients_brands_grid = get_field('clients_brands_grid');
+						?>
+							<ul class="grid-wrapper flex justify-center flex-wrap gap-[10px] desktop:gap-[30px]">
+								<?php
+									$clients_brands_grid = get_field('clients_brands_grid');
+								?>
+								<?php
+									foreach ($clients_brands_grid as $key => $client_img){
+								?>
+									<li class="max-w-[140px] desktop:max-w-[200px] self-center">
+										<img src="<?php echo $client_img['clients_brand_logotype']['url']; ?>" alt="logo" class="max-h-[150px] object-contain">
+									</li>
+								<?php
+									};
+								?>
+							</ul>
+					</div>
+
 					<?php
 						$clients_brands = get_field('clients_brands');
 						$clients_brands_count = count($clients_brands);
