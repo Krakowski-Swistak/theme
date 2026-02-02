@@ -282,7 +282,7 @@ get_header();
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('clients_heading'); ?>
 
-					<div class="ks-container ks-fadeInBottom mb-5">
+					<div class="ks-container ks-fadeInBottom mb-10 pb-10 border-b border-gray-400">
 						<?php
 							$clients_brands_grid = get_field('clients_brands_grid');
 						?>
